@@ -15,13 +15,15 @@ const Layout = ({ children }) => {
   return (
     <div className="layout_container">
       <div>
-        <div style={{ display: "flex", padding: "0 43px" }}>
+        <div
+          style={{ display: "flex", padding: "10px 43px", flexWrap: "wrap" }}
+        >
           <div style={{ width: "75%" }}>
             <Space size={40}>
               <Image src={logo} width={104} height={79} alt="logo" />
               <Space size={26}>
                 {navList.map((t, index) => (
-                  <TextField key={index} name={t} />
+                  <TextField key={index} text={t} />
                 ))}
               </Space>
               <Search

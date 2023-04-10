@@ -1,0 +1,25 @@
+// position: absolute;
+// top: 50%;
+// left: 50%;
+// transform: translate(-50%, -50%);
+
+.banner_image {
+    position: relative;
+
+    .banner_content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+
+        .content_text {
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+}

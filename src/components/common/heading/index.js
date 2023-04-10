@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable no-dupe-keys */
+import { Typography } from "antd";
 import React from "react";
+const { Title } = Typography;
 
-const TextField = ({
-  text,
+const Commonheading = ({
+  heading,
   children,
   font,
   fontSize,
@@ -21,15 +23,17 @@ const TextField = ({
   className,
   title,
   lineHeight,
+  level,
 }) => {
   return (
-    <p
+    <Title
+      level={level}
       title={title}
       className={`${className || ""} ${onClick ? "cp" : ""}`}
       // className={className}
       style={{
         margin: 0,
-        padding: 0,
+        paddinnameg: 0,
         fontFamily: font,
         fontSize,
         color,
@@ -46,9 +50,9 @@ const TextField = ({
       }}
       onClick={onClick}
     >
-      {text || children}
-    </p>
+      {heading || children}
+    </Title>
   );
 };
 
-export default TextField;
+export default Commonheading;
