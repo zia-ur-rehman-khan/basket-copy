@@ -1,7 +1,5 @@
 import Layout from "components/layout";
-import "../styles/index.less";
-
-import { Button } from "antd";
+import "styles/index.less";
 
 function MyApp({ Component, pageProps }) {
   return (

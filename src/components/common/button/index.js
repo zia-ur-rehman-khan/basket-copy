@@ -10,15 +10,17 @@ const CommonButton = ({
   height,
   background,
   borderRadius = "6px",
-  border = 0,
+  border,
   color = "#ffffff",
   onClick,
   htmlType,
   disabled,
+  type,
 }) => {
   return (
     <div className={topClass}>
       <Button
+        type={type}
         style={{
           width,
           height,

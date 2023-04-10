@@ -11,6 +11,7 @@ import CommonButton from "components/common/button";
 const { Search } = Input;
 
 const Layout = ({ children }) => {
+  const navList = ["Home", "About", "Shop", "Event", "Academy", "School"];
   return (
     <div className="layout_container">
       <div>
@@ -19,12 +20,9 @@ const Layout = ({ children }) => {
             <Space size={40}>
               <Image src={logo} width={104} height={79} alt="logo" />
               <Space size={26}>
-                <TextField name={"Home"} />
-                <TextField name={"About"} />
-                <TextField name={"Shop"} />
-                <TextField name={"Event"} />
-                <TextField name={"Academy"} />
-                <TextField name={"School"} />
+                {navList.map((t, index) => (
+                  <TextField key={index} name={t} />
+                ))}
               </Space>
               <Search
                 placeholder="input search text"
@@ -40,13 +38,8 @@ const Layout = ({ children }) => {
               <Image src={cart} width={20} height={20} alt="logo" />
             </Space>
             <Space>
-              <CommonButton
-                background={"none"}
-                border={"1px solid #FF6600"}
-                child={"Enquire Now"}
-                color="#FF6600"
-              />
-              <CommonButton background={"#FF6600"} child={"Sign Up"} />
+              <CommonButton child={"Enquire Now"} />
+              <CommonButton type={"primary"} child={"Sign Up"} />
             </Space>
           </Space>
         </div>
