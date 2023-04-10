@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./index.module.scss";
 import Image from "next/image";
 import logo from "public/layout/image/logo.png";
 import { Button, Input, Space } from "antd";
@@ -13,7 +12,7 @@ const { Search } = Input;
 
 const Layout = ({ children }) => {
   return (
-    <div className={styles.container}>
+    <div className="layout_container">
       <div>
         <div style={{ display: "flex", padding: "0 43px" }}>
           <div style={{ width: "75%" }}>
