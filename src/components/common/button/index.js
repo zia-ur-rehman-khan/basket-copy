@@ -15,7 +15,7 @@ const CommonButton = ({
   onClick,
   htmlType,
   disabled,
-  type,
+  type = "primary",
 }) => {
   return (
     <div className={topClass}>

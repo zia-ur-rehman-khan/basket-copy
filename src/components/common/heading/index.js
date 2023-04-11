@@ -30,10 +30,9 @@ const Commonheading = ({
       level={level}
       title={title}
       className={`${className || ""} ${onClick ? "cp" : ""}`}
-      // className={className}
       style={{
         margin: 0,
-        paddinnameg: 0,
+        padding: 0,
         fontFamily: font,
         fontSize,
         color,

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import banner from "public/layout/image/banner.png";
-import TextField from "../textField";
-import Commonheading from "../heading";
+import TextField from "../TextField";
+import Commonheading from "../Heading";
 import { Divider } from "antd";
 import { Space } from "antd";
 
@@ -35,14 +35,16 @@ const CommonBanner = () => {
       <div>
         <Image
           src={banner}
-          sizes="(max-width: 768px) 100vw,
-        (max-width: 1200px) 50vw,
-        33vw"
+          sizes="(min-width: 480px ) 50vw,
+          (min-width: 728px) 33vw,
+          (min-width: 976px) 25vw,
+          100vw"
           alt="logo"
+          layout="responsive"
         />
       </div>
     </div>
   );
 };
-``;
+
 export default CommonBanner;

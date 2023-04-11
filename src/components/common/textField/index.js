@@ -3,7 +3,7 @@
 /* eslint-disable no-dupe-keys */
 import React from "react";
 
-const TextField = ({
+const CommonTextField = ({
   text,
   children,
   font,
@@ -51,4 +51,4 @@ const TextField = ({
   );
 };
 
-export default TextField;
+export default CommonTextField;
