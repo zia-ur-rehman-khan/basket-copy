@@ -6,7 +6,7 @@ import CommonTextField from "components/common/TextField";
 
 const Card = ({ src }) => {
   return (
-    <Space direction="vertical" align="center">
+    <Space className="c-pointer" direction="vertical" align="center">
       <Image src={src} alt="Picture of the author" width={333} height={240} />
       <CommonTextField text="Coaches" className="text-primary" />
     </Space>

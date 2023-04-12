@@ -8,11 +8,24 @@ import logo from "public/layout/image/logo.png";
 import profile from "public/layout/svg/profile.svg";
 import heart from "public/layout/svg/heart.svg";
 import cart from "public/layout/svg/cart.svg";
+import { useRouter } from "next/router";
 
 const { Search } = Input;
 
 const Header = () => {
-  const navList = ["Home", "About", "Shop", "Event", "Academy", "School"];
+  const navList = [
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" },
+    { name: "Shop" },
+    { name: "Event" },
+    { name: "Academy" },
+    { name: "School" },
+  ];
+  const { push } = useRouter();
+
+  const navRoute = (url) => {
+    push(url);
+  };
 
   return (
     <div className="header">
@@ -21,7 +34,11 @@ const Header = () => {
           <Image src={logo} width={104} height={79} alt="logo" />
           <Space size={26}>
             {navList.map((t, index) => (
-              <TextField key={index} text={t} />
+              <TextField
+                onClick={() => navRoute(t.url)}
+                key={index}
+                text={t.name}
+              />
             ))}
           </Space>
           <Search

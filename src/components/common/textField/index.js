@@ -23,31 +23,33 @@ const CommonTextField = ({
   lineHeight,
 }) => {
   return (
-    <p
-      title={title}
-      className={`${className || ""} ${onClick ? "cp" : ""}`}
-      // className={className}
-      style={{
-        margin: 0,
-        padding: 0,
-        fontFamily: font,
-        fontSize,
-        color,
-        marginBottom: mb,
-        marginTop: mt,
-        textAlign,
-        fontFamily,
-        fontWeight,
-        letterSpacing,
-        lineHeight,
-        paddingLeft,
-        textDecoration,
-        whiteSpace: "pre-wrap",
-      }}
-      onClick={onClick}
-    >
-      {text || children}
-    </p>
+    <div className="paragraph-parent">
+      <p
+        title={title}
+        className={`${className || ""} ${onClick ? "c-pointer" : ""}`}
+        // className={className}
+        style={{
+          margin: 0,
+          padding: 0,
+          fontFamily: font,
+          fontSize,
+          color,
+          marginBottom: mb,
+          marginTop: mt,
+          textAlign,
+          fontFamily,
+          fontWeight,
+          letterSpacing,
+          lineHeight,
+          paddingLeft,
+          textDecoration,
+          whiteSpace: "pre-wrap",
+        }}
+        onClick={onClick}
+      >
+        {text || children}
+      </p>
+    </div>
   );
 };
 

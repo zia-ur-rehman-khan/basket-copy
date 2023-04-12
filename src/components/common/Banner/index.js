@@ -1,29 +1,18 @@
 import Image from "next/image";
-import React from "react";
-import banner from "public/layout/image/banner.png";
+import React, { Component } from "react";
 import TextField from "../TextField";
 import Commonheading from "../Heading";
 import { Divider } from "antd";
 import { Space } from "antd";
 
-const CommonBanner = () => {
+const CommonBanner = ({ text1, Component, heading, content, src }) => {
   return (
     <div className="banner-image">
       <Space className="banner-content">
-        <TextField text="WELCOME TO IBALL" fontSize="29.64px" />
-        <Space size={20}>
-          <Commonheading heading="You Ball" />
-          <Divider
-            type="vertical"
-            style={{ height: "60px", borderColor: "#ffffff" }}
-          />
-          <Commonheading heading="i Ball" />
-          <Divider
-            type="vertical"
-            style={{ height: "60px", borderColor: "#ffffff" }}
-          />
-          <Commonheading heading="We Ball" />
-        </Space>
+        <TextField text={text1} fontSize="29.64px" />
+
+        {heading ? <Commonheading heading={heading} /> : Component}
+
         <div className="content-text">
           <TextField
             text={
@@ -33,15 +22,9 @@ const CommonBanner = () => {
         </div>
       </Space>
       <div>
-        <Image
-          src={banner}
-          sizes="(min-width: 480px ) 50vw,
-          (min-width: 728px) 33vw,
-          (min-width: 976px) 25vw,
-          100vw"
-          alt="logo"
-          layout="responsive"
-        />
+        <div className="radial-background"></div>
+
+        <Image src={src} alt="logo" />
       </div>
     </div>
   );
