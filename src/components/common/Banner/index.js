@@ -8,8 +8,8 @@ import { Space } from "antd";
 
 const CommonBanner = () => {
   return (
-    <div className="banner_image">
-      <Space className="banner_content">
+    <div className="banner-image">
+      <Space className="banner-content">
         <TextField text="WELCOME TO IBALL" fontSize="29.64px" />
         <Space size={20}>
           <Commonheading heading="You Ball" />
@@ -24,7 +24,7 @@ const CommonBanner = () => {
           />
           <Commonheading heading="We Ball" />
         </Space>
-        <div className="content_text">
+        <div className="content-text">
           <TextField
             text={
               "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"

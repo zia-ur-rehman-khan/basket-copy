@@ -3,8 +3,8 @@ import Header from "./Header";
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout_container">
-      <div className="main_container">
+    <div className="layout-container">
+      <div className="main-container">
         <Header />
         {children}
       </div>

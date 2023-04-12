@@ -9,7 +9,7 @@ import { Space } from "antd";
 const ProductCard = ({ image }) => {
   const { src, width, height } = image;
   return (
-    <div className="product_card">
+    <div className="product-card">
       <div className="card_image">
         <Image
           src={src}
@@ -18,7 +18,7 @@ const ProductCard = ({ image }) => {
           height={height}
         />
       </div>
-      <Space className="card_content" direction="vertical">
+      <Space className="card-content" direction="vertical">
         <Divider />
         <CommonTextField
           text="Basketball with Net and Ring for Home and Outdoors"

@@ -9,7 +9,7 @@ import { Space } from "antd";
 
 const ImageContent = () => {
   return (
-    <div className="product_side p-5">
+    <div className="product-side p-5">
       <Row gutter={[58, 58]} align="middle">
         <Col
           xxl={{ span: 14 }}

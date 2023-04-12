@@ -12,7 +12,7 @@ import image3 from "public/withUs/img4.png";
 const WithUS = () => {
   const temp = [image, image1, image2, image3];
   return (
-    <div className="bg-secondary with_us_section d-flex flex-column align-items-center justify-content-center">
+    <div className="bg-secondary with-us-section d-flex flex-column align-items-center justify-content-center">
       <CommonTextField text="Ball With Us" />
       <Commonheading level={2} heading="Come Ball with Us" />
       <Row gutter={[33, 33]} justify="center" className="mt-5">

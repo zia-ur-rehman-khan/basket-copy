@@ -23,7 +23,7 @@ const Product = () => {
         <Commonheading heading={"Featured Product"} />
         <CommonButton child="View More" />
       </div>
-      <div className="card_parent mt-3">
+      <div className="card-parent mt-3">
         {temp.map((_t, key) => (
           <ProductCard image={_t} key={key} />
         ))}
