@@ -87,11 +87,7 @@ const Footer = () => {
   ];
 
   return (
-    <Row
-      justify="space-around"
-      className="bg-secondary p-5 radius"
-      gutter={[0, 50]}
-    >
+    <Row justify="space-around" className="bg-grey p-5 radius" gutter={[0, 50]}>
       <Col
         xxl={{ span: 5 }}
         xl={{ span: 5 }}

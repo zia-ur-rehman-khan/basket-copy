@@ -9,7 +9,7 @@ const MemberShip = () => {
     <Row
       justify="space-between"
       align="middle"
-      className="bg-secondary common-padding radius"
+      className="bg-grey common-padding radius"
       gutter={[24, 24]}
     >
       <Col
