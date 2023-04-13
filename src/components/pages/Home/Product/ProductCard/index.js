@@ -14,12 +14,7 @@ const ProductCard = ({ image }) => {
       child={
         <>
           <div>
-            <Image
-              src={src}
-              alt="Picture of the author"
-              width={width}
-              height={height}
-            />
+            <Image src={src} alt="Picture of the author" />
           </div>
           <Space className="p-3" size={11} direction="vertical">
             <Divider />

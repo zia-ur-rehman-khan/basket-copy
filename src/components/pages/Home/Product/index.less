@@ -1,9 +1,18 @@
 @import "ProductCard";
 
-.card-parent {
-    overflow: scroll;
+.product-side {
+    .card-parent {
+        overflow: scroll;
 
-    &::-webkit-scrollbar {
-        display: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    padding-left: 80px;
+
+    @media @xs {
+        padding: 0;
+
     }
 }

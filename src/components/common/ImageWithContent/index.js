@@ -8,7 +8,7 @@ import { Space } from "antd";
 
 const ImageContent = ({ src, content, className, responsive }) => {
   return (
-    <div className="product-side p-5">
+    <div className="image-content-side ">
       <Row gutter={[58, 58]} align="middle" className={`${className || ""}`}>
         <Col
           xxl={{ span: responsive.imagelarge }}

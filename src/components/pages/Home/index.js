@@ -60,7 +60,7 @@ const Home = () => {
       />
       <Product />
       <WithUS />
-      <div className="p-5">
+      <div className="event-side">
         <Event />
         <Blog />
       </div>

@@ -20,7 +20,7 @@ const Product = () => {
   ];
 
   return (
-    <div className="pl-5">
+    <div className="product-side">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"Featured Product"} />
         <CommonButton child="View More" />
@@ -30,11 +30,11 @@ const Product = () => {
         {temp.map((_t, key) => (
           <Col
             key={key}
-            xxl={{ span: 7 }}
-            xl={{ span: 7 }}
+            xxl={{ span: 6 }}
+            xl={{ span: 6 }}
             lg={{ span: 10 }}
             md={{ span: 11 }}
-            sm={{ span: 12 }}
+            sm={{ span: 15 }}
           >
             <ProductCard image={_t} key={key} />
           </Col>

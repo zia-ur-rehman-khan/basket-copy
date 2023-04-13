@@ -119,7 +119,7 @@ const Footer = () => {
         lg={{ span: 10 }}
         md={{ span: 12 }}
         sm={{ span: 12 }}
-        xs={{ span: 12 }}
+        xs={{ span: 24 }}
       >
         <CommonTextField
           className={"pb-2"}
@@ -148,7 +148,7 @@ const Footer = () => {
         lg={{ span: 10 }}
         md={{ span: 12 }}
         sm={{ span: 12 }}
-        xs={{ span: 12 }}
+        xs={{ span: 24 }}
       >
         <CommonTextField
           className={"pb-2"}
@@ -178,7 +178,7 @@ const Footer = () => {
         lg={{ span: 10 }}
         md={{ span: 12 }}
         sm={{ span: 12 }}
-        xs={{ span: 12 }}
+        xs={{ span: 24 }}
       >
         <CommonTextField
           className={"pb-2"}
@@ -227,7 +227,7 @@ const Footer = () => {
         lg={{ span: 10 }}
         md={{ span: 12 }}
         sm={{ span: 12 }}
-        xs={{ span: 12 }}
+        xs={{ span: 24 }}
       >
         <CommonTextField
           className={"pb-2"}
