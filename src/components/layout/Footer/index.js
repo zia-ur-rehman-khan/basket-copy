@@ -104,12 +104,12 @@ const Footer = () => {
 
           <CommonTextField text="iBall is a Basketball Foundation specializing in training, development coaching and Basketball themed events management (Birthday’s, Camps and tournaments)" />
           <Space size={0}>
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
           </Space>
         </Space>
       </Col>

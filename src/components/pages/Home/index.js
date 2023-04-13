@@ -20,6 +20,9 @@ const Home = () => {
       <CommonBanner
         text1={"Welcome to Iball"}
         src={banner}
+        content={
+          "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"
+        }
         Component={
           <Space size={20}>
             <Commonheading heading="You Ball" />
@@ -60,7 +63,7 @@ const Home = () => {
       />
       <Product />
       <WithUS />
-      <div className="event-side">
+      <div className="common-padding">
         <Event />
         <Blog />
       </div>

@@ -14,11 +14,7 @@ const CommonBanner = ({ text1, Component, heading, content, src }) => {
         {heading ? <Commonheading heading={heading} /> : Component}
 
         <div className="content-text">
-          <TextField
-            text={
-              "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"
-            }
-          />
+          <TextField text={content} />
         </div>
       </Space>
       <div>

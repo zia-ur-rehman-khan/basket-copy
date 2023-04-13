@@ -15,7 +15,7 @@ const Meet = () => {
   const array = [meet1, meet2, meet3, meet4];
 
   return (
-    <div className="p-5">
+    <div>
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Space direction="vertical">
           <CommonTextField text="Vision & History" />
