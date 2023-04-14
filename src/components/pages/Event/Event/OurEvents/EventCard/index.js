@@ -1,12 +1,9 @@
-import React from "react";
-import { Card } from "antd";
-import Image from "next/image";
-import { Divider } from "antd";
-import CommonTextField from "components/common/TextField";
-import CommonButton from "components/common/Button";
 import { Space } from "antd";
-import CommonCard from "components/common/card";
+import CommonButton from "components/common/Button";
+import CommonTextField from "components/common/TextField";
+import Image from "next/image";
 import { useRouter } from "next/router";
+import React from "react";
 
 const EventCard = ({ data }) => {
   const { push } = useRouter();

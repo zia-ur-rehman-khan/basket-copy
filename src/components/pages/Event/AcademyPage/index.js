@@ -1,14 +1,13 @@
-import CommonBanner from "components/common/Banner";
-import React from "react";
-import OurAcademy from "./OurAcademy";
-import banner from "public/event/banner.png";
-import CommonTextField from "components/common/TextField";
-import ImageContent from "components/common/ImageWithContent";
-import Commonheading from "components/common/Heading";
 import { Space } from "antd";
+import CommonBanner from "components/common/Banner";
 import CommonButton from "components/common/Button";
-import contentImage from "public/about/contentImage.png";
+import Commonheading from "components/common/Heading";
+import ImageContent from "components/common/ImageWithContent";
+import CommonTextField from "components/common/TextField";
+import banner from "public/event/banner.png";
 import MemberShip from "./MemberShip";
+import OurAcademy from "./OurAcademy";
+import React from "react";
 
 const AcademyPage = () => {
   return (

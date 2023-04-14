@@ -1,10 +1,8 @@
 import CommonBanner from "components/common/Banner";
-import React from "react";
-import banner from "public/event/banner.png";
 import CommonTextField from "components/common/TextField";
-
-import { Space } from "antd";
+import banner from "public/event/banner.png";
 import OurCommunity from "./OurCommunity";
+import React from "react";
 
 const CommunityPage = () => {
   return (

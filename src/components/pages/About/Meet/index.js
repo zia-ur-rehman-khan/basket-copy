@@ -2,14 +2,14 @@ import { Col, Row } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 
-import React from "react";
+import { Space } from "antd";
+import CommonTextField from "components/common/TextField";
 import meet1 from "public/meet/meet1.png";
 import meet2 from "public/meet/meet2.png";
 import meet3 from "public/meet/meet3.png";
 import meet4 from "public/meet/meet4.png";
 import MeetCard from "./MeetCard";
-import CommonTextField from "components/common/TextField";
-import { Space } from "antd";
+import React from "react";
 
 const Meet = () => {
   const array = [meet1, meet2, meet3, meet4];

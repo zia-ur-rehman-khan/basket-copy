@@ -1,10 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import CommonTextField from "components/common/TextField";
-import Commonheading from "components/common/Heading";
 import { Col, Row } from "antd";
-import CommonButton from "components/common/Button";
-import { Space } from "antd";
+import Image from "next/image";
+import React from "react";
 
 const ImageContent = ({ src, content, className, responsive, component }) => {
   return (

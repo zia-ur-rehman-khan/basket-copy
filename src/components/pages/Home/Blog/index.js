@@ -1,13 +1,12 @@
 import { Col, Row } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
-import React from "react";
-import EventCard from "../Event/EventCard";
 import blog1 from "public/blog/blog1.png";
 import blog2 from "public/blog/blog2.png";
 import blog3 from "public/blog/blog3.png";
 import blog4 from "public/blog/blog4.png";
 import BlogCard from "./BlogCard";
+import React from "react";
 
 const Blog = () => {
   const array = [blog1, blog2, blog3, blog4];

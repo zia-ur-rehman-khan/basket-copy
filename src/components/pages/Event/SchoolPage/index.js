@@ -1,13 +1,8 @@
 import CommonBanner from "components/common/Banner";
-import React from "react";
-import OurSchool from "./OurSchool";
-import banner from "public/event/banner.png";
 import CommonTextField from "components/common/TextField";
-import ImageContent from "components/common/ImageWithContent";
-import Commonheading from "components/common/Heading";
-import { Space } from "antd";
-import CommonButton from "components/common/Button";
-import contentImage from "public/about/contentImage.png";
+import banner from "public/event/banner.png";
+import OurSchool from "./OurSchool";
+import React from "react";
 
 const SchoolPage = () => {
   return (

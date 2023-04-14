@@ -1,9 +1,8 @@
-import Image from "next/image";
-import React, { Component } from "react";
-import TextField from "../TextField";
-import Commonheading from "../Heading";
-import { Divider } from "antd";
 import { Space } from "antd";
+import Image from "next/image";
+import Commonheading from "../Heading";
+import TextField from "../TextField";
+import React from "react";
 
 const CommonBanner = ({ text1, Component, heading, content, src }) => {
   return (

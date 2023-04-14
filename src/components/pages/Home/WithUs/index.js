@@ -1,13 +1,12 @@
-import { Col, Row, Space } from "antd";
+import { Col, Row } from "antd";
 import Commonheading from "components/common/Heading";
 import CommonTextField from "components/common/TextField";
-import Image from "next/image";
-import React from "react";
-import Card from "./Card";
 import image from "public/withUs/img1.png";
 import image1 from "public/withUs/img2.png";
 import image2 from "public/withUs/img3.png";
 import image3 from "public/withUs/img4.png";
+import Card from "./Card";
+import React from "react";
 
 const WithUS = () => {
   const temp = [image, image1, image2, image3];

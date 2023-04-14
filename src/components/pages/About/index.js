@@ -1,14 +1,14 @@
+import { Space } from "antd";
 import CommonBanner from "components/common/Banner";
-import React from "react";
-import banner from "public/about/banner.png";
+import CommonButton from "components/common/Button";
+import MemberShip from "components/common/Button/MemberShip";
 import Commonheading from "components/common/Heading";
 import ImageContent from "components/common/ImageWithContent";
 import CommonTextField from "components/common/TextField";
-import { Space } from "antd";
-import CommonButton from "components/common/Button";
+import banner from "public/about/banner.png";
 import contentImage from "public/about/contentImage.png";
 import Meet from "./Meet";
-import MemberShip from "components/common/Button/MemberShip";
+import React from "react";
 
 const About = () => {
   return (

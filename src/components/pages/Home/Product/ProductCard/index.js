@@ -1,11 +1,9 @@
-import React from "react";
-import { Card } from "antd";
-import Image from "next/image";
-import { Divider } from "antd";
-import CommonTextField from "components/common/TextField";
+import { Divider, Space } from "antd";
 import CommonButton from "components/common/Button";
-import { Space } from "antd";
+import CommonTextField from "components/common/TextField";
 import CommonCard from "components/common/card";
+import Image from "next/image";
+import React from "react";
 
 const ProductCard = ({ image }) => {
   const { src, width, height } = image;

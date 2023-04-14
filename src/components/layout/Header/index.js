@@ -1,22 +1,17 @@
-import { Col, Input, Row } from "antd";
-import { Space } from "antd";
-import CommonButton from "components/common/Button";
-import TextField from "components/common/TextField";
-import Image from "next/image";
-import React from "react";
-import logo from "public/layout/image/logo.png";
-import profile from "public/layout/svg/profile.svg";
-import heart from "public/layout/svg/heart.svg";
-import cart from "public/layout/svg/cart.svg";
-import { useRouter } from "next/router";
-import { Affix } from "antd";
 import { AlignLeftOutlined } from "@ant-design/icons";
-import { Drawer } from "antd";
-import Link from "next/link";
-import { Menu } from "antd";
-import { List } from "antd";
-import CommonTextField from "components/common/TextField";
-import { Grid } from "antd";
+import { Drawer, Grid, Input, List, Space } from "antd";
+import CommonButton from "components/common/Button";
+import {
+  default as CommonTextField,
+  default as TextField,
+} from "components/common/TextField";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import logo from "public/layout/image/logo.png";
+import cart from "public/layout/svg/cart.svg";
+import heart from "public/layout/svg/heart.svg";
+import profile from "public/layout/svg/profile.svg";
+import React from "react";
 
 const { Search } = Input;
 

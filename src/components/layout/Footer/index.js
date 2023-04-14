@@ -1,12 +1,10 @@
 import Image from "next/image";
-import React from "react";
 import logo from "public/layout/image/logo.png";
 import linkdin from "public/layout/svg/linkdin.svg";
 
+import { Col, List, Row, Space } from "antd";
 import CommonTextField from "components/common/TextField";
-import { Col, Row, Space } from "antd";
-import { List } from "antd";
-import { Card } from "antd";
+import React from "react";
 
 const Footer = () => {
   const data = [

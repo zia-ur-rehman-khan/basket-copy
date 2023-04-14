@@ -1,18 +1,16 @@
-import React from "react";
+import { Divider, Space } from "antd";
 import CommonBanner from "components/common/Banner";
-import ImageContent from "components/common/ImageWithContent";
-import Product from "./Product";
-import CommonTextField from "components/common/TextField";
-import Commonheading from "components/common/Heading";
-import Image from "next/image";
-import { Space } from "antd";
-import WithUS from "./WithUs";
-import Event from "./Event";
-import Blog from "./Blog";
-import banner from "public/layout/image/banner.png";
-import { Divider } from "antd";
-import contentImage from "public/image.png";
 import CommonButton from "components/common/Button";
+import Commonheading from "components/common/Heading";
+import ImageContent from "components/common/ImageWithContent";
+import CommonTextField from "components/common/TextField";
+import contentImage from "public/image.png";
+import banner from "public/layout/image/banner.png";
+import Blog from "./Blog";
+import Event from "./Event";
+import Product from "./Product";
+import WithUS from "./WithUs";
+import React from "react";
 
 const Home = () => {
   return (

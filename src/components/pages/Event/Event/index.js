@@ -1,15 +1,14 @@
+import { Space } from "antd";
 import CommonBanner from "components/common/Banner";
-import React from "react";
-import banner from "public/event/banner.png";
+import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import ImageContent from "components/common/ImageWithContent";
 import CommonTextField from "components/common/TextField";
-import { Space } from "antd";
-import CommonButton from "components/common/Button";
 import contentImage from "public/about/contentImage.png";
+import banner from "public/event/banner.png";
 import MemberShip from "../../../common/Button/MemberShip";
-import Meet from "../../About/Meet";
 import OurEvents from "./OurEvents";
+import React from "react";
 
 const EventPage = () => {
   return (
