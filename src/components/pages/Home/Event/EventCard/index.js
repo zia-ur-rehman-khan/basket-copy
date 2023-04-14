@@ -1,7 +1,7 @@
 import React from "react";
 import CommonTextField from "components/common/TextField";
 import Image from "next/image";
-import CommonCard from "components/common/card";
+import CommonCard from "components/common/Card";
 import { Space } from "antd";
 import { Divider } from "antd";
 import CommonButton from "components/common/Button";

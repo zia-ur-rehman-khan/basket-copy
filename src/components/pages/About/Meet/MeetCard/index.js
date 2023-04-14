@@ -1,6 +1,6 @@
 import { Space } from "antd";
 import CommonTextField from "components/common/TextField";
-import CommonCard from "components/common/card";
+import CommonCard from "components/common/Card";
 import Image from "next/image";
 import React from "react";
 
