@@ -1,7 +1,7 @@
 import { Space } from "antd";
 import Image from "next/image";
-import Commonheading from "../Heading";
-import TextField from "../TextField";
+import Commonheading from "components/common/Heading";
+import TextField from "components/common/TextField";
 import React from "react";
 
 const CommonBanner = ({ text1, Component, heading, content, src }) => {
