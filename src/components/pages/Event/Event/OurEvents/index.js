@@ -16,7 +16,13 @@ import event4 from "public/event/events4.svg";
 import event5 from "public/event/events5.svg";
 
 const OurEvents = () => {
-  const temp = [event1, event2, event3, event4, event5];
+  const temp = [
+    { src: event1, title: "School", url: "school" },
+    { src: event2, title: "Academy/Club", url: "academy" },
+    { src: event3, title: "Community", url: "community" },
+    { src: event4, title: "Birthdays", url: "birthday" },
+    { src: event5, title: "Camps", url: "camps" },
+  ];
 
   const colStyles = {
     flexBasis: "20%",
@@ -24,7 +30,7 @@ const OurEvents = () => {
   };
 
   return (
-    <div className="product-side mb-5">
+    <div className="event-side mb-5">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"Our events"} />
       </div>
@@ -39,7 +45,7 @@ const OurEvents = () => {
             md={{ span: 11 }}
             sm={{ span: 15 }}
           >
-            <EventCard image={_t} key={key} />
+            <EventCard data={_t} key={key} />
           </Col>
         ))}
       </Row>

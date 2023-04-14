@@ -1,24 +1,22 @@
 import { Col, Row } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
-
 import React from "react";
-import EventCard from "./EventCard";
-import event1 from "public/event/event1.png";
-import event2 from "public/event/event2.png";
-import event3 from "public/event/event3.png";
-import event4 from "public/event/event4.png";
+import blog1 from "public/blog/blog1.png";
+import blog2 from "public/blog/blog2.png";
+import blog3 from "public/blog/blog3.png";
+import blog4 from "public/blog/blog4.png";
+import BlogCard from "components/pages/Home/Blog/BlogCard";
+import EventCard from "components/pages/Home/Event/EventCard";
 
-const Event = () => {
-  const array = [event1, event2, event3, event4];
+const OurSchool = () => {
+  const array = [blog1, blog2, blog3, blog4, blog1, blog2, blog3, blog4];
 
   return (
     <div>
-      <div className="d-flex justify-content-between align-items-center ">
-        <Commonheading level={2} heading={"Browse Our Events"} />
-        <CommonButton child="View More" />
+      <div className="d-flex justify-content-between align-items-center mt-5">
+        <Commonheading level={2} heading={"Our School Events"} />
       </div>
-
       <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (
           <Col
@@ -37,4 +35,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default OurSchool;

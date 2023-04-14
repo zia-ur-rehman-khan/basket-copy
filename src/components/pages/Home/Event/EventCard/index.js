@@ -7,6 +7,7 @@ import { Divider } from "antd";
 import CommonButton from "components/common/Button";
 import time from "public/event/time.svg";
 import calender from "public/event/calender.svg";
+import dollar from "public/event/dollar.svg";
 
 const EventCard = ({ src }) => {
   return (
@@ -33,14 +34,30 @@ const EventCard = ({ src }) => {
               className="black"
               text="Lorem ipsum dolor sit amet, consectetur adipisng elit, sed do eiusmod tempor incididunt."
             />
-            <Space size={40}>
+            <Space style={{ width: "100%" }} align="baseline">
               <Space>
                 <Image src={time} width={22} height={22} alt="time" />
-                <CommonTextField className="black" text="05:30 Pm" />
+                <CommonTextField
+                  fontSize={"16px"}
+                  className="black"
+                  text="05:30 Pm"
+                />
               </Space>
               <Space>
                 <Image src={calender} width={19} height={22} alt="time" />
-                <CommonTextField className="black" text="24 Nov 2022" />
+                <CommonTextField
+                  className="black"
+                  text="24 Nov 2022"
+                  fontSize={"16px"}
+                />
+              </Space>
+              <Space>
+                <Image src={dollar} width={32} height={19} alt="time" />
+                <CommonTextField
+                  className="black"
+                  text="$32"
+                  fontSize={"16px"}
+                />
               </Space>
             </Space>
             <CommonButton width={"100%"} child="Learn More" />

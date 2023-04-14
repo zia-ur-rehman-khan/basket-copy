@@ -29,22 +29,21 @@ const Header = () => {
   const navList = [
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
-    { name: "Shop" },
+    { name: "Shop", url: "/shop" },
     { name: "Event", url: "/event" },
-    { name: "Academy" },
-    { name: "School" },
+    { name: "Academy", url: "/academy" },
+    { name: "School", url: "/school" },
   ];
   const { push } = useRouter();
+
+  // console.log(asPath.split("/")[1], "temp");
 
   const navRoute = (url) => {
     push(url);
   };
 
-  const id = "";
-
   return (
     <>
-      {/* <Affix offsetTop={0} style={{ zIndex: 16 }}> */}
       {screens.lg ? (
         <div className="header">
           <div className="left-side">
@@ -53,6 +52,7 @@ const Header = () => {
               <Space size={26}>
                 {navList.map((t, index) => (
                   <TextField
+                    className={"header-text"}
                     onClick={() => navRoute(t.url)}
                     key={index}
                     text={t.name}

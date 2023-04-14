@@ -4,6 +4,7 @@
 import React from "react";
 
 const CommonTextField = ({
+  topClass,
   text,
   children,
   font,
@@ -23,7 +24,7 @@ const CommonTextField = ({
   lineHeight,
 }) => {
   return (
-    <div className="paragraph-parent">
+    <div className={`${topClass || ""} paragraph-parent`}>
       <p
         title={title}
         className={`${className || ""} ${onClick ? "c-pointer" : ""}`}
