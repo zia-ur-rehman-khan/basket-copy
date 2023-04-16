@@ -21,7 +21,7 @@ const ImageContent = ({ src, content, className, responsive, component }) => {
           {component ? (
             component
           ) : (
-            <Image className="c-pointer" src={src} alt="logo" />
+            <Image priority={true} className="c-pointer" src={src} alt="logo" />
           )}
         </Col>
         <Col

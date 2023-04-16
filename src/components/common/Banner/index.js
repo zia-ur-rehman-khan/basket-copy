@@ -19,7 +19,7 @@ const CommonBanner = ({ text1, Component, heading, content, src }) => {
       <div>
         <div className="radial-background"></div>
 
-        <Image src={src} alt="logo" />
+        <Image src={src} alt="logo" priority={true} />
       </div>
     </div>
   );
