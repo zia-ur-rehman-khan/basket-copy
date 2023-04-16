@@ -17,26 +17,20 @@ const OurEvents = () => {
     { icon: <CampsIcon />, title: "Camps", url: "camps" },
   ];
 
-  const colStyles = {
-    flexBasis: "20%",
-    width: "20%",
-  };
-
   return (
     <div className="event-side mb-5">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"Our events"} />
       </div>
-      <Row type="flex" gutter={[10, 10]} className="mt-5 card-parent">
+      <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
         {temp.map((_t, key) => (
           <Col
             key={key}
-            style={{ ...colStyles }}
-            xxl={{ span: 5 }}
-            xl={{ span: 5 }}
-            lg={{ span: 10 }}
-            md={{ span: 11 }}
-            sm={{ span: 15 }}
+            xxl={{ span: 6 }}
+            xl={{ span: 6 }}
+            lg={{ span: 8 }}
+            md={{ span: 12 }}
+            sm={{ span: 16 }}
           >
             <EventCard data={_t} key={key} />
           </Col>
