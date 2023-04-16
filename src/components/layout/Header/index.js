@@ -17,9 +17,13 @@ const { Search } = Input;
 
 const Header = () => {
   const [isMobile, setIsMobile] = React.useState(false);
-
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
+  const { push, asPath } = useRouter();
+
+  const isActive = (href) => {
+    return asPath === href || asPath.startsWith(`${href}/`);
+  };
 
   const navList = [
     { name: "Home", url: "/" },
@@ -29,9 +33,6 @@ const Header = () => {
     { name: "Academy", url: "/academy" },
     { name: "School", url: "/school" },
   ];
-  const { push } = useRouter();
-
-  // console.log(asPath.split("/")[1], "temp");
 
   const navRoute = (url) => {
     push(url);
@@ -47,7 +48,9 @@ const Header = () => {
               <Space size={26}>
                 {navList.map((t, index) => (
                   <TextField
-                    className={"header-text"}
+                    className={`${
+                      isActive(t.url) ? "primary" : ""
+                    } header-text`}
                     onClick={() => navRoute(t.url)}
                     key={index}
                     text={t.name}
@@ -103,7 +106,10 @@ const Header = () => {
               <List.Item.Meta
                 title={
                   <a href={item.url}>
-                    <CommonTextField text={item.name} />
+                    <CommonTextField
+                      className={isActive(item.url) ? "primary" : ""}
+                      text={item.name}
+                    />
                   </a>
                 }
               />
