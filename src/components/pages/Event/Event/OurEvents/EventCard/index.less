@@ -1,14 +1,30 @@
 .event-card {
-    background: @bg-gray-color;
-    border-radius: 14px;
-
+  background: @bg-gray-color;
+  border-radius: 14px;
+  transition: 0.3s;
+  &:hover {
+    background: @primary-color;
     .event-icon-background {
-        background: @primary-color;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      background: #dadde2;
     }
+    .ant-btn-primary {
+      background: #dadde2;
+      color: @primary-color !important;
+    }
+    svg {
+      path {
+        fill: @primary-color;
+      }
+    }
+  }
+
+  .event-icon-background {
+    background: @primary-color;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

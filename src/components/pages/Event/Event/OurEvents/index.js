@@ -1,20 +1,20 @@
 import { Col, Row } from "antd";
 import Commonheading from "components/common/Heading";
-import event1 from "public/event/events1.svg";
-import event2 from "public/event/events2.svg";
-import event3 from "public/event/events3.svg";
-import event4 from "public/event/events4.svg";
-import event5 from "public/event/events5.svg";
 import EventCard from "./EventCard";
 import React from "react";
+import SchoolIcon from "public/svg/SchoolIcon";
+import ClubIcon from "public/svg/ClubIcon";
+import CommunityIcon from "public/svg/CommunityIcon";
+import BirthdayIcon from "public/svg/BirthdayIcon";
+import CampsIcon from "public/svg/CampsIcon";
 
 const OurEvents = () => {
   const temp = [
-    { src: event1, title: "School", url: "school" },
-    { src: event2, title: "Academy/Club", url: "academy" },
-    { src: event3, title: "Community", url: "community" },
-    { src: event4, title: "Birthdays", url: "birthday" },
-    { src: event5, title: "Camps", url: "camps" },
+    { icon: <SchoolIcon />, title: "School", url: "school" },
+    { icon: <ClubIcon />, title: "Academy/Club", url: "academy" },
+    { icon: <CommunityIcon />, title: "Community", url: "community" },
+    { icon: <BirthdayIcon />, title: "Birthdays", url: "birthday" },
+    { icon: <CampsIcon />, title: "Camps", url: "camps" },
   ];
 
   const colStyles = {

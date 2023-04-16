@@ -4,10 +4,11 @@ import CommonTextField from "components/common/TextField";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import Icon from "../../../../../../public/svg/ClubIcon";
 
 const EventCard = ({ data }) => {
   const { push } = useRouter();
-  const { src, title, url } = data;
+  const { icon, title, url } = data;
 
   const handelRoute = (url) => {
     push(`event/${url}`);
@@ -19,9 +20,7 @@ const EventCard = ({ data }) => {
       onClick={() => handelRoute(url)}
     >
       <Space size={20} direction="vertical" align="center">
-        <div className="event-icon-background">
-          <Image src={src} width={40} height={40} alt="Picture of the author" />
-        </div>
+        <div className="event-icon-background">{icon}</div>
         <CommonTextField text={title} fontSize="23px" fontWeight="600" />
         <CommonTextField
           fontSize={"14px"}
