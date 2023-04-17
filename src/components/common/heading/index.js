@@ -23,33 +23,31 @@ const Commonheading = ({
   level,
 }) => {
   return (
-    <div className="heading-parent">
-      <Title
-        level={level}
-        title={title}
-        className={`${className || ""} ${onClick ? "cp" : ""}`}
-        style={{
-          margin: 0,
-          padding: 0,
-          fontFamily: font,
-          fontSize,
-          color,
-          marginBottom: mb,
-          marginTop: mt,
-          textAlign,
-          fontFamily,
-          fontWeight,
-          letterSpacing,
-          lineHeight,
-          paddingLeft,
-          textDecoration,
-          whiteSpace: "pre-wrap",
-        }}
-        onClick={onClick}
-      >
-        {heading || children}
-      </Title>
-    </div>
+    <Title
+      level={level}
+      title={title}
+      className={`${className || ""} ${onClick ? "cp" : ""}`}
+      style={{
+        margin: 0,
+        padding: 0,
+        fontFamily: font,
+        fontSize,
+        color,
+        marginBottom: mb,
+        marginTop: mt,
+        textAlign,
+        fontFamily,
+        fontWeight,
+        letterSpacing,
+        lineHeight,
+        paddingLeft,
+        textDecoration,
+        whiteSpace: "pre-wrap",
+      }}
+      onClick={onClick}
+    >
+      {heading || children}
+    </Title>
   );
 };
 
