@@ -5,6 +5,10 @@ import linkdin from "public/layout/svg/linkdin.svg";
 import { Col, List, Row, Space } from "antd";
 import CommonTextField from "components/common/TextField";
 import React from "react";
+import { useRouter } from "next/router";
+
+// const isUser = useRouter().pathname.startsWith('/user')
+// const isAdmin = useRouter().pathname.startsWith('/admin')
 
 const Footer = () => {
   const data = [
@@ -84,8 +88,10 @@ const Footer = () => {
     },
   ];
 
+  const isUser = useRouter().pathname.startsWith('/user')
+  const isAdmin = useRouter().pathname.startsWith('/admin')
   return (
-    <Row justify="space-around" className="bg-grey p-5 radius" gutter={[0, 50]}>
+    <Row justify="space-around" className={`bg-grey p-5 radius ${isAdmin || isUser ? 'hide-true' : ''}`} gutter={[0, 50]}>
       <Col
         xxl={{ span: 5 }}
         xl={{ span: 5 }}
