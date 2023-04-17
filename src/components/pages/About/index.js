@@ -1,14 +1,14 @@
+import { Space } from "antd";
 import CommonBanner from "components/common/Banner";
-import React from "react";
-import banner from "public/about/banner.png";
+import CommonButton from "components/common/Button";
+import MemberShip from "components/common/Button/MemberShip";
 import Commonheading from "components/common/Heading";
 import ImageContent from "components/common/ImageWithContent";
 import CommonTextField from "components/common/TextField";
-import { Space } from "antd";
-import CommonButton from "components/common/Button";
+import banner from "public/about/banner.png";
 import contentImage from "public/about/contentImage.png";
 import Meet from "./Meet";
-import MemberShip from "./MemberShip";
+import React from "react";
 
 const About = () => {
   return (
@@ -17,6 +17,9 @@ const About = () => {
         heading={"Learn More About iBall"}
         text1={"Welcome to Iball"}
         src={banner}
+        content={
+          "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"
+        }
       />
       <ImageContent
         responsive={{
@@ -64,7 +67,9 @@ const About = () => {
         }
       />
       <MemberShip />
-      <Meet />
+      <div className="common-padding">
+        <Meet />
+      </div>
     </>
   );
 };

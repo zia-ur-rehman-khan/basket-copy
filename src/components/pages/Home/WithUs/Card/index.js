@@ -1,8 +1,7 @@
-import React from "react";
-import image from "public/withUs/img1.png";
 import { Space } from "antd";
-import Image from "next/image";
 import CommonTextField from "components/common/TextField";
+import Image from "next/image";
+import React from "react";
 
 const Card = ({ src }) => {
   return (

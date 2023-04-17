@@ -14,7 +14,7 @@ const Event = () => {
 
   return (
     <div>
-      <div className="d-flex justify-content-between align-items-center mt-5">
+      <div className="d-flex justify-content-between align-items-center ">
         <Commonheading level={2} heading={"Browse Our Events"} />
         <CommonButton child="View More" />
       </div>

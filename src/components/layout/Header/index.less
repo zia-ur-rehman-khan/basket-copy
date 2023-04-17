@@ -1,5 +1,64 @@
 .header {
     display: flex;
     padding: 10px 43px;
-    flex-Wrap: wrap
+    align-items: center;
+    justify-content: space-around;
+
+
+    .header-text {
+        transition: color 0.3s;
+
+        &:hover {
+            color: @primary-color !important;
+        }
+    }
+
+    .left-side {
+        width: 75%;
+
+        .ant-space {
+            @media @lg {
+                gap: 20px !important;
+
+            }
+        }
+    }
+
+    .right-side {
+        .ant-space {
+            @media @lg {
+                gap: 10px !important;
+            }
+        }
+    }
+
+    @media @lg {
+        padding: 10px 10px;
+
+    }
+}
+
+
+
+.ant-drawer-wrapper-body {
+    background: @secondary-color;
+}
+
+.side-nav-icon {
+    color: @white-color;
+    font-size: 22px;
+
+}
+
+.ant-drawer-close {
+    color: @white-color;
+}
+
+.ant-drawer-header {
+    padding: 0;
+
+    .ant-drawer-header-title {
+        flex-direction: row-reverse;
+
+    }
 }

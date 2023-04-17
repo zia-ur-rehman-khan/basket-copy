@@ -1,12 +1,10 @@
 import Image from "next/image";
-import React from "react";
 import logo from "public/layout/image/logo.png";
 import linkdin from "public/layout/svg/linkdin.svg";
 
+import { Col, List, Row, Space } from "antd";
 import CommonTextField from "components/common/TextField";
-import { Col, Row, Space } from "antd";
-import { List } from "antd";
-import { Card } from "antd";
+import React from "react";
 
 const Footer = () => {
   const data = [
@@ -87,11 +85,7 @@ const Footer = () => {
   ];
 
   return (
-    <Row
-      justify="space-around"
-      className="bg-secondary p-5 radius"
-      gutter={[0, 50]}
-    >
+    <Row justify="space-around" className="bg-grey p-5 radius" gutter={[0, 50]}>
       <Col
         xxl={{ span: 5 }}
         xl={{ span: 5 }}
@@ -104,12 +98,12 @@ const Footer = () => {
 
           <CommonTextField text="iBall is a Basketball Foundation specializing in training, development coaching and Basketball themed events management (Birthday’s, Camps and tournaments)" />
           <Space size={0}>
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
-            <Image src={linkdin} width={32} height={32} alt="logo" />;
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
+            <Image src={linkdin} width={32} height={32} alt="logo" />
           </Space>
         </Space>
       </Col>

@@ -1,9 +1,8 @@
-import Image from "next/image";
-import React, { Component } from "react";
-import TextField from "../TextField";
-import Commonheading from "../Heading";
-import { Divider } from "antd";
 import { Space } from "antd";
+import Image from "next/image";
+import Commonheading from "components/common/Heading";
+import TextField from "components/common/TextField";
+import React from "react";
 
 const CommonBanner = ({ text1, Component, heading, content, src }) => {
   return (
@@ -14,17 +13,13 @@ const CommonBanner = ({ text1, Component, heading, content, src }) => {
         {heading ? <Commonheading heading={heading} /> : Component}
 
         <div className="content-text">
-          <TextField
-            text={
-              "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"
-            }
-          />
+          <TextField text={content} />
         </div>
       </Space>
       <div>
         <div className="radial-background"></div>
 
-        <Image src={src} alt="logo" />
+        <Image src={src} alt="logo" priority={true} />
       </div>
     </div>
   );

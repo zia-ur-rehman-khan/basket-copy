@@ -1,15 +1,16 @@
-import React from "react";
-import Image from "next/image";
-import CommonTextField from "components/common/TextField";
-import Commonheading from "components/common/Heading";
 import { Col, Row } from "antd";
-import CommonButton from "components/common/Button";
-import { Space } from "antd";
+import Image from "next/image";
+import React from "react";
 
-const ImageContent = ({ src, content, className, responsive }) => {
+const ImageContent = ({ src, content, className, responsive, component }) => {
   return (
-    <div className="image-content-side ">
-      <Row gutter={[58, 58]} align="middle" className={`${className || ""}`}>
+    <div className="common-padding">
+      <Row
+        gutter={[58, 58]}
+        align="middle"
+        justify={"space-between"}
+        className={`${className || ""}`}
+      >
         <Col
           xxl={{ span: responsive.imagelarge }}
           xl={{ span: responsive.imagelarge }}
@@ -17,7 +18,11 @@ const ImageContent = ({ src, content, className, responsive }) => {
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
-          <Image className="c-pointer" src={src} alt="logo" />
+          {component ? (
+            component
+          ) : (
+            <Image priority={true} className="c-pointer" src={src} alt="logo" />
+          )}
         </Col>
         <Col
           xxl={{ span: responsive.contentlarge }}

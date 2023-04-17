@@ -1,13 +1,12 @@
-import React from "react";
-import ProductCard from "./ProductCard";
-import Commonheading from "components/common/Heading";
+import { Col, Row } from "antd";
 import CommonButton from "components/common/Button";
-import { Col, Row, Space } from "antd";
+import Commonheading from "components/common/Heading";
 import basketBall from "public/product/product1.png";
 import tshirt from "public/product/product2.png";
 import shoes from "public/product/product3.png";
 import socks from "public/product/product4.png";
-import CommonTextField from "components/common/TextField";
+import ProductCard from "./ProductCard";
+import React from "react";
 
 const Product = () => {
   const temp = [

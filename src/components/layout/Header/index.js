@@ -1,34 +1,38 @@
-import { Col, Input, Row } from "antd";
-import { Space } from "antd";
-import CommonButton from "components/common/Button";
-import TextField from "components/common/TextField";
-import Image from "next/image";
-import React from "react";
-import logo from "public/layout/image/logo.png";
-import profile from "public/layout/svg/profile.svg";
-import heart from "public/layout/svg/heart.svg";
-import cart from "public/layout/svg/cart.svg";
-import { useRouter } from "next/router";
-import { Affix } from "antd";
 import { AlignLeftOutlined } from "@ant-design/icons";
-import { Drawer } from "antd";
-import Link from "next/link";
-import { Menu } from "antd";
+import { Drawer, Grid, Input, List, Space } from "antd";
+import CommonButton from "components/common/Button";
+import {
+  default as CommonTextField,
+  default as TextField,
+} from "components/common/TextField";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import logo from "public/layout/image/logo.png";
+import cart from "public/layout/svg/cart.svg";
+import heart from "public/layout/svg/heart.svg";
+import profile from "public/layout/svg/profile.svg";
+import React from "react";
 
 const { Search } = Input;
 
 const Header = () => {
   const [isMobile, setIsMobile] = React.useState(false);
+  const { useBreakpoint } = Grid;
+  const screens = useBreakpoint();
+  const { push, asPath } = useRouter();
+
+  const isActive = (href) => {
+    return asPath === href || asPath.startsWith(`${href}/`);
+  };
 
   const navList = [
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
-    { name: "Shop" },
-    { name: "Event" },
-    { name: "Academy" },
-    { name: "School" },
+    { name: "Shop", url: "/shop" },
+    { name: "Event", url: "/event" },
+    { name: "Academy", url: "/academy" },
+    { name: "School", url: "/school" },
   ];
-  const { push } = useRouter();
 
   const navRoute = (url) => {
     push(url);
@@ -36,283 +40,93 @@ const Header = () => {
 
   return (
     <>
-      <div className="header">
-        <div style={{ width: "75%" }}>
-          <Space size={40}>
-            <Image src={logo} width={104} height={79} alt="logo" />
-            <Space size={26}>
-              {navList.map((t, index) => (
-                <TextField
-                  onClick={() => navRoute(t.url)}
-                  key={index}
-                  text={t.name}
-                />
-              ))}
+      {screens.lg ? (
+        <div className="header">
+          <div className="left-side">
+            <Space size={40}>
+              <Image src={logo} width={104} height={79} alt="logo" />
+              <Space size={26}>
+                {navList.map((t, index) => (
+                  <TextField
+                    className={`${
+                      isActive(t.url) ? "primary" : ""
+                    } header-text`}
+                    onClick={() => navRoute(t.url)}
+                    key={index}
+                    text={t.name}
+                  />
+                ))}
+              </Space>
+              <Search
+                placeholder="input search text"
+                // onSearch={onSearch}
+                enterButton
+              />
             </Space>
-            <Search
-              placeholder="input search text"
-              // onSearch={onSearch}
-              enterButton
-            />
-          </Space>
+          </div>
+          <div className="right-side">
+            <Space size={35}>
+              <Space>
+                <Image src={profile} width={20} height={20} alt="logo" />
+                <Image src={heart} width={20} height={20} alt="logo" />
+                <Image src={cart} width={20} height={20} alt="logo" />
+              </Space>
+              <Space direction={screens.xl ? "horizontal" : "vertical"}>
+                <CommonButton type="default" child={"Enquire Now"} />
+                <CommonButton child={"Sign Up"} />
+              </Space>
+            </Space>
+          </div>
         </div>
-        <Space size={35}>
+      ) : (
+        <Space className="pb-3 pt-3">
+          <AlignLeftOutlined
+            className="side-nav-icon"
+            onClick={() => setIsMobile(true)}
+          />
+          <Search
+            placeholder="input search text"
+            // onSearch={onSearch}
+            enterButton
+          />
+        </Space>
+      )}
+      <Drawer
+        title={<Image src={logo} width={104} height={79} alt="logo" />}
+        placement="left"
+        onClose={() => setIsMobile(false)}
+        open={isMobile}
+        width="50%"
+        className="side-drawer"
+      >
+        <List
+          dataSource={navList}
+          renderItem={(item) => (
+            <List.Item>
+              <List.Item.Meta
+                title={
+                  <a href={item.url}>
+                    <CommonTextField
+                      className={isActive(item.url) ? "primary" : ""}
+                      text={item.name}
+                    />
+                  </a>
+                }
+              />
+            </List.Item>
+          )}
+        />
+        <Space className="mt-3" size={[30, 10]} wrap>
           <Space>
             <Image src={profile} width={20} height={20} alt="logo" />
             <Image src={heart} width={20} height={20} alt="logo" />
             <Image src={cart} width={20} height={20} alt="logo" />
           </Space>
-          <Space>
+          <Space wrap>
             <CommonButton type="default" child={"Enquire Now"} />
             <CommonButton child={"Sign Up"} />
           </Space>
         </Space>
-      </div>
-      <Affix offsetTop={0} style={{ zIndex: 16 }}>
-        <div className="top-header">
-          <div className="header-wrapper">
-            <AlignLeftOutlined
-              className="side-nav-icon"
-              onClick={() => setIsMobile(true)}
-            />
-            {/* <div className="logo">
-             {IconLogo}
-             &nbsp; &nbsp;
-             {TextLogo}
-           </div> */}
-            {/* <Link href="/">
-           <div className="logo">
-             {IconLogo}
-             &nbsp; &nbsp;
-             {TextLogo}
-           </div>
-         </Link> */}
-          </div>
-        </div>
-      </Affix>
-      <Drawer
-        title=""
-        placement="left"
-        onClose={() => setIsMobile(false)}
-        visible={isMobile}
-        width="75%"
-        className="side-drawer"
-      >
-        <Menu
-          theme="dark"
-          // triggerSubMenuAction="click"
-          mode="inline"
-          // className={
-          //   currentRoute.includes("services")
-          //     ? "active-submenu submenu-container"
-          //     : "submenu-container"
-          // }
-          defaultSelectedKeys={["SubMenu"]}
-        >
-          <Menu.SubMenu
-            title="Services"
-            popupClassName="submenu-popup-class"
-            className="menu-container"
-            // popupOffset={[0, 0]}
-            key="SubMenu"
-          >
-            <Row gutter={[16, 16]}>
-              <Col xs={24} lg={8}>
-                <Link href="/services/botox-dermal-filler">
-                  <a
-                  // className={
-                  //   id === "botox-dermal-filler" ? "active" : "non-active"
-                  // }
-                  >
-                    <Image
-                      src="/icons/dermal-filler.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    Botox/Dermal Fillers
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link
-                  href="/services/bioidentical-hormone-replacement-therapy"
-                  className="submenu-link"
-                >
-                  <a
-                  // className={
-                  //   id?.includes("hormone-replacement")
-                  //     ? "active"
-                  //     : "non-active"
-                  // }
-                  >
-                    <Image
-                      src="/icons/hormonal-therapy.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    Bioidentical Hormone Replacement Therapy
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link href="/services/peptide-therapy" className="submenu-link">
-                  <a
-                    className={
-                      id?.includes("peptide") ? "active" : "non-active"
-                    }
-                  >
-                    <Image
-                      src="/icons/slim-body.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    Peptide Therapy (Sermorelin/ Ipamorelin)
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link
-                  href="/services/botox-dermal-filler-parties"
-                  className="submenu-link"
-                >
-                  <a
-                    className={
-                      id === "botox-dermal-filler-parties"
-                        ? "active"
-                        : "non-active"
-                    }
-                  >
-                    <Image
-                      src="/icons/dermal-filler-parties.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    Botox / Dermal Filler Parties
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link
-                  href="/services/tesosterone-therapy"
-                  className="submenu-link"
-                >
-                  <a
-                    className={
-                      id?.includes("tesosterone") ? "active" : "non-active"
-                    }
-                  >
-                    <Image
-                      src="/icons/hormonal-ring.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    {/* {HormonalRingIcon} */}
-                    Testosterone Therapy
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link
-                  href="/services/micronutrient-testing"
-                  className="submenu-link"
-                >
-                  <a
-                    className={
-                      id?.includes("micronutrient") ? "active" : "non-active"
-                    }
-                  >
-                    <Image
-                      src="/icons/flask.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    {/* {FlaskIcon} */}
-                    Mobile Labs/ Micronutrient Testing
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link href="/services/IV-therapy" className="submenu-link">
-                  <a
-                    className={
-                      id?.includes("IV-therapy") ? "active" : "non-active"
-                    }
-                  >
-                    <Image
-                      src="/icons/iv-bag.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    {/* {IVBagIcon} */}
-                    IV therapy
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link
-                  href="/services/medical-weight-loss"
-                  className="submenu-link"
-                >
-                  <a
-                    className={
-                      id?.includes("medical-weight-loss")
-                        ? "active"
-                        : "non-active"
-                    }
-                  >
-                    <Image
-                      src="/icons/diet.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    {/* {DietIcon} */}
-                    Medical Weight Loss
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link href="/services/xeo" className="submenu-link">
-                  <a className={id?.includes("xeo") ? "active" : "non-active"}>
-                    <Image
-                      src="/icons/xeo-icon.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    {/* {DietIcon} */}
-                    XEO
-                  </a>
-                </Link>
-              </Col>
-              <Col xs={24} lg={8}>
-                <Link href="/services/secret-RF" className="submenu-link">
-                  <a
-                    className={
-                      id?.includes("secret-RF") ? "active" : "non-active"
-                    }
-                  >
-                    <Image
-                      src="/icons/secretRf-icon.svg"
-                      className="submenu-icon mobile-icon"
-                      alt="icon"
-                      preview={false}
-                    />
-                    {/* {DietIcon} */}
-                    SecretRf
-                  </a>
-                </Link>
-              </Col>
-            </Row>
-          </Menu.SubMenu>
-        </Menu>
       </Drawer>
     </>
   );
