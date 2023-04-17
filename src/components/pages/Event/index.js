@@ -5,6 +5,7 @@ import AcademyPage from "./AcademyPage";
 import SchoolPage from "./SchoolPage";
 import CampsPage from "./CampsPage";
 import CommunityPage from "./CommunityPage";
+import BirthdayPage from "./BirthdayPage";
 
 const Event = (props) => {
   const router = useRouter();
@@ -21,7 +22,7 @@ const Event = (props) => {
       case "community":
         return <CommunityPage />;
       case "birthday":
-        return <CommonTextField text={"birthday"} />;
+        return <BirthdayPage />;
       case "camps":
         return <CampsPage text={"camps"} />;
     }

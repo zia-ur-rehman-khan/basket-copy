@@ -15,7 +15,11 @@ h1.ant-typography {
     }
 }
 
-
+.heading-parent {
+    .black {
+        color: @secondary-color !important;
+    }
+}
 
 h2.ant-typography {
     font-weight: 600;
@@ -37,6 +41,30 @@ h2.ant-typography {
 
 
 }
+
+
+h3.ant-typography {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+
+
+
+    @media @sm {
+        font-size: 35px;
+        line-height: 50px;
+
+    }
+
+    @media @xs {
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+
+}
+
+
 
 h4.ant-typography {
     font-weight: 600;

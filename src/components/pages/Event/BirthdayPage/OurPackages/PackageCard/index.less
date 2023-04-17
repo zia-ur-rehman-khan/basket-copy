@@ -1,0 +1,24 @@
+.package-card {
+    background: @light-grey;
+    transition: box-shadow .3s;
+
+    &:hover {
+        box-shadow: 0 0 11px @primary-color;
+    }
+}
+
+.package-color-card {
+    background: @bg-gray-color;
+    transition: box-shadow .3s;
+
+    button {
+        background: @light-grey !important;
+        border-color: @light-grey !important;
+        color: @bg-gray-color !important;
+    }
+
+    &:hover {
+        box-shadow: 0 0 11px @primary-color;
+
+    }
+}
