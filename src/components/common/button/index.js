@@ -5,7 +5,7 @@ const CommonButton = ({
   child,
   classname,
   topClass,
-  width,
+  width = "100%",
   height,
   background,
   borderRadius = "6px",
