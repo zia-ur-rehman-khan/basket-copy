@@ -1,12 +1,19 @@
 import Image from "next/image";
 import logo from "public/layout/image/logo.png";
 import linkdin from "public/layout/svg/linkdin.svg";
+import twitter from "public/layout/svg/twitter.svg";
+import instagram from "public/layout/svg/instagram.svg";
+import tiktok from "public/layout/svg/tiktok.svg";
+import facebook from "public/layout/svg/facebook.svg";
 
 import { Col, List, Row, Space } from "antd";
 import CommonTextField from "components/common/TextField";
 import React from "react";
+import { Input } from "antd";
+import CommonButton from "components/common/Button";
 
 const Footer = () => {
+  const socialIcons = [linkdin, twitter, instagram, tiktok, facebook];
   const data = [
     {
       title: "Home",
@@ -87,8 +94,8 @@ const Footer = () => {
   return (
     <Row justify="space-around" className="bg-grey p-5 radius" gutter={[0, 50]}>
       <Col
-        xxl={{ span: 5 }}
-        xl={{ span: 5 }}
+        xxl={{ span: 6 }}
+        xl={{ span: 6 }}
         lg={{ span: 10 }}
         md={{ span: 16 }}
         sm={{ span: 24 }}
@@ -98,12 +105,9 @@ const Footer = () => {
 
           <CommonTextField text="iBall is a Basketball Foundation specializing in training, development coaching and Basketball themed events management (Birthday’s, Camps and tournaments)" />
           <Space size={0}>
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
+            {socialIcons.map((t, index) => (
+              <Image key={index} src={t} width={32} height={32} alt="logo" />
+            ))}
           </Space>
         </Space>
       </Col>
@@ -223,13 +227,20 @@ const Footer = () => {
         sm={{ span: 12 }}
         xs={{ span: 24 }}
       >
-        <CommonTextField
-          className={"pb-2"}
-          text={"Newsletter"}
-          fontSize={"21px"}
-          fontWeight={"600"}
-        />
-        <CommonTextField text={"Subscribe To our Newsletter."} />
+        <Space direction="vertical">
+          <CommonTextField
+            className={"pb-2"}
+            text={"Newsletter"}
+            fontSize={"21px"}
+            fontWeight={"600"}
+          />
+          <CommonTextField text={"Subscribe To our Newsletter."} />
+          <Input
+            placeholder="Enter Your Email"
+            // onSearch={onSearch}
+          />
+          <CommonButton child={"submit"} classname={"black"} width={"100%"} />
+        </Space>
       </Col>
     </Row>
   );

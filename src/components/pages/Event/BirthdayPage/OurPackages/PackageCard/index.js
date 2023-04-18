@@ -11,7 +11,7 @@ const PacakgeCard = ({ data }) => {
 
   return (
     <div
-      className={`radius p-3  c-pointer ${
+      className={`radius c-pointer ${
         type == "Most Popular" ? "package-color-card" : "package-card"
       }`}
       style={{

@@ -22,8 +22,9 @@ const BirthdayPage = () => {
           "Make Your Child’s Day with one of our Fantastic Party Packages With great packages to suit all budgets we guarantee to make your child’s day a very special one"
         }
       />
-
-      <OurPackages />
+      <div className="common-padding">
+        <OurPackages />
+      </div>
 
       <Offer />
 

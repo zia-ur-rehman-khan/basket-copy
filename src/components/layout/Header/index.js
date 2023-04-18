@@ -58,7 +58,7 @@ const Header = () => {
                 ))}
               </Space>
               <Search
-                placeholder="input search text"
+                placeholder="search"
                 // onSearch={onSearch}
                 enterButton
               />
