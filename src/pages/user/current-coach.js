@@ -11,8 +11,16 @@ import coachSeven from '../../public/profile/coach7.png'
 import coachEight from '../../public/profile/coach8.png'
 import coachNine from '../../public/profile/coach9.png'
 import coachTen from '../../public/profile/coach10.png'
+import vidOne from '../../public/profile/coachvid1.png'
+import vidTwo from '../../public/profile/coachvid2.png'
+import vidThree from '../../public/profile/coachvid3.png'
+import vidFour from '../../public/profile/coachvid4.png'
+import thumbOne from '../../public/profile/thumb1.png'
+import thumbTwo from '../../public/profile/thumb2.png'
+import thumbThree from '../../public/profile/thumb3.png'
+import thumbFour from '../../public/profile/thumb4.png'
 import CoachCard from 'components/dashboard/CoachCard';
-
+import VideoCard from 'components/dashboard/VideoCard';
 
 const coachInfo = [
     {
@@ -76,6 +84,80 @@ const coachInfo = [
         price: 250,
     },
 ]
+const coachVids = [
+    {
+        id: 1,
+        img: vidOne,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbOne,
+
+    },
+    {
+        id: 2,
+        img: vidTwo,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbTwo,
+
+    },
+    {
+        id: 3,
+        img: vidThree,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbThree,
+
+    },
+    {
+        id: 4,
+        img: vidFour,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbFour,
+
+    },
+    {
+        id: 5,
+        img: vidOne,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbOne,
+
+    },
+    {
+        id: 6,
+        img: vidTwo,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbTwo,
+
+    },
+    {
+        id: 7,
+        img: vidThree,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbThree,
+
+    },
+    {
+        id: 8,
+        img: vidFour,
+        title: 'Lorem ipsum dolor sit amet',
+        text: 'Lorem ipsum dolor sit amet, Duis aute irure dolor in reprehender itcons',
+        name: 'Becky Sutton',
+        thumb: thumbFour,
+
+    },
+]
 
 
 const items = [
@@ -87,7 +169,7 @@ const items = [
     {
         key: '2',
         label: `Video Tutorials`,
-        children: `Content of Tab Pane 2`,
+        children: coachVids.map(card => <VideoCard image={card.img} title={card.title} text={card.text} name={card.name} thumb={card.thumb}/>),
     },
 ];
 
