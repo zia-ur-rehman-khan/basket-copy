@@ -2,9 +2,22 @@ import { Col, Row, Space } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import CommonTextField from "components/common/TextField";
+import { useRouter } from "next/router";
 import React from "react";
 
 const MemberShip = () => {
+  const { query, push } = useRouter();
+
+  const handelRoute = () => {
+    push({
+      pathname: "/register",
+      query: {
+        t: "payment",
+        m: "member",
+      },
+    });
+  };
+
   return (
     <Row
       justify="space-between"
@@ -45,7 +58,11 @@ const MemberShip = () => {
         md={{ span: 24 }}
         sm={{ span: 24 }}
       >
-        <CommonButton width={"200px"} child="Buy Membership" />
+        <CommonButton
+          width={"200px"}
+          child="Buy Membership"
+          onClick={handelRoute}
+        />
       </Col>
     </Row>
   );

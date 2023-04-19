@@ -8,16 +8,27 @@ import CommonTextField from "components/common/TextField";
 import { Space } from "antd";
 import { useRouter } from "next/router";
 const Thanks = () => {
-  const { push } = useRouter();
+  const { push, query } = useRouter();
+  const { m } = query;
 
   const handelRoute = () => {
-    push("/event");
+    if (m) {
+      push("/about");
+    } else {
+      push("/event");
+    }
   };
 
   return (
     <div className="bg-grey common-padding radius d-flex flex-column align-items-center">
       <Image src={thanksImage} alt="Thank You" priority={true} />
-      <CommonHeading heading={"Thanks For Registering"} />
+      <CommonHeading
+        className={"mb-3"}
+        level={2}
+        heading={`Thanks For ${
+          m === "member" ? "Buying Membership" : "Registering"
+        }`}
+      />
       <CommonTextField
         textAlign={"center"}
         text="Donec ac odio tempor orci dapibus. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Viverra adipiscing at in tellus integer feugiat scelerisque varius. Eu mi bibendum neque egestas congue quisque egestas diam."

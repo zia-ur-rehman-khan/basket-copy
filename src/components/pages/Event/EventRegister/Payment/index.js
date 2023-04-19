@@ -13,7 +13,7 @@ import React from "react";
 const Payment = () => {
   const { query, push } = useRouter();
 
-  const handelRegister = () => {
+  const handelRoute = () => {
     // if we use replace so its not make history of query
     push({
       query: {
@@ -80,24 +80,8 @@ const Payment = () => {
           <CommonInputField placeholder="Enter Your CVC" type={"number"} />
         </Col>
       </Row>
-      <div className="d-flex justify-content-between">
-        <CommonTextField opacity="0.5" text={"I Prefer to be Contacted by"} />
-        <Radio.Group>
-          <Radio value={1}>
-            <CommonTextField opacity="0.5" text={"Email"} />
-          </Radio>
-          <Radio value={2}>
-            <CommonTextField opacity="0.5" text={"Phone"} />
-          </Radio>
-        </Radio.Group>
-      </div>
-      <div className="d-flex justify-content-between">
-        <CommonTextField opacity="0.5" text={"Agree to Terms & Conditions"} />
-        <Radio.Group>
-          <Radio value={1}></Radio>
-        </Radio.Group>
-      </div>
-      <CommonButton child={"submit"} onClick={handelRegister} />
+
+      <CommonButton child={"Submit Detail"} onClick={handelRoute} />
     </Space>
   );
 };

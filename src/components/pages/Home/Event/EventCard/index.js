@@ -15,7 +15,7 @@ const EventCard = ({ src }) => {
 
   const { type } = query;
 
-  const cardDetailes = (t) => {
+  const handelRoute = (t) => {
     push(
       {
         pathname: "/event/[type]/[id]",
@@ -27,7 +27,7 @@ const EventCard = ({ src }) => {
 
   return (
     <CommonCard
-      onClick={() => cardDetailes(10)}
+      onClick={() => handelRoute(10)}
       child={
         <>
           <div>

@@ -13,7 +13,7 @@ import React from "react";
 const Register = () => {
   const { replace, query, push } = useRouter();
 
-  const handelRegister = () => {
+  const handelRoute = () => {
     push({
       query: {
         ...query,
@@ -124,7 +124,7 @@ const Register = () => {
           <Radio value={1}></Radio>
         </Radio.Group>
       </div>
-      <CommonButton child={"submit"} onClick={handelRegister} />
+      <CommonButton child={"submit"} onClick={handelRoute} />
     </Space>
   );
 };
