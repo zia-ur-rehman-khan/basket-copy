@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import thanksImage from "public/event/thanks.png";
+import thanksMember from "public/event/thanksMember.png";
 import CommonHeading from "components/common/Heading";
 import CommonInputField from "components/common/Input";
 import CommonButton from "components/common/Button";
@@ -12,16 +13,24 @@ const Thanks = () => {
   const { m } = query;
 
   const handelRoute = () => {
-    if (m) {
-      push("/about");
-    } else {
-      push("/event");
-    }
+    push("/event");
   };
 
   return (
     <div className="bg-grey common-padding radius d-flex flex-column align-items-center">
-      <Image src={thanksImage} alt="Thank You" priority={true} />
+      <Image
+        src={m === "member" ? thanksMember : thanksImage}
+        alt="Thank You"
+        priority={true}
+      />
+      {m && (
+        <CommonTextField
+          className={"mt-3"}
+          text="Order ID #31654646"
+          letterSpacing={"3px"}
+          fontSize={"20px"}
+        />
+      )}
       <CommonHeading
         className={"mb-3"}
         level={2}
