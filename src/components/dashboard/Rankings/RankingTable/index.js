@@ -94,7 +94,7 @@ const RankingTable = () => {
             <Column title="Name" dataIndex="name" key="name" render={
                 (_, record) => (
                     <div className='table__name'>
-                        <Image src={record.image} />
+                        <Image src={record.image} alt=" "/>
                         <p>{record.name}</p>
                     </div>
                 )

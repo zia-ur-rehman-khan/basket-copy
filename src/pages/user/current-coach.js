@@ -158,18 +158,16 @@ const coachVids = [
 
     },
 ]
-
-
-const items = [
+const tabItems = [
     {
         key: '1',
         label: `Regular Coaching`,
-        children: coachInfo.map(card => <CoachCard image={card.img} name={card.name} price={card.price} />),
+        children: coachInfo.map(card => <CoachCard key={card.id} image={card.img} name={card.name} price={card.price} />),
     },
     {
         key: '2',
         label: `Video Tutorials`,
-        children: coachVids.map(card => <VideoCard image={card.img} title={card.title} text={card.text} name={card.name} thumb={card.thumb}/>),
+        children: coachVids.map(card => <VideoCard key={card.id} id={card.id} image={card.img} title={card.title} text={card.text} name={card.name} thumb={card.thumb} />),
     },
 ];
 
@@ -177,7 +175,7 @@ const CurrentCoach = () => {
     return (
         <UserLayout>
             <DashboardTitle title="Current Coaching" />
-            <Tabs defaultActiveKey="1" items={items} />
+            <Tabs defaultActiveKey="1" items={tabItems} />
         </UserLayout>
     )
 }
