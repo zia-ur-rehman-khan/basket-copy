@@ -10,7 +10,7 @@ function Sidebar() {
   const user = useRouter();
 
   const isAdmin = admin.pathname.startsWith('/admin')
-  const isUser = admin.pathname.startsWith('/user')
+  const isUser = user.pathname.startsWith('/user')
   const isActive = useRouter().pathname
 
   return (

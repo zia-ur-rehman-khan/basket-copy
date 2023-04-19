@@ -13,7 +13,7 @@ export const coachNav = [
         linkText: 'Personal Information', route: '/user'
     },
     {
-        linkText: 'Change Password', route: '/'
+        linkText: 'Change Password', route: '/user/change-password'
     },
     {
         linkText: 'Ranking', route: '/'
