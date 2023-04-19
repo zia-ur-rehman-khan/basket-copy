@@ -2,7 +2,14 @@ import { Col, Row } from "antd";
 import Image from "next/image";
 import React from "react";
 
-const ImageContent = ({ src, content, className, responsive, component }) => {
+const ImageContent = ({
+  src,
+  content,
+  className,
+  responsive,
+  component,
+  children,
+}) => {
   return (
     <div className="common-padding">
       <Row
@@ -31,7 +38,7 @@ const ImageContent = ({ src, content, className, responsive, component }) => {
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
-          {content}
+          {content || children}
         </Col>
       </Row>
     </div>
