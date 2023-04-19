@@ -8,13 +8,11 @@ const ProfileThumb = ({ image, name, username }) => {
     return (
         <div className='profile__thumb'>
             <Row align="middle" gutter={20}>
-                <Col span={3}>
-                    <Image src={image} />
-                </Col>
-                <Col span={9}>
+                <Image src={image} />
+                <div style={{ marginLeft : '10px' }}>
                     <h4 className='name'>{name}</h4>
                     <p className='username'>{username}</p>
-                </Col>
+                </div>
             </Row>
         </div>
     )

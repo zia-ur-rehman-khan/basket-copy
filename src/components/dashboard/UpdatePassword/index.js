@@ -9,7 +9,7 @@ const UpdatePassword = () => {
                 <Row gutter={20}>
                     <Col span={12}>
                         <Form.Item
-                            name="first-name"
+                            name="Old Password"
                             rules={[
                                 {
                                     required: true,
@@ -21,7 +21,7 @@ const UpdatePassword = () => {
                     </Col>
                     <Col span={12}>
                         <Form.Item
-                            name="last-name"
+                            name="New Password"
                             rules={[
                                 {
                                     required: true,
@@ -33,7 +33,7 @@ const UpdatePassword = () => {
                     </Col>
                     <Col span={12}>
                         <Form.Item
-                            name="phone-number"
+                            name="Confirm Password"
                             rules={[
                                 {
                                     required: true,

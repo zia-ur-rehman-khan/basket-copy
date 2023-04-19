@@ -16,7 +16,7 @@ export const coachNav = [
         linkText: 'Change Password', route: '/user/change-password'
     },
     {
-        linkText: 'Ranking', route: '/'
+        linkText: 'Ranking', route: '/user/ranking'
     },
     {
         linkText: 'Current Coach', route: '/'
