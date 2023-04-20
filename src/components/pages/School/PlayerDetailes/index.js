@@ -52,22 +52,14 @@ const PlayerDetailes = () => {
               children: (
                 <Space size={40} direction="vertical">
                   <Space className="justify-content-between w-100" wrap={true}>
-                    <div className="bg-grey radius  points">
-                      <CommonTextField text={"Points Per Game"} />
-                      <Divider style={{ borderColor: "#0000004D" }} />
+                    {new Array(3).fill(null).map((_t, index) => (
+                      <div className="bg-grey radius  points" key={index}>
+                        <CommonTextField text={"Points Per Game"} />
+                        <Divider style={{ borderColor: "#0000004D" }} />
 
-                      <CommonHeading level={2} heading={"22"} />
-                    </div>
-                    <div className="bg-grey radius  points">
-                      <CommonTextField text={"Points Per Game"} />
-                      <Divider style={{ borderColor: "#0000004D" }} />
-                      <CommonHeading level={2} heading={"22"} />
-                    </div>
-                    <div className="bg-grey radius  points">
-                      <CommonTextField text={"Points Per Game"} />
-                      <Divider style={{ borderColor: "#0000004D" }} />
-                      <CommonHeading level={2} heading={"22"} />
-                    </div>
+                        <CommonHeading level={2} heading={"22"} />
+                      </div>
+                    ))}
                   </Space>
                   <CommonTextField text={"Seasons Highlights"} />
                   <Image src={detail} alt="detail" />
