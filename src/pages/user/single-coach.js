@@ -1,9 +1,11 @@
+// Components 
 import CoachSingle from 'components/dashboard/CoachSingle'
 import DashboardTitle from 'components/dashboard/Title'
 import UserLayout from 'components/dashboard/UserLayout'
-import singleCoach from 'public/profile/single-coach.jpg'
+
+// Image 
 import thumbOne from 'public/profile/thumb1.png'
-import React from 'react'
+import singleCoach from 'public/profile/single-coach.jpg'
 
 const coachVids = [
     {

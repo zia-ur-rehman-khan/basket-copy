@@ -1,10 +1,15 @@
+// Ant D 
 import { Col, Row } from 'antd'
+
+// Components
 import ProfileThumb from 'components/dashboard/ProfileThumb'
 import RankingTable from 'components/dashboard/Rankings/RankingTable'
+import RankingHighlight from 'components/dashboard/Rankings/RankingHighlight'
 import DashboardTitle from 'components/dashboard/Title'
 import UserLayout from 'components/dashboard/UserLayout'
-import rankingThumb from '../../public/profile/user-thumb.png'
-import RankingHighlight from 'components/dashboard/Rankings/RankingHighlight'
+
+// Images 
+import rankingThumb from 'public/profile/user-thumb.png'
 
 const Ranking = () => {
     return (

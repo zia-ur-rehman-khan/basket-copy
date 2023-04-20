@@ -1,11 +1,16 @@
-import React from 'react'
+// Components 
 import UserLayout from 'components/dashboard/UserLayout'
 import DashboardTitle from 'components/dashboard/Title'
 import ProfileThumb from 'components/dashboard/ProfileThumb'
-import userAvatar from '../../public/profile/user-avatar.png'
 import Information from 'components/dashboard/Information'
 import CommonButton from 'components/common/button'
+
+// React Icons 
+import userAvatar from '../../public/profile/user-avatar.png'
+
+// Ant D
 import { Row, Col } from 'antd'
+
 function UserDashboard() {
   return (
     <UserLayout>

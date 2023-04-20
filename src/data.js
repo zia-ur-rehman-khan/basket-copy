@@ -22,7 +22,7 @@ export const coachNav = [
         linkText: 'Current Coach', route: '/user/current-coach'
     },
     {
-        linkText: 'Calendar', route: '/'
+        linkText: 'Calendar', route: '/user/calendar'
     },
     {
         linkText: 'Videos', route: '/'
@@ -90,45 +90,45 @@ export const userNav = [
 
 export const personalInfo = [
     {
-        text: 'First Name', labelValue: 'Herbert', ico: <FaUserAlt/>
+        text: 'First Name', labelValue: 'Herbert', ico: <FaUserAlt />
     },
     {
-        text: 'Last Name:', labelValue: 'Douglas', ico: <FaUserAlt/>
+        text: 'Last Name:', labelValue: 'Douglas', ico: <FaUserAlt />
     },
     {
-        text: 'Phone:', labelValue: '+1-234-567-890', ico: <BsTelephoneFill/>
+        text: 'Phone:', labelValue: '+1-234-567-890', ico: <BsTelephoneFill />
     },
     {
-        text: 'Email', labelValue: 'Iball@gmail.com', ico: <BsEnvelopeFill/>
+        text: 'Email', labelValue: 'Iball@gmail.com', ico: <BsEnvelopeFill />
     },
     {
-        text: 'Address', labelValue: '347 Hickory Rd.Glen Burnie, MD 21060', ico: <FaMapMarkerAlt/>
+        text: 'Address', labelValue: '347 Hickory Rd.Glen Burnie, MD 21060', ico: <FaMapMarkerAlt />
     },
     {
-        text: 'Region', labelValue: 'North West', ico: <FaMapMarked/>
+        text: 'Region', labelValue: 'North West', ico: <FaMapMarked />
     },
     {
-        text: 'Zip', labelValue: '99501', ico: <FaMapMarked/>
+        text: 'Zip', labelValue: '99501', ico: <FaMapMarked />
     },
     {
-        text: 'Select State', labelValue: 'California', ico: <FaMapMarked/>
+        text: 'Select State', labelValue: 'California', ico: <FaMapMarked />
     },
     {
-        text: 'City', labelValue: 'New York', ico: <BsBuildings/>
+        text: 'City', labelValue: 'New York', ico: <BsBuildings />
     },
 ]
 
 export const schollInfo = [
     {
-        text: 'School Name', labelValue: 'Silverleaf College', ico: <FaSchool/>
+        text: 'School Name', labelValue: 'Silverleaf College', ico: <FaSchool />
     },
     {
-        text: 'Grade', labelValue: 'Grade 11', ico: <FaSchool/>
+        text: 'Grade', labelValue: 'Grade 11', ico: <FaSchool />
     },
     {
-        text: 'Campus', labelValue: 'Campus 2', ico: <FaSchool/>
+        text: 'Campus', labelValue: 'Campus 2', ico: <FaSchool />
     },
     {
-        text: 'City', labelValue: 'New York', ico: <FaSchool/>
+        text: 'City', labelValue: 'New York', ico: <FaSchool />
     },
 ]

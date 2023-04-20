@@ -1,24 +1,29 @@
+// Components 
 import DashboardTitle from 'components/dashboard/Title'
 import UserLayout from 'components/dashboard/UserLayout'
+
+// Ant D 
 import { Tabs } from 'antd';
-import coachOne from '../../public/profile/coach1.png'
-import coachTwo from '../../public/profile/coach2.png'
-import coachThree from '../../public/profile/coach3.png'
-import coachFour from '../../public/profile/coach4.png'
-import coachFive from '../../public/profile/coach5.png'
-import coachSix from '../../public/profile/coach6.png'
-import coachSeven from '../../public/profile/coach7.png'
-import coachEight from '../../public/profile/coach8.png'
-import coachNine from '../../public/profile/coach9.png'
-import coachTen from '../../public/profile/coach10.png'
-import vidOne from '../../public/profile/coachvid1.png'
-import vidTwo from '../../public/profile/coachvid2.png'
-import vidThree from '../../public/profile/coachvid3.png'
-import vidFour from '../../public/profile/coachvid4.png'
-import thumbOne from '../../public/profile/thumb1.png'
-import thumbTwo from '../../public/profile/thumb2.png'
-import thumbThree from '../../public/profile/thumb3.png'
-import thumbFour from '../../public/profile/thumb4.png'
+
+// Images for tabs 
+import coachOne from 'public/profile/coach1.png'
+import coachTwo from 'public/profile/coach2.png'
+import coachThree from 'public/profile/coach3.png'
+import coachFour from 'public/profile/coach4.png'
+import coachFive from 'public/profile/coach5.png'
+import coachSix from 'public/profile/coach6.png'
+import coachSeven from 'public/profile/coach7.png'
+import coachEight from 'public/profile/coach8.png'
+import coachNine from 'public/profile/coach9.png'
+import coachTen from 'public/profile/coach10.png'
+import vidOne from 'public/profile/coachvid1.png'
+import vidTwo from 'public/profile/coachvid2.png'
+import vidThree from 'public/profile/coachvid3.png'
+import vidFour from 'public/profile/coachvid4.png'
+import thumbOne from 'public/profile/thumb1.png'
+import thumbTwo from 'public/profile/thumb2.png'
+import thumbThree from 'public/profile/thumb3.png'
+import thumbFour from 'public/profile/thumb4.png'
 import CoachCard from 'components/dashboard/CoachCard';
 import VideoCard from 'components/dashboard/VideoCard';
 
