@@ -7,11 +7,8 @@ import CampsPage from "./CampsPage";
 import CommunityPage from "./CommunityPage";
 import BirthdayPage from "./BirthdayPage";
 
-const Event = (props) => {
-  const router = useRouter();
-  const { type } = router.query;
-
-  console.log(props, "params");
+const Event = ({ query }) => {
+  const { type } = query;
 
   const _render = () => {
     switch (type) {
