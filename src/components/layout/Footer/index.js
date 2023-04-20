@@ -18,15 +18,19 @@ const Footer = () => {
   const data = [
     {
       title: "Home",
+      url: "/",
     },
     {
       title: "About",
+      url: "/about",
     },
     {
       title: "Shop",
+      url: "/shop",
     },
     {
       title: "Event",
+      url: "/event",
     },
     {
       title: "Contact Us",
@@ -47,15 +51,18 @@ const Footer = () => {
     },
     {
       title: "Our Staff",
+      url: "/team",
     },
     {
       title: "Our Achievements",
     },
     {
       title: "Terms & Condition",
+      url: "/terms-conditions",
     },
     {
       title: "Privacy Policy",
+      url: "/privacy-policy",
     },
   ];
 
@@ -76,19 +83,19 @@ const Footer = () => {
 
   const data4 = [
     {
-      title: "Company",
-    },
-    {
       title: "Coaches",
     },
     {
       title: "Schools",
+      url: "/school",
     },
     {
       title: "I ball Players",
+      url: "/about",
     },
     {
       title: "Partners & Sponsors",
+      url: "/partners-sponsers",
     },
   ];
 
@@ -132,7 +139,7 @@ const Footer = () => {
             <List.Item>
               <List.Item.Meta
                 title={
-                  <a href="https://ant.design">
+                  <a href={item.url}>
                     <CommonTextField text={item.title} />
                   </a>
                 }
@@ -162,7 +169,7 @@ const Footer = () => {
             <List.Item>
               <List.Item.Meta
                 title={
-                  <a href="https://ant.design">
+                  <a href={item.url}>
                     <CommonTextField text={item.title} />
                   </a>
                 }
@@ -191,7 +198,7 @@ const Footer = () => {
             <List.Item>
               <List.Item.Meta
                 title={
-                  <a href="https://ant.design">
+                  <a href={item.url}>
                     <CommonTextField text={item.title} />
                   </a>
                 }
@@ -211,7 +218,7 @@ const Footer = () => {
             <List.Item>
               <List.Item.Meta
                 title={
-                  <a href="https://ant.design">
+                  <a href={item.url}>
                     <CommonTextField text={item.title} />
                   </a>
                 }
