@@ -11,6 +11,7 @@ import CommonTextField from "components/common/TextField";
 import React from "react";
 import { Input } from "antd";
 import CommonButton from "components/common/Button";
+import CommonInputField from "components/common/Input";
 
 const Footer = () => {
   const socialIcons = [linkdin, twitter, instagram, tiktok, facebook];
@@ -235,9 +236,10 @@ const Footer = () => {
             fontWeight={"600"}
           />
           <CommonTextField text={"Subscribe To our Newsletter."} />
-          <Input
+          <CommonInputField
             placeholder="Enter Your Email"
-            // onSearch={onSearch}
+            className="white"
+            height={"35px"}
           />
           <CommonButton child={"submit"} classname={"black"} width={"100%"} />
         </Space>

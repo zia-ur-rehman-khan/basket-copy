@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 const School = () => {
   const { push } = useRouter();
   const handelRoute = () => {
-    push("/school-register");
+    push("/school/school-register");
   };
 
   return (

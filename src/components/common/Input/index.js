@@ -21,13 +21,13 @@ const CommonInputField = ({
   return (
     <div>
       <Input
-        style={{ height: height }}
+        style={{ height }}
         type={type}
         name={name}
         addonBefore={addonBefore}
         showCount={showCount}
         maxLength={maxLength}
-        className={`ad-input  ${className}`}
+        className={`ad-input  ${className || ""}`}
         placeholder={placeholder}
         onChange={onChange}
         onBlur={onBlur}
