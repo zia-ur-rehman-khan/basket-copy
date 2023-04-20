@@ -39,7 +39,7 @@ const SchoolRegister = () => {
   return (
     <>
       <CommonBanner src={banner} heading={"School member Registration"} />
-      <Row gutter={[30, 30]} className="common-padding">
+      <Row gutter={[50, 30]} className="common-padding">
         <Col
           xxl={{ span: 12 }}
           xl={{ span: 12 }}
