@@ -6,6 +6,7 @@ import ImageContent from "components/common/ImageWithContent";
 import CommonTextField from "components/common/TextField";
 import contentImage from "public/school/schoolContentImage.png";
 import banner from "public/school/schoolBanner.png";
+
 import React from "react";
 import OurTeam from "components/pages/Team/OurTeam";
 import WorkWith from "./WorkWith";

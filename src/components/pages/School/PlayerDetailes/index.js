@@ -7,6 +7,7 @@ import CommonTextField from "components/common/TextField";
 import { Space } from "antd";
 import { Tabs } from "antd";
 import { Divider } from "antd";
+import detail from "public/school/playerDetailImage.png";
 
 const PlayerDetailes = () => {
   return (
@@ -49,35 +50,38 @@ const PlayerDetailes = () => {
               label: `Tab ${id}`,
               key: id,
               children: (
-                <Space size={40}>
-                  <Space
-                    align="center"
-                    direction="vertical"
-                    className="bg-grey radius p-3"
-                  >
-                    <CommonTextField text={"Points Per Game"} />
-                    <Divider />
-                    <CommonHeading level={2} heading={"22"} />
-                  </Space>
-                  <Space
-                    align="center"
-                    direction="vertical"
-                    className="bg-grey radius p-3"
-                  >
-                    <CommonTextField text={"Points Per Game"} />
-                    <Divider />
-                    <CommonHeading level={2} heading={"22"} />
-                  </Space>
-                  <Space
-                    align="center"
-                    direction="vertical"
-                    className="bg-grey radius p-3"
-                  >
-                    <CommonTextField text={"Points Per Game"} />
-                    <Divider />
-                    <CommonHeading level={2} heading={"22"} />
+                <Space size={40} direction="vertical">
+                  <Space className="justify-content-between w-100" wrap={true}>
+                    <Space
+                      align="center"
+                      direction="vertical"
+                      className="bg-grey radius p-4"
+                    >
+                      <CommonTextField text={"Points Per Game"} />
+                      <Divider />
+                      <CommonHeading level={2} heading={"22"} />
+                    </Space>
+                    <Space
+                      align="center"
+                      direction="vertical"
+                      className="bg-grey radius p-4"
+                    >
+                      <CommonTextField text={"Points Per Game"} />
+                      <Divider />
+                      <CommonHeading level={2} heading={"22"} />
+                    </Space>
+                    <Space
+                      align="center"
+                      direction="vertical"
+                      className="bg-grey radius p-4"
+                    >
+                      <CommonTextField text={"Points Per Game"} />
+                      <Divider />
+                      <CommonHeading level={2} heading={"22"} />
+                    </Space>
                   </Space>
                   <CommonTextField text={"Seasons Highlights"} />
+                  <Image src={detail} alt="detail" />
                 </Space>
               ),
             };

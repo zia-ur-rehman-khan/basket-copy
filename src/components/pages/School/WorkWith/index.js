@@ -12,6 +12,9 @@ import card4 from "public/school/card4.png";
 
 import React from "react";
 import WorkWithCard from "./card";
+import { Select } from "antd";
+import { Space } from "antd";
+import CommonSelect from "components/common/Select";
 
 const WorkWith = () => {
   const array = [
@@ -31,9 +34,20 @@ const WorkWith = () => {
 
   return (
     <div>
-      <div className="d-flex justify-content-between align-items-center mt-5">
+      <div className="d-flex justify-content-between align-items-center mt-5 flex-wrap">
         <Commonheading level={2} heading={"Who We Work With"} />
-        <CommonTextField text={"Coach Region:"} />
+        <Space>
+          <CommonTextField text={"Coach Region:"} />
+          <CommonSelect
+            defaultValue="lucy"
+            width={120}
+            options={[
+              { value: "jack", label: "Jack" },
+              { value: "lucy", label: "Lucy" },
+              { value: "Yiminghe", label: "yiminghe" },
+            ]}
+          />
+        </Space>
       </div>
       <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (

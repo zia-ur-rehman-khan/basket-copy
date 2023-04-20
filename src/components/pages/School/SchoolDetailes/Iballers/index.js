@@ -10,6 +10,7 @@ import React from "react";
 import IballerCard from "./IballerCard";
 import { Input } from "antd";
 import { Space } from "antd";
+import CommonSelect from "components/common/Select";
 
 const { Search } = Input;
 
@@ -48,10 +49,32 @@ const Iballers = () => {
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
-          <Space size={30} wrap={true}>
+          <Space size={20} wrap={true}>
             <Search placeholder="Search by Name" enterButton />
-            <CommonTextField text={"Coach Region:"} />
-            <CommonTextField text={"Age:"} />
+            <Space>
+              <CommonTextField text={"Coach Region:"} />
+              <CommonSelect
+                defaultValue="lucy"
+                width={120}
+                options={[
+                  { value: "jack", label: "Jack" },
+                  { value: "lucy", label: "Lucy" },
+                  { value: "Yiminghe", label: "yiminghe" },
+                ]}
+              />
+            </Space>
+            <Space>
+              <CommonTextField text={"Age:"} />
+              <CommonSelect
+                defaultValue="lucy"
+                width={120}
+                options={[
+                  { value: "jack", label: "Jack" },
+                  { value: "lucy", label: "Lucy" },
+                  { value: "Yiminghe", label: "yiminghe" },
+                ]}
+              />
+            </Space>
           </Space>
         </Col>
       </Row>
@@ -68,6 +91,11 @@ const Iballers = () => {
             <IballerCard src={_t} />
           </Col>
         ))}
+        <CommonTextField
+          text="View More"
+          color="#4DC3D1"
+          className={"c-pointer"}
+        />
       </Row>
     </div>
   );
