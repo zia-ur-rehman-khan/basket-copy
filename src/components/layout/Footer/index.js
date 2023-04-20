@@ -197,13 +197,7 @@ const Footer = () => {
           dataSource={data3}
           renderItem={(item) => (
             <List.Item>
-              <List.Item.Meta
-                title={
-                  <a href={item.url}>
-                    <CommonTextField text={item.title} />
-                  </a>
-                }
-              />
+              <List.Item.Meta title={<CommonTextField text={item.title} />} />
             </List.Item>
           )}
         />
