@@ -5,11 +5,11 @@ import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
 
-const WorkWithCard = ({ src }) => {
+const WorkWithCard = ({ src, partner }) => {
   const { push } = useRouter();
 
   const handelRoute = (t) => {
-    push(`school/${t}`);
+    if (!partner) push(`school/${t}`);
   };
 
   return (

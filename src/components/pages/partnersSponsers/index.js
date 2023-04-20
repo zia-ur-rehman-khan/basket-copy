@@ -14,11 +14,6 @@ import WorkWith from "../School/WorkWith";
 import OurPartner from "./OurPartner";
 
 const PartnersSponsers = () => {
-  const { push } = useRouter();
-  const handelRoute = () => {
-    push("/school/school-register");
-  };
-
   return (
     <>
       <CommonBanner

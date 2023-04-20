@@ -45,7 +45,7 @@ const OurPartner = ({ head }) => {
             md={{ span: 12 }}
             sm={{ span: 16 }}
           >
-            <WorkWithCard src={_t} />
+            <WorkWithCard src={_t} partner />
           </Col>
         ))}
       </Row>
