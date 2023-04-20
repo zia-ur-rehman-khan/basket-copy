@@ -40,7 +40,7 @@ const Videos = () => {
         <Col span={12}>
           <DashboardTitle title="Videos" />
         </Col>
-        <Col span={12} style={{ display : 'flex', justifyContent : 'flex-end', paddingRight : '3rem' }}>
+        <Col span={12} style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '3rem' }}>
           <CommonButton child={"Upload Video"} />
         </Col>
       </Row>

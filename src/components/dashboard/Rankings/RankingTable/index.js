@@ -1,6 +1,11 @@
+// Next Link 
 import Image from 'next/image';
+
+// Ant d
 import { Space, Table, Tag } from 'antd';
-const { Column, ColumnGroup } = Table;
+const { Column } = Table;
+
+// Images 
 import tableImageOne from 'public/profile/table1.png'
 import tableImageTwo from 'public/profile/table2.png'
 import tableImageThree from 'public/profile/table3.png'
@@ -14,6 +19,7 @@ import tableImageTen from 'public/profile/table10.png'
 import up from 'public/profile/up.png'
 import down from 'public/profile/down.png'
 
+// Data 
 const data = [
     {
         key: 1,
@@ -94,7 +100,7 @@ const RankingTable = () => {
             <Column title="Name" dataIndex="name" key="name" render={
                 (_, record) => (
                     <div className='table__name'>
-                        <Image src={record.image} alt=" "/>
+                        <Image src={record.image} alt=" " />
                         <p>{record.name}</p>
                     </div>
                 )
