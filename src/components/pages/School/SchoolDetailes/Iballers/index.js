@@ -40,7 +40,7 @@ const Iballers = () => {
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
-          <Commonheading level={2} heading={"Who We Work With"} />
+          <Commonheading level={2} heading={"Children Academy iballers"} />
         </Col>
         <Col
           xxl={{ span: 12 }}

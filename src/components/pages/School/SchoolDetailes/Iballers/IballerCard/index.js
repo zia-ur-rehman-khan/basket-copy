@@ -4,6 +4,7 @@ import CommonCard from "components/common/Card";
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
+import { Divider } from "antd";
 
 const IballerCard = ({ src }) => {
   const { push, asPath, pathname, query } = useRouter();
@@ -35,12 +36,18 @@ const IballerCard = ({ src }) => {
           </div>
           <Space className="p-2" size={11} align="center" direction="vertical">
             <CommonTextField
-              text={"William Lawmann"}
+              text={"00"}
               className={"black"}
               fontSize={"32px"}
               fontWeight={"bold"}
             />
-            <CommonTextField text={"Founder"} className={"black"} />
+            <Divider style={{ borderColor: "#000000", width: "200px" }} />
+            <CommonTextField
+              text={"Russ"}
+              className={"black"}
+              fontSize={"32px"}
+              fontWeight={"bold"}
+            />
           </Space>
         </>
       }

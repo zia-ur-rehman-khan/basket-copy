@@ -52,33 +52,22 @@ const PlayerDetailes = () => {
               children: (
                 <Space size={40} direction="vertical">
                   <Space className="justify-content-between w-100" wrap={true}>
-                    <Space
-                      align="center"
-                      direction="vertical"
-                      className="bg-grey radius p-4"
-                    >
+                    <div className="bg-grey radius  points">
                       <CommonTextField text={"Points Per Game"} />
-                      <Divider />
+                      <Divider style={{ borderColor: "#0000004D" }} />
+
                       <CommonHeading level={2} heading={"22"} />
-                    </Space>
-                    <Space
-                      align="center"
-                      direction="vertical"
-                      className="bg-grey radius p-4"
-                    >
+                    </div>
+                    <div className="bg-grey radius  points">
                       <CommonTextField text={"Points Per Game"} />
-                      <Divider />
+                      <Divider style={{ borderColor: "#0000004D" }} />
                       <CommonHeading level={2} heading={"22"} />
-                    </Space>
-                    <Space
-                      align="center"
-                      direction="vertical"
-                      className="bg-grey radius p-4"
-                    >
+                    </div>
+                    <div className="bg-grey radius  points">
                       <CommonTextField text={"Points Per Game"} />
-                      <Divider />
+                      <Divider style={{ borderColor: "#0000004D" }} />
                       <CommonHeading level={2} heading={"22"} />
-                    </Space>
+                    </div>
                   </Space>
                   <CommonTextField text={"Seasons Highlights"} />
                   <Image src={detail} alt="detail" />
