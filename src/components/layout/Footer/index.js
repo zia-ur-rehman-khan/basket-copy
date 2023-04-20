@@ -34,6 +34,7 @@ const Footer = () => {
     },
     {
       title: "Contact Us",
+      url: "/contact-us",
     },
   ];
   const data2 = [

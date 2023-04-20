@@ -14,9 +14,11 @@ import { Space } from "antd";
 import Image from "next/image";
 import { Upload } from "antd";
 import { message } from "antd";
+import { Input } from "antd";
 
-const SchoolRegister = () => {
+const SchoolRegister = ({ contactUs }) => {
   const icons = [mail, location, phone];
+  const { TextArea } = Input;
 
   const props = {
     name: "file",
@@ -38,7 +40,10 @@ const SchoolRegister = () => {
 
   return (
     <>
-      <CommonBanner src={banner} heading={"School member Registration"} />
+      <CommonBanner
+        src={banner}
+        heading={contactUs ? "Contact Us" : "School member Registration"}
+      />
       <Row gutter={[50, 30]} className="common-padding">
         <Col
           xxl={{ span: 12 }}
@@ -81,7 +86,7 @@ const SchoolRegister = () => {
         >
           <CommonHeading
             level={2}
-            heading={"Registration Form"}
+            heading={`${contactUs ? "Enquiry" : "Registration"} Form`}
             className={"mb-3"}
           />
           <Row gutter={[24, 24]}>
@@ -125,41 +130,45 @@ const SchoolRegister = () => {
             >
               <CommonInputField placeholder="Select School" />
             </Col>
-            <Col
-              xxl={{ span: 12 }}
-              xl={{ span: 12 }}
-              lg={{ span: 12 }}
-              md={{ span: 12 }}
-              sm={{ span: 24 }}
-              xs={{ span: 24 }}
-            >
-              <CommonInputField placeholder="Child’s Age" />
-            </Col>
-            <Col
-              xxl={{ span: 12 }}
-              xl={{ span: 12 }}
-              lg={{ span: 12 }}
-              md={{ span: 12 }}
-              sm={{ span: 24 }}
-              xs={{ span: 24 }}
-            >
-              <Space align="center" className="h-100">
-                <CommonTextField text="Child Picture:" opacity={"0.5"} />
-                <Upload {...props}>
-                  <CommonTextField
-                    text="Browse"
-                    className={"c-pointer"}
-                    color="#FF6600"
-                  />
-                </Upload>
-              </Space>
-            </Col>
+            {contactUs ? (
+              <Col span={24}>
+                <TextArea placeholder="Write Your Message" rows={4} />
+              </Col>
+            ) : (
+              <>
+                <Col
+                  xxl={{ span: 12 }}
+                  xl={{ span: 12 }}
+                  lg={{ span: 12 }}
+                  md={{ span: 12 }}
+                  sm={{ span: 24 }}
+                  xs={{ span: 24 }}
+                >
+                  <CommonInputField placeholder="Child’s Age" />
+                </Col>
+                <Col
+                  xxl={{ span: 12 }}
+                  xl={{ span: 12 }}
+                  lg={{ span: 12 }}
+                  md={{ span: 12 }}
+                  sm={{ span: 24 }}
+                  xs={{ span: 24 }}
+                >
+                  <Space align="center" className="h-100">
+                    <CommonTextField text="Child Picture:" opacity={"0.5"} />
+                    <Upload {...props}>
+                      <CommonTextField
+                        text="Browse"
+                        className={"c-pointer"}
+                        color="#FF6600"
+                      />
+                    </Upload>
+                  </Space>
+                </Col>
+              </>
+            )}
             <Col span={24}>
-              <CommonButton
-                child={"Submit"}
-                background="#4DC3D1"
-                border={"none"}
-              />
+              <CommonButton child={"Submit"} border={"none"} />
             </Col>
           </Row>
         </Col>
