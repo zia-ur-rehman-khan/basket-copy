@@ -25,7 +25,7 @@ export const coachNav = [
         linkText: 'Calendar', route: '/user/calendar'
     },
     {
-        linkText: 'Videos', route: '/'
+        linkText: 'Videos', route: '/user/videos'
     },
     {
         linkText: 'My Orders', route: '/'

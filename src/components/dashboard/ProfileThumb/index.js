@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import userAvatar from '../../../public/profile/user-avatar.png'
+import userAvatar from 'public/profile/user-avatar.png'
 // import userAvatar from '../../../constants'
 import Image from 'next/image'
 

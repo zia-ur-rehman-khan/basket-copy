@@ -1,6 +1,6 @@
 import React from 'react'
-import up from '../../../../public/profile/up.png'
-import down from '../../../../public/profile/down.png'
+import up from 'public/profile/up.png'
+import down from 'public/profile/down.png'
 import Image from 'next/image';
 
 const data = [
