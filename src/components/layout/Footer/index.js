@@ -104,7 +104,7 @@ const Footer = () => {
           <Image src={logo} width={104} height={79} alt="logo" />
 
           <CommonTextField text="iBall is a Basketball Foundation specializing in training, development coaching and Basketball themed events management (Birthday’s, Camps and tournaments)" />
-          <Space size={0}>
+          <Space size={5}>
             {socialIcons.map((t, index) => (
               <Image key={index} src={t} width={32} height={32} alt="logo" />
             ))}
