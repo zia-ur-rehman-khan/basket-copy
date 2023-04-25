@@ -19,7 +19,7 @@ export const coachNav = [
         linkText: 'Ranking', route: '/user/ranking'
     },
     {
-        linkText: 'Current Coach', route: '/user/current-coach'
+        linkText: 'Current Coach', route: '/user/coach'
     },
     {
         linkText: 'Calendar', route: '/user/calendar'
@@ -28,7 +28,7 @@ export const coachNav = [
         linkText: 'Videos', route: '/user/videos'
     },
     {
-        linkText: 'My Orders', route: '/user/my-orders'
+        linkText: 'My Orders', route: '/user/orders'
     },
     {
         linkText: 'My Wishlist', route: '/'

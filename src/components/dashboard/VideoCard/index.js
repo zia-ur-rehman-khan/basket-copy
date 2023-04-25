@@ -2,12 +2,12 @@ import { Card } from 'antd'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiFillPlayCircle } from 'react-icons/ai'
-const VideoCard = ({ image, title, text, name, thumb }) => {
+const VideoCard = ({ image, title, text, name, thumb, id }) => {
     return (
         <Card className='vid__card'>
             <>
                 <div className='card__head'>
-                    <Link href="/user/single-coach">
+                    <Link href={`/user/coach/${id}`}>
                         <>
                             <Image src={image} alt=" " />
                             <AiFillPlayCircle />
@@ -15,7 +15,7 @@ const VideoCard = ({ image, title, text, name, thumb }) => {
                     </Link>
                 </div>
                 <div className='card__body'>
-                    <Link href="/user/single-coach">
+                    <Link href={`/user/coach/${id}`}>
                         <h4>{title}</h4>
                     </Link>
                     <p>{text}</p>

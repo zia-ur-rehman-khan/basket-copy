@@ -1,6 +1,7 @@
 // Components 
 import DashboardTitle from 'components/dashboard/Title'
 import UserLayout from 'components/dashboard/UserLayout'
+import Sort from 'components/dashboard/Sort'
 
 // Ant D
 import { Col, Row, Table, Column } from 'antd'
@@ -20,7 +21,7 @@ const data = [
     status: 'Confirm',
     paymentStatus: 'Paid',
     total: 590.00,
-    details: `/user/order-detail`
+    details: `/user/orders/`
   },
   {
     id: 2,
@@ -30,7 +31,7 @@ const data = [
     status: 'Confirm',
     paymentStatus: 'Paid',
     total: 590.00,
-    details: `/user/order-detail`
+    details: `/user/orders/`
   },
   {
     id: 3,
@@ -40,7 +41,7 @@ const data = [
     status: 'Confirm',
     paymentStatus: 'Paid',
     total: 590.00,
-    details: `/user/order-detail`
+    details: `/user/orders/`
   },
   {
     id: 4,
@@ -50,7 +51,7 @@ const data = [
     status: 'Confirm',
     paymentStatus: 'Paid',
     total: 590.00,
-    details: `/user/order-detail`
+    details: `/user/orders/`
   },
   {
     id: 5,
@@ -60,7 +61,7 @@ const data = [
     status: 'Confirm',
     paymentStatus: 'Paid',
     total: 590.00,
-    details: `/user/order-detail`
+    details: `/user/orders/`
   },
   {
     id: 6,
@@ -70,7 +71,7 @@ const data = [
     status: 'Confirm',
     paymentStatus: 'Paid',
     total: 590.00,
-    details: `/user/order-detail`
+    details: `/user/orders/`
   },
 ];
 
@@ -82,7 +83,7 @@ const MyOrders = () => {
           <DashboardTitle title="My Orders" />
         </Col>
         <Col span={12} style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '3rem' }}>
-          filter
+          <Sort/>
         </Col>
       </Row>
       <Table dataSource={data} className='dashboard__table order__table'>
@@ -98,7 +99,7 @@ const MyOrders = () => {
         <Column title="Total" dataIndex="total" key="key" />
         <Column title="Details" dataIndex="key" key="key" render={
           (_, record) => (
-            <Link href={record.details}>View Details</Link>
+            <Link href={`${record.details}/${record.id}`}>View Details</Link>
           )
         } />
       </Table>
