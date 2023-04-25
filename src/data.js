@@ -37,7 +37,7 @@ export const coachNav = [
         linkText: 'Become a Partner', route: '/user/become-partner'
     },
     {
-        linkText: 'My Wallet', route: '/'
+        linkText: 'My Wallet', route: '/user/wallet'
     },
     {
         linkText: 'My Coach', route: '/'

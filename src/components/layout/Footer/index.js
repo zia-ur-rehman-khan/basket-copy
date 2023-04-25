@@ -8,7 +8,9 @@ import facebook from "public/layout/svg/facebook.svg";
 
 import { Col, List, Row, Space } from "antd";
 import CommonTextField from "components/common/TextField";
-import React from "react";
+import CommonInputField from "components/common/Input";
+import CommonButton from "components/common/Button";
+import { useRouter } from "next/router";
 
 const Footer = () => {
   const socialIcons = [linkdin, twitter, instagram, tiktok, facebook];
