@@ -4,9 +4,10 @@ import CommonTextField from "components/common/TextField";
 import CommonCard from "components/common/Card";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const ProductCard = ({ productData }) => {
-  const { src, width, height, category } = productData;
+  const { id, src, width, height, category } = productData;
   return (
     <CommonCard
       child={
@@ -53,11 +54,13 @@ const ProductCard = ({ productData }) => {
             </div>
 
             <Space>
-              <CommonButton
-                child="Learn More"
-                classname="product-details"
-                width={160}
-              />
+              <Link href={`productDetail/1`}>
+                <CommonButton
+                  child="Learn More"
+                  classname="product-details"
+                  width={160}
+                />
+              </Link>
               {category == "featured" ? (
                 <CommonButton
                   child="£20.00"
