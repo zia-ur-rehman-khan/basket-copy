@@ -1,4 +1,3 @@
-import React from 'react'
 import TextArea from 'antd/lib/input/TextArea';
 import { Button, Form, Input, Row, Col, Select } from 'antd';
 

@@ -34,7 +34,7 @@ export const coachNav = [
         linkText: 'My Wishlist', route: '/'
     },
     {
-        linkText: 'Become a Partner', route: '/'
+        linkText: 'Become a Partner', route: '/user/become-partner'
     },
     {
         linkText: 'My Wallet', route: '/'
