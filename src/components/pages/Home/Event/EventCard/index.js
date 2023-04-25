@@ -8,10 +8,26 @@ import CommonButton from "components/common/Button";
 import time from "public/event/time.svg";
 import calender from "public/event/calender.svg";
 import dollar from "public/event/dollar.svg";
+import { useRouter } from "next/router";
 
 const EventCard = ({ src }) => {
+  const { push, asPath, pathname, query } = useRouter();
+
+  const { type } = query;
+
+  const handelRoute = (t) => {
+    push(
+      {
+        pathname: "/event/[type]/[id]",
+        query: { type, t },
+      },
+      `/event/${type}/${t}`
+    );
+  };
+
   return (
     <CommonCard
+      onClick={() => handelRoute(10)}
       child={
         <>
           <div>

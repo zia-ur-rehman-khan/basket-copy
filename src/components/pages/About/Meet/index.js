@@ -10,9 +10,16 @@ import meet3 from "public/meet/meet3.png";
 import meet4 from "public/meet/meet4.png";
 import MeetCard from "./MeetCard";
 import React from "react";
+import { useRouter } from "next/router";
 
 const Meet = () => {
   const array = [meet1, meet2, meet3, meet4];
+
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/team");
+  };
 
   return (
     <div>
@@ -21,7 +28,7 @@ const Meet = () => {
           <CommonTextField text="Vision & History" />
           <Commonheading level={2} heading={"Meet the people Behind iball"} />
         </Space>
-        <CommonButton child="View More" />
+        <CommonButton child="View More" onClick={handelRoute} />
       </div>
       <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (
