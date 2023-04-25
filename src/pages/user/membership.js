@@ -2,6 +2,7 @@
 import DashboardTitle from "components/dashboard/Title"
 import UserLayout from "components/dashboard/UserLayout"
 import MembershipCard from "components/dashboard/MembershipCard";
+import AcademyMembership from "components/dashboard/AcademyMembership";
 
 // Ant D 
 import { Tabs } from 'antd';
@@ -11,12 +12,12 @@ const tabItems = [
     {
         key: '1',
         label: ` Academy Membership`,
-        children: 'test',
+        children: <AcademyMembership />,
     },
     {
         key: '2',
         label: `Birthday Membership`,
-        children: <MembershipCard/>,
+        children: <MembershipCard />,
     },
 ];
 
