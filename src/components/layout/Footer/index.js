@@ -40,6 +40,7 @@ const Footer = () => {
   const data2 = [
     {
       title: "What We Do",
+      url: "/what-we-do",
     },
     {
       title: "Blogs",

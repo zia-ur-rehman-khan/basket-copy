@@ -6,12 +6,16 @@ import { useRouter } from "next/router";
 import React from "react";
 import Icon from "../../../../../../public/svg/ClubIcon";
 
-const EventCard = ({ data }) => {
+const EventCard = ({ data, academy }) => {
   const { push } = useRouter();
   const { icon, title, url } = data;
 
   const handelRoute = (url) => {
-    push(`event/${url}`);
+    if (academy) {
+      push(`${url}`);
+    } else {
+      push(`event/${url}`);
+    }
   };
   return (
     <Space
