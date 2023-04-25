@@ -6,7 +6,20 @@ import tick from "public/tick.svg";
 import React from "react";
 
 const MemberShip = () => {
-  const temp = [1, 2, 3, 4];
+  const temp = [
+    {
+      point: "1 Group Training Session per Week",
+      text: "Weekly Group Training Sessions Made Up Of Drills & Scrimmages.",
+    },
+    {
+      point: "1 Film Study Session Per Week",
+      text: "30 Min Film Study Session - One Of The Senior Iball Coaches Reviews And Analyses Your In-Game Footage And Identifies Areas Of Progression And Those Which Can Be Improved.",
+    },
+    {
+      point: "1 Academy Jersey ",
+      text: "1 X Iball Academy Kit With Printed Name.",
+    },
+  ];
   return (
     <div className="bg-grey member-ship-card radius">
       <Space size={20} direction="vertical">
@@ -18,20 +31,17 @@ const MemberShip = () => {
               <Image
                 src={tick}
                 alt="Picture of the author"
-                width={19}
-                height={19}
+                width={16}
+                height={16}
+                layout="fixed"
               />
               <Space direction="vertical">
                 <CommonTextField
                   fontSize={"22px"}
-                  text="1 Group Training Session per Week"
+                  text={t?.point}
                   className={"primary"}
                 />
-                <CommonTextField
-                  text={
-                    "Weekly Group Training Sessions Made Up Of Drills & Scrimmages."
-                  }
-                />
+                <CommonTextField text={t?.text} />
               </Space>
             </Space>
           </>
