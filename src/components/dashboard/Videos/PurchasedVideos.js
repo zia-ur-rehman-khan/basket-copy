@@ -97,6 +97,7 @@ const PurchasedVideos = () => {
     <>
       {
         purchasedVideos?.map(purchased => <VideoCard
+          key={purchased?.id}
           image={purchased?.img}
           title={purchased?.title}
           text={purchased?.text}

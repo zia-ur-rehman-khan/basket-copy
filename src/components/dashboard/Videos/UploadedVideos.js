@@ -97,6 +97,7 @@ const UploadedVideos = () => {
         <>
             {
                 uploads?.map(upload => <VideoCard
+                    key={upload?.id}
                     image={upload?.img}
                     title={upload?.title}
                     text={upload?.text}

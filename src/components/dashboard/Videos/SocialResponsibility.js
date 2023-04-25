@@ -93,6 +93,7 @@ const SocialResponsibility = () => {
         <>
             {
                 socialResponsibility?.map(social => <VideoCard
+                    key={social?.id}
                     image={social?.img}
                     title={social?.title}
                     text={social?.text}

@@ -40,10 +40,10 @@ export const coachNav = [
         linkText: 'My Wallet', route: '/user/wallet'
     },
     {
-        linkText: 'My Coach', route: '/'
+        linkText: 'My Coach', route: '/user/my-coach'
     },
     {
-        linkText: 'My  Membership', route: '/'
+        linkText: 'My  Membership', route: '/user/membership'
     },
 ]
 

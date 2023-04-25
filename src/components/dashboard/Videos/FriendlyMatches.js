@@ -97,6 +97,7 @@ const FriendlyMatches = () => {
     <>
       {
         friendlyMatches?.map(matches => <VideoCard
+          key={matches?.id}
           image={matches?.img}
           title={matches?.title}
           text={matches?.text}
