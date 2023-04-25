@@ -43,9 +43,11 @@ const Footer = () => {
     },
     {
       title: "Our Services",
+      url: "/service",
     },
     {
       title: "Our Road Map",
+      url: "/road-map",
     },
     {
       title: "Our Staff",
@@ -53,6 +55,10 @@ const Footer = () => {
     },
     {
       title: "Our Achievements",
+      url: "/achievement",
+    },
+    {
+      title: "Media",
     },
     {
       title: "Terms & Condition",
