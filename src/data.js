@@ -31,7 +31,7 @@ export const coachNav = [
         linkText: 'My Orders', route: '/user/orders'
     },
     {
-        linkText: 'My Wishlist', route: '/'
+        linkText: 'My Wishlist', route: '/user/wishlist'
     },
     {
         linkText: 'Become a Partner', route: '/user/become-partner'
@@ -51,7 +51,7 @@ export const coachNav = [
 // User Dashboard Sidenav 
 export const userNav = [
     {
-        linkText: 'Personal Information', route: '/',
+        linkText: 'Personal Information', route: '/admin',
     },
     {
         linkText: 'Change Password', route: '/',
