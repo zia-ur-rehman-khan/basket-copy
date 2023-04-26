@@ -11,8 +11,14 @@ import Event from "./Event";
 import Product from "./Product";
 import WithUS from "./WithUs";
 import React from "react";
+import blog1 from "public/blog/blog1.png";
+import blog2 from "public/blog/blog2.png";
+import blog3 from "public/blog/blog3.png";
+import blog4 from "public/blog/blog4.png";
 
 const Home = () => {
+  const array = [blog1, blog2, blog3, blog4];
+
   return (
     <>
       <CommonBanner
@@ -63,7 +69,7 @@ const Home = () => {
       <WithUS />
       <div className="common-padding">
         <Event />
-        <Blog />
+        <Blog array={array} />
       </div>
     </>
   );

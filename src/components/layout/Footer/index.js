@@ -44,6 +44,7 @@ const Footer = () => {
     },
     {
       title: "Blogs",
+      url: "/blog",
     },
     {
       title: "Our Services",
