@@ -8,6 +8,9 @@ import CommonButton from 'components/common/button'
 // React Icons 
 import userAvatar from '../../public/profile/user-avatar.png'
 
+// Data 
+import { personalInfo } from 'data'
+
 // Ant D
 import { Row, Col } from 'antd'
 import Link from 'next/link'
@@ -21,7 +24,7 @@ const AdminDashboard = () => {
           <DashboardTitle title="Personal Information" />
         </Col>
         <Col span={12} style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '3rem' }}>
-          <Link href="/admin/edit-profile" ><a className='primary__btn'>Edit</a></Link>
+          <Link href="/coach/edit-profile" ><a className='primary__btn'>Edit</a></Link>
         </Col>
       </Row>
       {/* Title  */}
@@ -31,7 +34,18 @@ const AdminDashboard = () => {
       {/* Profile thumb  */}
 
       {/* contact info  */}
-      <Information />
+      {/* {
+        personalInfo.map((pInfo, i) => (
+          <Information
+            key={i}
+            ico={pInfo.ico}
+            text={pInfo.text}
+            labelValue={pInfo.labelValue}
+          />
+        ))
+      
+      } */}
+      <Information/>
       {/* contact info  */}
     </AdminLayout>
   )

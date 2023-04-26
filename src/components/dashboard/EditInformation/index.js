@@ -76,7 +76,7 @@ const EditPofileInfo = () => {
                     </Col>
                     <Col span={24}>
                         <Form.Item
-                            name="your-email"
+                            name="your-address"
                             rules={[
                                 {
                                     required: true,

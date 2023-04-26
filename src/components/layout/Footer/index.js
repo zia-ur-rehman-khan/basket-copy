@@ -109,7 +109,7 @@ const Footer = () => {
   ];
 
   const isUser = useRouter().pathname.startsWith('/user')
-  const isAdmin = useRouter().pathname.startsWith('/admin')
+  const isAdmin = useRouter().pathname.startsWith('/coach')
   return (
     <Row justify="space-around" className={`bg-grey p-5 radius ${isAdmin || isUser ? 'hide-true' : ''}`} gutter={[0, 50]}>
       <Col

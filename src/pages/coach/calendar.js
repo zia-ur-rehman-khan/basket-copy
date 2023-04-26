@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 
 // components 
 import DashboardTitle from 'components/dashboard/Title'
-import UserLayout from 'components/dashboard/UserLayout'
+import AdminLayout from 'components/dashboard/AdminLayout'
 import AllEvents from 'components/dashboard/AllEvents';
-import Sessions from 'components/dashboard/Sessions';
 
 // Calendar
 import Calendar from 'react-calendar';
@@ -12,6 +11,7 @@ import 'react-calendar/dist/Calendar.css';
 
 // AntD 
 import { Col, Row, Tabs } from 'antd'
+import CoachSessions from 'components/dashboard/CoachSessions';
 
 // Events Data
 const events = [
@@ -59,12 +59,12 @@ const CalendarOutlet = () => {
         {
             key: '2',
             label: `My Sessions`,
-            children: <Sessions />,
+            children: <CoachSessions/>,
         },
     ];
 
     return (
-        <UserLayout>
+        <AdminLayout>
             <DashboardTitle title="Calendar" />
             <Row gutter={25}>
                 <Col span={12}>
@@ -83,7 +83,7 @@ const CalendarOutlet = () => {
                     </div>
                 </Col>
             </Row>
-        </UserLayout>
+        </AdminLayout>
     )
 }
 

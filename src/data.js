@@ -51,40 +51,40 @@ export const coachNav = [
 // User Dashboard Sidenav 
 export const userNav = [
     {
-        linkText: 'Personal Information', route: '/admin',
+        linkText: 'Personal Information', route: '/coach',
     },
     {
-        linkText: 'Change Password', route: '/',
+        linkText: 'Change Password', route: '/coach/change-password',
     },
     {
-        linkText: 'Billing History', route: '/',
+        linkText: 'Billing History', route: '/coach/billing-history',
     },
     {
-        linkText: 'Ranking', route: '/',
+        linkText: 'Ranking', route: '/coach/ranking',
     },
     {
-        linkText: 'Calendar', route: '/',
+        linkText: 'Calendar', route: '/coach/calendar',
     },
     {
-        linkText: 'Coach Profiles', route: '/',
+        linkText: 'Coach Profiles', route: '/coach/coach-profile',
     },
     {
-        linkText: 'Donate To iBall  Players', route: '/',
+        linkText: 'Donate To iBall  Players', route: '/coach/donate',
     },
     {
-        linkText: 'My Wishlist', route: '/',
+        linkText: 'My Wishlist', route: '/coach/wishlist',
     },
     {
-        linkText: 'My Orders', route: '/',
+        linkText: 'My Orders', route: '/coach/orders',
     },
     {
-        linkText: 'My Tutorials', route: '/',
+        linkText: 'My Tutorials', route: '/coach/my-tutorials',
     },
     {
-        linkText: 'Become a Partner', route: '/',
+        linkText: 'Become a Partner', route: '/coach/become-partner',
     },
     {
-        linkText: 'My Wallet ', route: '/',
+        linkText: 'My Wallet ', route: '/coach/wallet',
     },
 ]
 
