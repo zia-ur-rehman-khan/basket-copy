@@ -81,7 +81,11 @@ const Payment = () => {
         </Col>
       </Row>
 
-      <CommonButton child={"Submit Detail"} onClick={handelRoute} />
+      <CommonButton
+        child={"Submit Detail"}
+        onClick={handelRoute}
+        height={"45px"}
+      />
     </Space>
   );
 };

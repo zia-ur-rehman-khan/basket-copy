@@ -68,6 +68,7 @@ const PlayerRegion = ({ type }) => {
             <Space>
               <CommonTextField text={`${type} Region:`} />
               <CommonSelect
+                className="simple-select"
                 defaultValue="lucy"
                 width={120}
                 options={[

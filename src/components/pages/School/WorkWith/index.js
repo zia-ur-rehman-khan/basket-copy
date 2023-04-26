@@ -39,6 +39,7 @@ const WorkWith = () => {
         <Space>
           <CommonTextField text={"Coach Region:"} />
           <CommonSelect
+            className="simple-select"
             defaultValue="lucy"
             width={120}
             options={[
