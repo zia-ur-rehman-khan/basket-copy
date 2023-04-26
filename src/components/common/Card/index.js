@@ -1,8 +1,8 @@
 import React from "react";
 
-const CommonCard = ({ child, onClick }) => {
+const CommonCard = ({ child, onClick, style }) => {
   return (
-    <div className="common-card c-pointer" onClick={onClick}>
+    <div className="common-card c-pointer" style={style} onClick={onClick}>
       {child}
     </div>
   );
