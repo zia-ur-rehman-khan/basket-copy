@@ -24,7 +24,7 @@ const ALL = () => {
   ];
   return (
     <>
-      <div className="product-side">
+      <div className="all_products_wrapper">
         <div className="d-flex justify-content-between align-items-center mt-5">
           <Commonheading level={2} heading={"All Products"} />
           <div className="product-filters">
@@ -49,11 +49,6 @@ const ALL = () => {
             </>
           ))}
         </Row>
-        <CommonButton
-          child="Load More"
-          classname="load-products-btn"
-          topClass="load-products"
-        />
 
         {/* </div> */}
       </div>

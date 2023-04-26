@@ -5,6 +5,7 @@ import CommonCard from "components/common/Card";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+import Commonheading from "components/common/Heading";
 
 const ProductCard = ({ productData }) => {
   const { id, src, width, height, category } = productData;
@@ -12,25 +13,21 @@ const ProductCard = ({ productData }) => {
     <CommonCard
       child={
         <>
-          <div>
-            <Image src={src} alt="Picture of the author" />
+          <div className="product-image-wrapper">
+            <Image src={src} alt="Picture " className="product-image" />
           </div>
           <Space className="p-3" size={11} direction="vertical">
             <div>
               <Row>
                 <Col span={12}>
-                  <CommonTextField
-                    text="White Jersey"
-                    className="black"
-                    fontSize="25px"
-                    fontWeight="600"
+                  <Commonheading
+                    level={4}
+                    heading={"White Jersey"}
                     color="#000000"
                   />
-                  <CommonTextField
-                    text="Organic Cotton"
-                    className="black"
-                    fontSize="17px"
-                    fontWeight="500"
+                  <Commonheading
+                    level={5}
+                    heading={"Organic Cotton"}
                     color="rgba(0, 0, 0, 0.5)"
                   />
                 </Col>
@@ -43,10 +40,11 @@ const ProductCard = ({ productData }) => {
                     <li>⭐</li>
                   </ul>
                   {category == "all" ? (
-                    <CommonButton
-                      child="£20.00"
-                      classname="product-price"
-                      // topClass="load-products"
+                    <Commonheading
+                      level={5}
+                      heading={"£20.00"}
+                      color={"#FF6600"}
+                      className={"product-price"}
                     />
                   ) : null}
                 </Col>
@@ -62,17 +60,19 @@ const ProductCard = ({ productData }) => {
                 />
               </Link>
               {category == "featured" ? (
-                <CommonButton
-                  child="£20.00"
-                  classname="product-price"
-                  // topClass="load-products"
+                <Commonheading
+                  level={5}
+                  heading={"£20.00"}
+                  color={"#FF6600"}
+                  className={"product-price"}
                 />
               ) : null}
               {category == "all" ? (
                 <CommonButton
                   child="❤️"
                   classname="product-favourite"
-                  // topClass="load-products"
+                  background={"#000000"}
+                  color={"#000000"}
                 />
               ) : null}
             </Space>

@@ -3,7 +3,7 @@ import { Carousel } from "antd";
 
 import ShopCarousel from "./ShopCarousel";
 
-const dotPosition = "left";
+const dotPosition = "bottom";
 
 const index = () => {
   const onChange = (currentSlide) => {

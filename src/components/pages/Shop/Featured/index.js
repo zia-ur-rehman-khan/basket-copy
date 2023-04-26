@@ -21,7 +21,7 @@ const index = () => {
   ];
   return (
     <>
-      <div className="product-side">
+      <div className="featured_products_wrapper">
         <div className="d-flex justify-content-between align-items-center mt-5">
           <Commonheading level={2} heading={"Featured Products"} />
           {/* <CommonButton child="View More" /> */}
