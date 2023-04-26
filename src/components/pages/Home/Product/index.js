@@ -25,7 +25,7 @@ const Product = () => {
         <CommonButton child="View More" />
       </div>
       {/* <div className="card-parent mt-3"> */}
-      <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
+      <div className="mt-5 card-parent d-flex" style={{ gap: "20px" }}>
         {temp.map((_t, key) => (
           <Col
             key={key}
@@ -33,12 +33,13 @@ const Product = () => {
             xl={{ span: 6 }}
             lg={{ span: 10 }}
             md={{ span: 11 }}
-            sm={{ span: 15 }}
+            sm={{ span: 16 }}
+            xs={{ span: 22 }}
           >
             <ProductCard image={_t} key={key} />
           </Col>
         ))}
-      </Row>
+      </div>
 
       {/* </div> */}
     </div>
