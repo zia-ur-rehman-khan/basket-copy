@@ -95,36 +95,52 @@ const Register = () => {
           xs={{ span: 24 }}
         >
           <div className="d-flex justify-content-between">
-            <CommonTextField opacity="0.5" text={"Gender:"} />
+            <CommonTextField fontSize={"14px"} opacity="0.5" text={"Gender:"} />
             <Radio.Group>
               <Radio value={1}>
-                <CommonTextField opacity="0.5" text={"Male"} />
+                <CommonTextField
+                  fontSize={"14px"}
+                  opacity="0.5"
+                  text={"Male"}
+                />
               </Radio>
               <Radio value={2}>
-                <CommonTextField opacity="0.5" text={"Female"} />
+                <CommonTextField
+                  fontSize={"14px"}
+                  opacity="0.5"
+                  text={"Female"}
+                />
               </Radio>
             </Radio.Group>
           </div>
         </Col>
       </Row>
       <div className="d-flex justify-content-between">
-        <CommonTextField opacity="0.5" text={"I Prefer to be Contacted by"} />
+        <CommonTextField
+          fontSize={"14px"}
+          opacity="0.5"
+          text={"I Prefer to be Contacted by"}
+        />
         <Radio.Group>
           <Radio value={1}>
-            <CommonTextField opacity="0.5" text={"Email"} />
+            <CommonTextField fontSize={"14px"} opacity="0.5" text={"Email"} />
           </Radio>
           <Radio value={2}>
-            <CommonTextField opacity="0.5" text={"Phone"} />
+            <CommonTextField fontSize={"14px"} opacity="0.5" text={"Phone"} />
           </Radio>
         </Radio.Group>
       </div>
       <div className="d-flex justify-content-between">
-        <CommonTextField opacity="0.5" text={"Agree to Terms & Conditions"} />
+        <CommonTextField
+          fontSize={"14px"}
+          opacity="0.5"
+          text={"Agree to Terms & Conditions"}
+        />
         <Radio.Group>
           <Radio value={1}></Radio>
         </Radio.Group>
       </div>
-      <CommonButton child={"submit"} onClick={handelRoute} />
+      <CommonButton child={"submit"} onClick={handelRoute} height={"45px"} />
     </Space>
   );
 };

@@ -5,7 +5,7 @@ import { Select } from "antd";
 
 const CommonSelect = ({
   name,
-  className,
+  className = "select-form",
   type,
   onChange,
   onBlur,
@@ -13,17 +13,20 @@ const CommonSelect = ({
   errors,
   touch,
   height,
+  background,
   options,
   width,
   defaultValue,
+  placeholder,
 }) => {
   return (
-    <div className="select-parent">
+    <div className={`select-parent ${className || ""}`}>
       <Select
+        placeholder={placeholder}
         defaultValue={defaultValue}
         options={options}
         width={width}
-        style={{ height }}
+        style={{ height, background }}
         type={type}
         name={name}
         onChange={onChange}

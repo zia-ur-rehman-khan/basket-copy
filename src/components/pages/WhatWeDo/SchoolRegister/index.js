@@ -153,19 +153,24 @@ const SchoolRegister = () => {
               xs={{ span: 24 }}
             >
               <Space align="center" className="h-100">
-                <CommonTextField text={`${t} Avatar:`} opacity={"0.5"} />
+                <CommonTextField
+                  text={`${t} Avatar:`}
+                  opacity={"0.5"}
+                  fontSize={"14px"}
+                />
                 <Upload {...props}>
                   <CommonTextField
                     text="Browse"
                     className={"c-pointer"}
                     color="#FF6600"
+                    fontSize={"14px"}
                   />
                 </Upload>
               </Space>
             </Col>
 
             <Col span={24}>
-              <CommonButton child={"Submit"} border={"none"} />
+              <CommonButton child={"Submit"} border={"none"} height={"45px"} />
             </Col>
           </Row>
         </Col>

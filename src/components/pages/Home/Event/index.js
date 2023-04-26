@@ -8,15 +8,22 @@ import event1 from "public/event/event1.png";
 import event2 from "public/event/event2.png";
 import event3 from "public/event/event3.png";
 import event4 from "public/event/event4.png";
+import { useRouter } from "next/router";
 
 const Event = () => {
   const array = [event1, event2, event3, event4];
+
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/event");
+  };
 
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center ">
         <Commonheading level={2} heading={"Browse Our Events"} />
-        <CommonButton child="View More" />
+        <CommonButton child="View More" onClick={handelRoute} />
       </div>
 
       <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">

@@ -38,13 +38,24 @@ const Header = () => {
     push(url);
   };
 
+  const handelRoute = (t) => {
+    push(t);
+  };
+
   return (
     <>
       {screens.lg ? (
         <div className="header">
           <div className="left-side">
             <Space size={40}>
-              <Image src={logo} width={104} height={79} alt="logo" />
+              <Image
+                src={logo}
+                width={104}
+                height={79}
+                alt="logo"
+                className="c-pointer"
+                onClick={() => handelRoute("/")}
+              />
               <Space size={26}>
                 {navList.map((t, index) => (
                   <TextField
@@ -72,8 +83,15 @@ const Header = () => {
                 <Image src={cart} width={20} height={20} alt="logo" />
               </Space>
               <Space direction={screens.xl ? "horizontal" : "vertical"}>
-                <CommonButton type="default" child={"Enquire Now"} />
-                <CommonButton child={"Sign Up"} />
+                <CommonButton
+                  type="default"
+                  child={"Enquire Now"}
+                  onClick={() => handelRoute("/contact-us")}
+                />
+                <CommonButton
+                  child={"Sign Up"}
+                  onClick={() => handelRoute("/sign-up")}
+                />
               </Space>
             </Space>
           </div>
