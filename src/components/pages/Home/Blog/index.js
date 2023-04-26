@@ -1,21 +1,23 @@
 import { Col, Row } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
-import blog1 from "public/blog/blog1.png";
-import blog2 from "public/blog/blog2.png";
-import blog3 from "public/blog/blog3.png";
-import blog4 from "public/blog/blog4.png";
+
 import BlogCard from "./BlogCard";
 import React from "react";
+import { useRouter } from "next/router";
 
-const Blog = () => {
-  const array = [blog1, blog2, blog3, blog4];
+const Blog = ({ array, noMore }) => {
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/blog");
+  };
 
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"Read Our Blogs"} />
-        <CommonButton child="View More" />
+        {!noMore && <CommonButton child="View More" onClick={handelRoute} />}
       </div>
       <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (

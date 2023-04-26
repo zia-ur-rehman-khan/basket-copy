@@ -39,9 +39,11 @@ const Footer = () => {
   const data2 = [
     {
       title: "What We Do",
+      url: "/what-we-do",
     },
     {
       title: "Blogs",
+      url: "/blog",
     },
     {
       title: "Our Services",
@@ -90,6 +92,7 @@ const Footer = () => {
   const data4 = [
     {
       title: "Coaches",
+      url: "/what-we-do/coach-region",
     },
     {
       title: "Schools",
