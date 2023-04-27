@@ -23,7 +23,7 @@ import thumbThree from 'public/profile/thumb3.png'
 import thumbFour from 'public/profile/thumb4.png'
 
 // Videos
-import vid from 'public/video/video.mp4'
+// import vid from 'public/video/video.mp4'
 
 // Data 
 const coachInfo = [
