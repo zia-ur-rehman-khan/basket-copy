@@ -11,10 +11,10 @@ const Information = () => {
                         <Col span={12} key={i} >
                             <div className='info__box'>
                                 <Row>
-                                    <Col span={2}>{pInfo.ico}</Col>
+                                    <Col span={2}>{pInfo?.ico}</Col>
                                     <Col span={12}>
-                                        <p className='label__text'>{pInfo.text}</p>
-                                        <p className='label__value'>{pInfo.labelValue}</p>
+                                        <p className='label__text'>{pInfo?.text}</p>
+                                        <p className='label__value'>{pInfo?.labelValue}</p>
                                     </Col>
                                 </Row>
                             </div>
@@ -28,10 +28,10 @@ const Information = () => {
                         <Col span={12} key={i} >
                             <div className='info__box'>
                                 <Row>
-                                    <Col span={2}>{pInfo.ico}</Col>
+                                    <Col span={2}>{pInfo?.ico}</Col>
                                     <Col span={12}>
-                                        <p className='label__text'>{pInfo.text}</p>
-                                        <p className='label__value'>{pInfo.labelValue}</p>
+                                        <p className='label__text'>{pInfo?.text}</p>
+                                        <p className='label__value'>{pInfo?.labelValue}</p>
                                     </Col>
                                 </Row>
                             </div>

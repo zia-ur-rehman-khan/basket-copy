@@ -4,7 +4,7 @@ import UserLayout from "components/dashboard/UserLayout"
 import VideoCard from "components/dashboard/VideoCard"
 
 // Ant D 
-import { Col, Row, Space } from "antd"
+import { Col, Row } from "antd"
 
 // Next 
 import Image from "next/image"
@@ -21,6 +21,9 @@ import thumbOne from 'public/profile/thumb1.png'
 import thumbTwo from 'public/profile/thumb2.png'
 import thumbThree from 'public/profile/thumb3.png'
 import thumbFour from 'public/profile/thumb4.png'
+
+// Videos
+import vid from 'public/video/video.mp4'
 
 // Data 
 const coachInfo = [

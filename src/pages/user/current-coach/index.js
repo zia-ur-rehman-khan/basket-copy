@@ -26,6 +26,7 @@ import thumbThree from 'public/profile/thumb3.png'
 import thumbFour from 'public/profile/thumb4.png'
 import CoachCard from 'components/dashboard/CoachCard';
 import VideoCard from 'components/dashboard/VideoCard';
+// import vid from 'public/video/video.mp4'
 
 const coachInfo = [
     {

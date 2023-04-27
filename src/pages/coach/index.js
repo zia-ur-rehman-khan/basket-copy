@@ -45,7 +45,7 @@ const AdminDashboard = () => {
         ))
       
       } */}
-      <Information/>
+      <Information />
       {/* contact info  */}
     </AdminLayout>
   )

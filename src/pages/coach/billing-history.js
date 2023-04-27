@@ -12,6 +12,7 @@ import { Col, Row, Tabs, Table, Column } from 'antd'
 import product from 'public/profile/wishlist.png'
 import item from 'public/profile/item.png'
 import Image from 'next/image';
+import TutorialsBilling from 'components/dashboard/TutorialsBilling';
 
 // Data 
 const data = [
@@ -103,24 +104,7 @@ const tabItems = [
     {
         key: '2',
         label: `Tutorials Billing`,
-        children: <Table dataSource={data} className='dashboard__table order__table billing__table'>
-            <Column title="SNo" dataIndex="key" key="key" />
-            <Column title="Name" dataIndex="name" key="key" render={(_, record) => (
-                <div className='item'>
-                    <Image src={record.img} alt=" " />
-                    <span>{record.name}</span>
-                </div>
-            )} />
-            <Column title="Description" dataIndex="description" key="key" />
-            <Column title="Quantity" dataIndex="qty" key="key" render={(_, record) => (
-                <span>Qty {record.qty}</span>
-            )} />
-            <Column title="Date" dataIndex="date" key="key" />
-            <Column title="Amount" dataIndex="amount" key="key" render={(_, record) => (
-                <span>£ {record.amount}</span>
-            )} />
-            <Column title="" dataIndex="test" key="key" />
-        </Table>,
+        children: <TutorialsBilling />
     },
 ];
 

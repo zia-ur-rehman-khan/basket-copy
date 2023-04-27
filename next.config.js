@@ -12,3 +12,5 @@ module.exports = withLess({
   // reactStrictMode: true,
   lessLoaderOptions: {},
 });
+
+
