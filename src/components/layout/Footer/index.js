@@ -63,6 +63,7 @@ const Footer = () => {
     },
     {
       title: "Media",
+      url: "/media",
     },
     {
       title: "Terms & Condition",
