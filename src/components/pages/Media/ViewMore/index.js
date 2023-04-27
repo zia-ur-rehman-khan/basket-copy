@@ -14,8 +14,15 @@ import video4 from "public/video/video4.png";
 import video5 from "public/video/video5.png";
 import video6 from "public/video/video6.png";
 import video7 from "public/video/video7.png";
-import React from "react";
+import React, { useRef } from "react";
 import Card from "./Card";
+import { Carousel } from "antd";
+import basketBall from "public/product/product1.png";
+import image from "public/carousal/carousal1.png";
+import image2 from "public/about/banner.png";
+import image3 from "public/school/schoolBanner.png";
+import Image from "next/image";
+import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 const ViewMore = ({ picture }) => {
   const array = [blog6, blog5, blog2, blog4, blog1, blog2, blog7, blog4];
@@ -30,8 +37,52 @@ const ViewMore = ({ picture }) => {
     video6,
   ];
 
+  const temp = [image, image2, image3, image2, image, image3];
+
+  const carouselRef = useRef();
+
+  const goToNextSlide = () => {
+    carouselRef.current.next();
+  };
+
+  const goToPrevSlide = () => {
+    carouselRef.current.prev();
+  };
+
+  const CustomPrevArrow = () => (
+    <div
+      className="custom-arrow custom-arrow-left c-pointer"
+      onClick={goToPrevSlide}
+    >
+      <LeftOutlined />
+    </div>
+  );
+
+  const CustomNextArrow = () => (
+    <div
+      className="custom-arrow custom-arrow-right c-pointer"
+      onClick={goToNextSlide}
+    >
+      <RightOutlined />
+    </div>
+  );
+
   return (
-    <div>
+    <div className="parent-view-more">
+      <Carousel
+        ref={carouselRef}
+        prevArrow={<CustomPrevArrow />}
+        nextArrow={<CustomNextArrow />}
+        slidesToShow={1}
+        slidesToScroll={1}
+        infinite={true}
+        arrows={true}
+        dots={false}
+      >
+        {temp.map((_t, key) => (
+          <Image src={_t} alt="carousal" key={key} />
+        ))}
+      </Carousel>
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"View More"} />
       </div>

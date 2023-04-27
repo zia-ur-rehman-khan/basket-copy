@@ -8,6 +8,7 @@ import OurAcademy from "../Event/AcademyPage/OurAcademy";
 import CommonTextField from "components/common/TextField";
 import ViewMore from "./ViewMore";
 import { useRouter } from "next/router";
+import ProductCard from "../Home/Product/ProductCard";
 
 const Media = () => {
   const [activeKey, setActiveKey] = useState("1");
@@ -24,32 +25,32 @@ const Media = () => {
   return (
     <div>
       <CommonBanner src={banner} heading={"Gallery"} />
-      <Row
-        gutter={[0, 30]}
-        className="common-padding"
-        justify={"space-between"}
-        align={"middle"}
-      >
-        <CommonHeading level={2} heading={"Browse Our Gallery"} />
-        <Col
-          xxl={{ span: 12 }}
-          xl={{ span: 12 }}
-          lg={{ span: 12 }}
-          md={{ span: 24 }}
-          sm={{ span: 24 }}
-          xs={{ span: 24 }}
-        >
-          <Tabs
-            onChange={handleTabChange}
-            defaultActiveKey="1"
-            items={tabs}
-            className="my-tabs"
-            type="card"
-          />
-        </Col>
-      </Row>
-
       <div className="common-padding">
+        <Row
+          gutter={[0, 30]}
+          justify={"space-between"}
+          align={"middle"}
+          className="mb-3"
+        >
+          <CommonHeading level={2} heading={"Browse Our Gallery"} />
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 24 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <Tabs
+              onChange={handleTabChange}
+              defaultActiveKey="1"
+              items={tabs}
+              className="my-tabs"
+              type="card"
+            />
+          </Col>
+        </Row>
+
         {activeKey === "1" ? (
           <>
             <ViewMore picture />
