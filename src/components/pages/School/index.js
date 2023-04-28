@@ -11,6 +11,7 @@ import React from "react";
 import OurTeam from "components/pages/Team/OurTeam";
 import WorkWith from "./WorkWith";
 import { useRouter } from "next/router";
+import CommonVideoPreview from "components/common/VideoPreview";
 
 const School = () => {
   const { push } = useRouter();
@@ -41,7 +42,7 @@ const School = () => {
           contentSmall: 24,
           contentlarge: 10,
         }}
-        src={contentImage}
+        component={<CommonVideoPreview />}
       >
         <CommonTextField fontSize="20px" text="Learn more about Iball" />
         <Commonheading level={2} heading="What We do" />
