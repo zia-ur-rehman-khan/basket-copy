@@ -6,11 +6,23 @@ import { Radio } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import React from "react";
+import { useRouter } from "next/router";
 
 const tempImage =
   "https://www.investopedia.com/thmb/3H96L9iC_VUhvsqmnypxfEQW4UA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/full-color-800x450-cee226a48bed4177b90351075b332227.jpg";
 
 const Index = () => {
+  const { push, query } = useRouter();
+
+  const handelRoute = () => {
+    push({
+      pathname: "register",
+      query: {
+        ...query,
+        t: "payment",
+      },
+    });
+  };
   return (
     <>
       <div style={{ width: "100%" }}>
@@ -55,6 +67,7 @@ const Index = () => {
             background={"#1D1D1D"}
             color={"#FF6600"}
             border={"1px solid #FF6600"}
+            onClick={handelRoute}
           />
         </div>
       </div>

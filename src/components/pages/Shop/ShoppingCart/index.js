@@ -5,6 +5,7 @@ import { DeleteOutlined } from "@ant-design/icons";
 
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
+import { useRouter } from "next/router";
 
 // import "https://image.spreadshirtmedia.com/content/q_auto,f_auto,w_210/CMS/SSP/product_image_shirt_kids.png" from "public/product/product1.png";
 
@@ -73,6 +74,12 @@ const data = [
 ];
 
 const Index = () => {
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/checkout");
+  };
+
   return (
     <>
       <div className="review_form p-5" style={{ width: "80%", margin: "auto" }}>
@@ -196,6 +203,7 @@ const Index = () => {
               child="Proceed to checkout"
               width={"100%"}
               classname={"mt-3"}
+              onClick={handelRoute}
             />
           </Col>
         </Row>

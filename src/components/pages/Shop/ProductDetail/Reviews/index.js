@@ -5,8 +5,15 @@ import { Col, Row } from "antd";
 import Review from "./Review";
 import Commonheading from "components/common/Heading";
 import CommonButton from "components/common/Button";
+import { useRouter } from "next/router";
 
 const Index = () => {
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/submitReview/12");
+  };
+
   const reviews = [
     {
       id: 1,
@@ -86,9 +93,7 @@ const Index = () => {
       <div className="product-side">
         <div className="d-flex justify-content-between align-items-center mt-4">
           <Commonheading level={2} heading={"Reviews"} />
-          <CommonButton
-            child="Give Review"
-          />
+          <CommonButton child="Give Review" onClick={handelRoute} />
         </div>
         <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
           {reviews?.map((_t, key) => (

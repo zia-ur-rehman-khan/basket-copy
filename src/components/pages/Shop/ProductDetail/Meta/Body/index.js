@@ -7,8 +7,15 @@ import CommonButton from "components/common/Button";
 import tempImage from "public/product/product1.png";
 
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Index = () => {
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/cart");
+  };
+
   return (
     <>
       <div className="product_body_wrapper">
@@ -87,10 +94,13 @@ const Index = () => {
           </Col>
         </Row>
 
-  
         <Row className="mt-5" gutter={[16, 16]}>
           <Col span={12}>
-            <CommonButton child={" Add to Cart"} width={"100%"} />
+            <CommonButton
+              child={" Add to Cart"}
+              width={"100%"}
+              onClick={handelRoute}
+            />
           </Col>
           <Col span={12}>
             <CommonButton
