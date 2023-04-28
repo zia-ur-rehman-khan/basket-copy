@@ -1,11 +1,17 @@
 import Layout from "components/layout";
-import "styles/Index.less";
+import Head from "next/head";
+import "styles/index.less";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <title>Iball</title>
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 

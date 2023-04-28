@@ -4,7 +4,7 @@ import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import ImageContent from "components/common/ImageWithContent";
 import CommonTextField from "components/common/TextField";
-import contentImage from "public/about/contentImage.png";
+import contentImage from "public/event/eventContentImage.png";
 import banner from "public/event/banner.png";
 import MemberShip from "../../../common/Button/MemberShip";
 import OurEvents from "./OurEvents";

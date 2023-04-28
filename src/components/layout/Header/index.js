@@ -38,59 +38,74 @@ const Header = () => {
     push(url);
   };
 
+  const handelRoute = (t) => {
+    push(t);
+  };
+
   return (
     <>
-      {screens.lg ? (
-        <div className="header">
-          <div className="left-side">
-            <Space size={40}>
-              <Image src={logo} width={104} height={79} alt="logo" />
-              <Space size={26}>
-                {navList.map((t, Index) => (
-                  <TextField
-                    className={`${
-                      isActive(t.url) ? "primary" : ""
-                    } header-text`}
-                    onClick={() => navRoute(t.url)}
-                    key={Index}
-                    text={t.name}
-                  />
-                ))}
-              </Space>
-              <Search
-                placeholder="input search text"
-                // onSearch={onSearch}
-                enterButton
+      <div className="header">
+        <div className="left-side">
+          <Space size={40}>
+            <Image
+              src={logo}
+              width={104}
+              height={79}
+              alt="logo"
+              className="c-pointer"
+              onClick={() => handelRoute("/")}
+            />
+            <Space size={26}>
+              {navList.map((t, index) => (
+                <TextField
+                  className={`${isActive(t.url) ? "primary" : ""} header-text`}
+                  onClick={() => navRoute(t.url)}
+                  key={index}
+                  text={t.name}
+                />
+              ))}
+            </Space>
+            <Search
+              placeholder="search"
+              // onSearch={onSearch}
+              enterButton
+            />
+          </Space>
+        </div>
+        <div className="right-side">
+          <Space size={35}>
+            <Space>
+              <Image src={profile} width={20} height={20} alt="logo" />
+              <Image src={heart} width={20} height={20} alt="logo" />
+              <Image src={cart} width={20} height={20} alt="logo" />
+            </Space>
+            <Space direction={screens.xl ? "horizontal" : "vertical"}>
+              <CommonButton
+                type="default"
+                child={"Enquire Now"}
+                onClick={() => handelRoute("/contact-us")}
+              />
+              <CommonButton
+                child={"Sign Up"}
+                onClick={() => handelRoute("/sign-up")}
               />
             </Space>
-          </div>
-          <div className="right-side">
-            <Space size={35}>
-              <Space>
-                <Image src={profile} width={20} height={20} alt="logo" />
-                <Image src={heart} width={20} height={20} alt="logo" />
-                <Image src={cart} width={20} height={20} alt="logo" />
-              </Space>
-              <Space direction={screens.xl ? "horizontal" : "vertical"}>
-                <CommonButton type="default" child={"Enquire Now"} />
-                <CommonButton child={"Sign Up"} />
-              </Space>
-            </Space>
-          </div>
+          </Space>
         </div>
-      ) : (
-        <Space className="pb-3 pt-3">
-          <AlignLeftOutlined
-            className="side-nav-icon"
-            onClick={() => setIsMobile(true)}
-          />
-          <Search
-            placeholder="input search text"
-            // onSearch={onSearch}
-            enterButton
-          />
-        </Space>
-      )}
+      </div>
+
+      <Space className="pb-3 pt-3 mobile">
+        <AlignLeftOutlined
+          className="side-nav-icon"
+          onClick={() => setIsMobile(true)}
+        />
+        <Search
+          placeholder="input search text"
+          // onSearch={onSearch}
+          enterButton
+        />
+      </Space>
+
       <Drawer
         title={<Image src={logo} width={104} height={79} alt="logo" />}
         placement="left"

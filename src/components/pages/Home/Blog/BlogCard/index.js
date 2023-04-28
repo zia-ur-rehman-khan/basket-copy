@@ -5,10 +5,18 @@ import CommonCard from "components/common/Card";
 import { Space } from "antd";
 import { Divider } from "antd";
 import CommonButton from "components/common/Button";
+import { useRouter } from "next/router";
 
 const BlogCard = ({ src }) => {
+  const { push } = useRouter();
+
+  const handelRoute = (t) => {
+    push(`blog/${t}`);
+  };
+
   return (
     <CommonCard
+      onClick={() => handelRoute(10)}
       child={
         <>
           <div>

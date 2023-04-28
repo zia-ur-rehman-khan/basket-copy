@@ -9,6 +9,7 @@ const ProductCard = ({ image }) => {
   const { src, width, height } = image;
   return (
     <CommonCard
+      style={{ margin: "0 10px", height: "485px" }}
       child={
         <>
           <div>

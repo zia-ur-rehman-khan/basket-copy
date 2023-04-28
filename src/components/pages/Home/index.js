@@ -11,8 +11,23 @@ import Event from "./Event";
 import Product from "./Product";
 import WithUS from "./WithUs";
 import React from "react";
+import blog1 from "public/blog/blog1.png";
+import blog2 from "public/blog/blog2.png";
+import blog3 from "public/blog/blog3.png";
+import blog4 from "public/blog/blog4.png";
+// import video from "public/video/video.mp4";
+import { useRouter } from "next/router";
+import CommonVideoPreview from "components/common/VideoPreview";
 
 const Home = () => {
+  const array = [blog1, blog2, blog3, blog4];
+
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/what-we-do");
+  };
+
   return (
     <>
       <CommonBanner
@@ -37,6 +52,7 @@ const Home = () => {
           </Space>
         }
       />
+
       <ImageContent
         responsive={{
           imageSmall: 24,
@@ -44,7 +60,7 @@ const Home = () => {
           contentSmall: 24,
           contentlarge: 10,
         }}
-        src={contentImage}
+        component={<CommonVideoPreview />}
         content={
           <>
             <CommonTextField fontSize="20px" text="Learn more about Iball" />
@@ -54,7 +70,11 @@ const Home = () => {
             />
             <Space direction="vertical" size={24}>
               <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-              <CommonButton child="learn more" type="primary" />
+              <CommonButton
+                child="learn more"
+                type="primary"
+                onClick={handelRoute}
+              />
             </Space>
           </>
         }
@@ -63,7 +83,7 @@ const Home = () => {
       <WithUS />
       <div className="common-padding">
         <Event />
-        <Blog />
+        <Blog array={array} />
       </div>
     </>
   );

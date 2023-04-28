@@ -19,6 +19,7 @@ const CommonTextField = ({
   className,
   title,
   lineHeight,
+  opacity,
 }) => {
   return (
     <div className={`${topClass || ""} paragraph-parent`}>
@@ -41,6 +42,7 @@ const CommonTextField = ({
           paddingLeft,
           textDecoration,
           whiteSpace: "pre-wrap",
+          opacity,
         }}
         onClick={onClick}
       >

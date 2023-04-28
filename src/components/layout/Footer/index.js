@@ -1,53 +1,78 @@
 import Image from "next/image";
 import logo from "public/layout/image/logo.png";
 import linkdin from "public/layout/svg/linkdin.svg";
+import twitter from "public/layout/svg/twitter.svg";
+import instagram from "public/layout/svg/instagram.svg";
+import tiktok from "public/layout/svg/tiktok.svg";
+import facebook from "public/layout/svg/facebook.svg";
 
 import { Col, List, Row, Space } from "antd";
 import CommonTextField from "components/common/TextField";
 import React from "react";
+import { Input } from "antd";
+import CommonButton from "components/common/Button";
+import CommonInputField from "components/common/Input";
 
 const Footer = () => {
+  const socialIcons = [linkdin, twitter, instagram, tiktok, facebook];
   const data = [
     {
       title: "Home",
+      url: "/",
     },
     {
       title: "About",
+      url: "/about",
     },
     {
       title: "Shop",
+      url: "/shop",
     },
     {
       title: "Event",
+      url: "/event",
     },
     {
       title: "Contact Us",
+      url: "/contact-us",
     },
   ];
   const data2 = [
     {
       title: "What We Do",
+      url: "/what-we-do",
     },
     {
       title: "Blogs",
+      url: "/blog",
     },
     {
       title: "Our Services",
+      url: "/service",
     },
     {
       title: "Our Road Map",
+      url: "/road-map",
     },
     {
       title: "Our Staff",
+      url: "/team",
     },
     {
       title: "Our Achievements",
+      url: "/achievement",
+    },
+    {
+      title: "Media",
+      url: "/media",
     },
     {
       title: "Terms & Condition",
+      url: "/terms-conditions",
     },
     {
       title: "Privacy Policy",
+      url: "/privacy-policy",
     },
   ];
 
@@ -68,27 +93,28 @@ const Footer = () => {
 
   const data4 = [
     {
-      title: "Company",
-    },
-    {
       title: "Coaches",
+      url: "/what-we-do/coach-region",
     },
     {
       title: "Schools",
+      url: "/school",
     },
     {
       title: "I ball Players",
+      url: "/about",
     },
     {
       title: "Partners & Sponsors",
+      url: "/partners-sponsers",
     },
   ];
 
   return (
     <Row justify="space-around" className="bg-grey p-5 radius" gutter={[0, 50]}>
       <Col
-        xxl={{ span: 5 }}
-        xl={{ span: 5 }}
+        xxl={{ span: 6 }}
+        xl={{ span: 6 }}
         lg={{ span: 10 }}
         md={{ span: 16 }}
         sm={{ span: 24 }}
@@ -97,13 +123,10 @@ const Footer = () => {
           <Image src={logo} width={104} height={79} alt="logo" />
 
           <CommonTextField text="iBall is a Basketball Foundation specializing in training, development coaching and Basketball themed events management (Birthday’s, Camps and tournaments)" />
-          <Space size={0}>
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
-            <Image src={linkdin} width={32} height={32} alt="logo" />
+          <Space size={5}>
+            {socialIcons.map((t, index) => (
+              <Image key={index} src={t} width={32} height={32} alt="logo" />
+            ))}
           </Space>
         </Space>
       </Col>
@@ -127,7 +150,7 @@ const Footer = () => {
             <List.Item>
               <List.Item.Meta
                 title={
-                  <a href="https://ant.design">
+                  <a href={item.url}>
                     <CommonTextField text={item.title} />
                   </a>
                 }
@@ -157,7 +180,7 @@ const Footer = () => {
             <List.Item>
               <List.Item.Meta
                 title={
-                  <a href="https://ant.design">
+                  <a href={item.url}>
                     <CommonTextField text={item.title} />
                   </a>
                 }
@@ -184,13 +207,7 @@ const Footer = () => {
           dataSource={data3}
           renderItem={(item) => (
             <List.Item>
-              <List.Item.Meta
-                title={
-                  <a href="https://ant.design">
-                    <CommonTextField text={item.title} />
-                  </a>
-                }
-              />
+              <List.Item.Meta title={<CommonTextField text={item.title} />} />
             </List.Item>
           )}
         />
@@ -206,7 +223,7 @@ const Footer = () => {
             <List.Item>
               <List.Item.Meta
                 title={
-                  <a href="https://ant.design">
+                  <a href={item.url}>
                     <CommonTextField text={item.title} />
                   </a>
                 }
@@ -223,13 +240,21 @@ const Footer = () => {
         sm={{ span: 12 }}
         xs={{ span: 24 }}
       >
-        <CommonTextField
-          className={"pb-2"}
-          text={"Newsletter"}
-          fontSize={"21px"}
-          fontWeight={"600"}
-        />
-        <CommonTextField text={"Subscribe To our Newsletter."} />
+        <Space direction="vertical">
+          <CommonTextField
+            className={"pb-2"}
+            text={"Newsletter"}
+            fontSize={"21px"}
+            fontWeight={"600"}
+          />
+          <CommonTextField text={"Subscribe To our Newsletter."} />
+          <CommonInputField
+            placeholder="Enter Your Email"
+            className="white"
+            height={"35px"}
+          />
+          <CommonButton child={"submit"} classname={"black"} width={"100%"} />
+        </Space>
       </Col>
     </Row>
   );

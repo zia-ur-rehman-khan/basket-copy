@@ -2,7 +2,7 @@ import { Typography } from "antd";
 import React from "react";
 const { Title } = Typography;
 
-const Commonheading = ({
+const CommonHeading = ({
   heading,
   children,
   font,
@@ -51,4 +51,4 @@ const Commonheading = ({
   );
 };
 
-export default Commonheading;
+export default CommonHeading;

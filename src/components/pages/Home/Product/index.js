@@ -7,6 +7,7 @@ import shoes from "public/product/product3.png";
 import socks from "public/product/product4.png";
 import ProductCard from "./ProductCard";
 import React from "react";
+import { Carousel } from "antd";
 
 const Product = () => {
   const temp = [
@@ -18,29 +19,55 @@ const Product = () => {
     { src: basketBall, width: 218, height: 218 },
   ];
 
+  const responsiveSettings = [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+  ];
+
   return (
     <div className="product-side">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"Featured Product"} />
         <CommonButton child="View More" />
       </div>
-      {/* <div className="card-parent mt-3"> */}
-      <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
+      <Carousel
+        dots={false}
+        responsive={responsiveSettings}
+        slidesToShow={4}
+        slidesToScroll={3}
+        draggable
+        infinite={false}
+      >
         {temp.map((_t, key) => (
-          <Col
-            key={key}
-            xxl={{ span: 6 }}
-            xl={{ span: 6 }}
-            lg={{ span: 10 }}
-            md={{ span: 11 }}
-            sm={{ span: 15 }}
-          >
-            <ProductCard image={_t} key={key} />
-          </Col>
+          <ProductCard image={_t} key={key} />
         ))}
-      </Row>
-
-      {/* </div> */}
+      </Carousel>
     </div>
   );
 };

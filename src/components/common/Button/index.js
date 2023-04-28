@@ -5,7 +5,7 @@ const CommonButton = ({
   child,
   classname,
   topClass,
-  width,
+  width = "100%",
   height,
   background,
   borderRadius = "6px",
@@ -17,7 +17,7 @@ const CommonButton = ({
   type = "primary",
 }) => {
   return (
-    <div className={`${topClass || ""} button-parent`}>
+    <div className={`button-parent ${topClass || ""} `}>
       <Button
         type={type}
         style={{
