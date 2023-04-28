@@ -8,10 +8,9 @@ import facebook from "public/layout/svg/facebook.svg";
 
 import { Col, List, Row, Space } from "antd";
 import CommonTextField from "components/common/TextField";
-import React from "react";
-import { Input } from "antd";
-import CommonButton from "components/common/Button";
 import CommonInputField from "components/common/Input";
+import CommonButton from "components/common/Button";
+import { useRouter } from "next/router";
 
 const Footer = () => {
   const socialIcons = [linkdin, twitter, instagram, tiktok, facebook];
@@ -110,8 +109,10 @@ const Footer = () => {
     },
   ];
 
+  const isUser = useRouter().pathname.startsWith('/user')
+  const isAdmin = useRouter().pathname.startsWith('/coach')
   return (
-    <Row justify="space-around" className="bg-grey p-5 radius" gutter={[0, 50]}>
+    <Row justify="space-around" className={`bg-grey p-5 radius ${isAdmin || isUser ? 'hide-true' : ''}`} gutter={[0, 50]}>
       <Col
         xxl={{ span: 6 }}
         xl={{ span: 6 }}

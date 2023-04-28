@@ -1,0 +1,296 @@
+.ant-tabs-tab-btn {
+    font-size: 16px;
+}
+
+.ant-tabs-tab .ant-tabs-tab-btn:not(.ant-tabs-tab-active .ant-tabs-tab-btn) {
+    color: #ffffff80
+}
+
+.ant-tabs-nav:before {
+    border-bottom: 1px solid #f0f0f036 !important;
+}
+
+// calendar 
+.calendar__wrapp {
+    background: #4B4A54;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+
+    .react-calendar {
+        background: transparent;
+        border: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .react-calendar__navigation__prev2-button,
+    .react-calendar__navigation__next2-button {
+        display: none;
+    }
+
+    .react-calendar__navigation__arrow {
+        position: absolute;
+        top: 10px;
+        background: #efefefa3;
+        color: #fff;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        font-size: 26px;
+        transition: .4s ease;
+    }
+
+    .react-calendar__navigation__arrow:hover {
+        background: #ff6600 !important;
+    }
+
+    .react-calendar__navigation__next-button {
+        right: 0;
+    }
+
+    .react-calendar__navigation__prev-button {
+        right: 60px;
+    }
+
+    .react-calendar__navigation__label {
+        max-width: max-content;
+        margin-top: 19px;
+    }
+
+    .react-calendar__navigation__label span {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .react-calendar__navigation__label:hover {
+        background: transparent !important;
+    }
+
+    .events__highlighter {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        list-style: none;
+        margin: 20px 0 0 17px;
+
+        li {
+            font-size: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        li:nth-child(odd) {
+            color: #FF6600;
+        }
+
+        li:nth-child(odd):before {
+            background: #FF6600;
+        }
+
+        li:nth-child(even) {
+            color: #FFC700;
+        }
+
+        li:nth-child(even):before {
+            background: #FFC700;
+        }
+    }
+
+    .react-calendar__viewContainer {
+        color: #fff;
+        margin: 30px 0 0;
+    }
+
+    .react-calendar__month-view__weekdays__weekday {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 24px !important;
+    }
+
+    .react-calendar__month-view__weekdays__weekday abbr[title],
+    abbr[data-original-title] {
+        text-decoration: none !important;
+    }
+
+    .react-calendar__tile--active {
+        background: transparent !important;
+        color: #FF6600 !important
+    }
+
+    .react-calendar__tile--hasActive {
+        background: transparent !important;
+    }
+
+    .react-calendar__tile--now {
+        background: transparent;
+        color: #FFC700;
+    }
+
+    .react-calendar__month-view__days__day--weekend {
+        color: #d1000087
+    }
+
+    .react-calendar__tile.react-calendar__month-view__days__day:hover {
+        background: transparent;
+        color: #ff6600;
+    }
+}
+
+// calendar 
+
+// Order 
+.orders__wrapp {
+    background: #4B4A54;
+    padding: 2rem;
+    border-radius: 11px;
+
+    .order__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+        border-bottom: 1px solid rgba(250, 250, 250, 0.25);
+        padding: 12px 0;
+
+        .order__item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    .order__qty,
+    .order__price,
+    .item__name {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .orders__total-wrapp {
+        margin-top: 2rem;
+
+        .total__row {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            strong {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Order 
+
+
+// Wallet 
+.wallet__row {
+    background: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 11px;
+    margin: 14px 0;
+
+    .wallet__title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .wallet__points {
+        margin: 0;
+        color: #FF6600;
+        font-size: 18px;
+    }
+}
+
+.wallet__balance {
+    background: #FF6600;
+    padding: 1rem;
+    border-radius: 11px;
+    text-align: center;
+    margin-top: 14px;
+
+    small {
+        font-size: 16px;
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 40px;
+        margin: 0;
+        font-weight: bold;
+
+        sup {
+            font-weight: 300;
+            font-size: 18px;
+            margin-left: 6px;
+        }
+    }
+}
+
+// Wallet 
+
+// Coach Card
+.coach__info-wrapp {
+    display: flex;
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
+    gap: 1.5rem;
+
+    .coach__avatar {
+        flex: 1;
+    }
+
+    .coach__info {
+        flex: 2.5;
+
+        .info__row {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+
+            h2 {
+                font-weight: 600;
+                font-size: 24px;
+            }
+
+            p:first-child {
+                flex: 2;
+            }
+
+            p:last-child {
+                flex: 1;
+            }
+        }
+    }
+}
+
+// Coach Card

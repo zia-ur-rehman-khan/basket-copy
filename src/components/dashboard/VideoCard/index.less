@@ -1,0 +1,73 @@
+.vid__card {
+    background: #4B4A54;
+    border: 0;
+    max-width: 300px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .ant-card-body {
+        padding: 0;
+    }
+
+    img {
+        width: 100% !important;
+        height: 160px !important;
+        object-fit: cover;
+    }
+
+    .card__head {
+        position: relative;
+
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff6600;
+            font-size: 50px;
+            cursor: pointer;
+        }
+    }
+
+    .card__body {
+        padding: 16px;
+        color: #fff;
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li:has(img) {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        li {
+            font-size: 12px;
+            font-weight: 300;
+
+            img {
+                width : 32px !important;
+                height : 32px !important;
+                object-fit: cover;
+            }
+        }
+
+        h4 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+}
