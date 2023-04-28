@@ -24,7 +24,7 @@ const Index = () => {
               <p>⭐⭐⭐⭐⭐</p>
             </div>
           </Col>
-          <Col span={12} className="d-flex flex-row justify-content-end;">
+          <Col span={12} className="d-flex flex-row justify-content-end">
             <Commonheading level={4} heading={"£20.00"} color="#FF6600" />
           </Col>
         </Row>
