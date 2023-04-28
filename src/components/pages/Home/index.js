@@ -15,7 +15,7 @@ import blog1 from "public/blog/blog1.png";
 import blog2 from "public/blog/blog2.png";
 import blog3 from "public/blog/blog3.png";
 import blog4 from "public/blog/blog4.png";
-import video from "public/video/video.mp4";
+// import video from "public/video/video.mp4";
 import { useRouter } from "next/router";
 import CommonVideoPreview from "components/common/VideoPreview";
 
@@ -52,7 +52,7 @@ const Home = () => {
           </Space>
         }
       />
-      <CommonVideoPreview src={video} />
+      {/* <CommonVideoPreview src={video} /> */}
 
       <ImageContent
         responsive={{
