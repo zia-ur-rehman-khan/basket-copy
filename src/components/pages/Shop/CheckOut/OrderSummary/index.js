@@ -38,7 +38,7 @@ const Index = () => {
   return (
     <>
       <div>
-        <Commonheading level={4} heading="Order Summary" />
+        <Commonheading level={4} heading="Order Summary" className={" mb-2"} />
         <div className="d-flex">
           <Input placeholder="Enter Promo Code" />
           <CommonButton child="Apply" />
