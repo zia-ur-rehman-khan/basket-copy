@@ -5,6 +5,13 @@
     justify-content: space-around;
 
 
+    @media (max-width: 1000px) {
+        display: none;
+    }
+
+
+
+
     .header-text {
         transition: color 0.3s;
 
@@ -36,6 +43,17 @@
         padding: 10px 10px;
 
     }
+}
+
+
+.mobile {
+    display: none;
+
+    @media (max-width: 1000px) {
+        display: flex;
+    }
+
+
 }
 
 
