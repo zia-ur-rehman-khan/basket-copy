@@ -8,7 +8,7 @@ import PaymentDetails from "./PaymentDetails";
 import OrderSummary from "./OrderSummary";
 import CommonButton from "components/common/Button";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="product-side">
@@ -47,4 +47,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

@@ -102,7 +102,7 @@ const data = [
   },
 ];
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="product-side">
@@ -164,4 +164,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

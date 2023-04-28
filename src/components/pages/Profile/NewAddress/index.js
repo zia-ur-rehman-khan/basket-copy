@@ -5,7 +5,7 @@ import CommonTextField from "components/common/TextField";
 import { Input, Row, Col } from "antd";
 import CommonButton from "components/common/Button";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="product-side">
@@ -57,4 +57,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

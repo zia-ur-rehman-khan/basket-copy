@@ -5,7 +5,7 @@ import { Col, Row } from "antd";
 import Review from "./Review";
 import Commonheading from "components/common/Heading";
 
-const index = () => {
+const Index = () => {
   const reviews = [
     {
       id: 1,
@@ -105,4 +105,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

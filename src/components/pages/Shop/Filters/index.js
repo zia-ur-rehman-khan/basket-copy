@@ -7,7 +7,7 @@ const handleChange = (value) => {
 
 import CommonButton from "components/common/Button";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <Select
@@ -99,4 +99,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

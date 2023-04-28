@@ -6,7 +6,7 @@ import Commonheading from "components/common/Heading";
 import CommonButton from "components/common/Button";
 import Image from "next/image";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="product_body_wrapper">
@@ -78,4 +78,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

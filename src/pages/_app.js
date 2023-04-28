@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import "styles/index.less";
+import "styles/Index.less";
 
 function MyApp({ Component, pageProps }) {
   return (

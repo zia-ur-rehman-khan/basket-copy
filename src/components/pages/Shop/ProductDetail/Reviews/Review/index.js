@@ -11,7 +11,7 @@ const { Meta } = Card;
 import CommonCard from "components/common/Card";
 import CommonButton from "components/common/Button";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <CommonCard
@@ -46,4 +46,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

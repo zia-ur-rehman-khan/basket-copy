@@ -4,7 +4,7 @@ const DynamicHeader = dynamic(() =>
   import("components/pages/Profile/NewAddress")
 );
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <DynamicHeader />
@@ -12,4 +12,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

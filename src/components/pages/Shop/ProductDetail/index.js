@@ -5,7 +5,7 @@ import SimilarProducts from "../Similar";
 import RecentlyProducts from "../Recently";
 import ProductMeta from "./Meta";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="carasoul-container">
@@ -18,4 +18,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

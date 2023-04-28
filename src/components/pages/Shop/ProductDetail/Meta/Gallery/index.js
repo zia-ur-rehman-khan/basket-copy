@@ -4,7 +4,7 @@ import { Col, Divider, Row, Space } from "antd";
 import CommonCard from "components/common/Card";
 import Image from "next/image";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="product_gallery_wrapper">
@@ -58,4 +58,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

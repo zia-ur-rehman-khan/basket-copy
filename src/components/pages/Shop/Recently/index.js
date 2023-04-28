@@ -9,7 +9,7 @@ import socks from "public/product/product4.png";
 import ProductCard from "../Product/ProductCard";
 import React from "react";
 
-const index = () => {
+const Index = () => {
   const products = [
     {
       src: basketBall,
@@ -111,4 +111,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

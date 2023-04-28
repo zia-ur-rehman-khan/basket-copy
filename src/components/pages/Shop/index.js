@@ -4,7 +4,7 @@ import AllProducts from "./All";
 import Hero from "./Hero";
 import CommonButton from "components/common/Button";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="carasoul-container">
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

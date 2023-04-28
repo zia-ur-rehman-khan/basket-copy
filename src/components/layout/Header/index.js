@@ -46,13 +46,13 @@ const Header = () => {
             <Space size={40}>
               <Image src={logo} width={104} height={79} alt="logo" />
               <Space size={26}>
-                {navList.map((t, index) => (
+                {navList.map((t, Index) => (
                   <TextField
                     className={`${
                       isActive(t.url) ? "primary" : ""
                     } header-text`}
                     onClick={() => navRoute(t.url)}
-                    key={index}
+                    key={Index}
                     text={t.name}
                   />
                 ))}

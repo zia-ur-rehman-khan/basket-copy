@@ -2,7 +2,7 @@ import React from "react";
 
 import Commonheading from "components/common/Heading";
 
-const index = ({ slideData }) => {
+const Index = ({ slideData }) => {
   const { id, content } = slideData;
   return (
     <>
@@ -23,4 +23,4 @@ const index = ({ slideData }) => {
   );
 };
 
-export default index;
+export default Index;

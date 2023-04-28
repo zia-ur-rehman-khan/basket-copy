@@ -2,7 +2,7 @@ import React from "react";
 
 import NewAddress from "/NewAddress";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <NewAddress />
@@ -10,4 +10,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

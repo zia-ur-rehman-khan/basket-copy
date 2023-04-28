@@ -9,7 +9,7 @@ import socks from "public/product/product4.png";
 import ProductCard from "../Product/ProductCard";
 import React from "react";
 
-const index = () => {
+const Index = () => {
   const products = [
     { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
     { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
@@ -48,4 +48,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

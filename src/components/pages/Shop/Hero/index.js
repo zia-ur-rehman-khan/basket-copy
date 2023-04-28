@@ -5,7 +5,7 @@ import ShopCarousel from "./ShopCarousel";
 
 const dotPosition = "bottom";
 
-const index = () => {
+const Index = () => {
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
@@ -34,4 +34,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

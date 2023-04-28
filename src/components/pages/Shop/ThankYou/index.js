@@ -6,7 +6,7 @@ import TempImage from "public/product/product1.png";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="product-side">
@@ -34,4 +34,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

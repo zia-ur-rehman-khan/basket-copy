@@ -3,7 +3,7 @@ import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import React from "react";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div>
@@ -78,4 +78,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

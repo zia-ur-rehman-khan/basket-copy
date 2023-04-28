@@ -4,7 +4,7 @@ import { Col, Row } from "antd";
 import ProductBody from "./Body";
 import ProductGallery from "./Gallery";
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <div className="product-side">
@@ -22,4 +22,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

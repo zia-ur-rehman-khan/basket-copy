@@ -7,7 +7,7 @@ import { Col, Divider, Row, Space } from "antd";
 import Commonheading from "components/common/Heading";
 import CommonButton from "components/common/Button";
 
-const index = () => {
+const Index = () => {
   const onChange = (e) => {
     console.log("Change:", e.target.value);
   };
@@ -38,4 +38,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
