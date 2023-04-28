@@ -11,6 +11,7 @@ import banner from "public/school/detailBanner.png";
 import React from "react";
 import MemberShip from "components/common/Button/MemberShip";
 import OurNumbers from "./OurNumbers";
+import CommonVideoPreview from "components/common/VideoPreview";
 
 const Achievement = () => {
   return (
@@ -47,7 +48,7 @@ const Achievement = () => {
           contentSmall: 24,
           contentlarge: 10,
         }}
-        src={contentVideo}
+        component={<CommonVideoPreview />}
         content={
           <>
             <CommonTextField fontSize="20px" text="OUR ACHIEVEMENTS" />

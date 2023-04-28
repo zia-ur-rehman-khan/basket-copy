@@ -52,7 +52,6 @@ const Home = () => {
           </Space>
         }
       />
-      {/* <CommonVideoPreview src={} /> */}
 
       <ImageContent
         responsive={{
@@ -61,7 +60,7 @@ const Home = () => {
           contentSmall: 24,
           contentlarge: 10,
         }}
-        src={contentImage}
+        component={<CommonVideoPreview />}
         content={
           <>
             <CommonTextField fontSize="20px" text="Learn more about Iball" />
