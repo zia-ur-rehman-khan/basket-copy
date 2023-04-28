@@ -5,29 +5,38 @@ import React from "react";
 import TempImage from "public/product/product1.png";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
+import CommonTextField from "components/common/TextField";
+import tempImage from "public/event/event1.png";
 
 const Index = () => {
   return (
     <>
-      <div className="product-side">
-        <div className="thankyou_wrapper">
-          <Image src={TempImage ?? TempImage} alt="Picture " />
-          <Commonheading level={5} heading={"Order ID #31654646"} />
-          <Commonheading level={3} heading={"Thanks For Shopping"} />
+      <div className="bg-grey p-5 radius d-flex flex-column align-items-center thankyou_wrapper">
+        <Image src={tempImage ?? tempImage} alt="Thank You" priority={true} />
 
-          <Commonheading
-            level={5}
-            heading={
-              "Donec ac odio tempor orci dapibus. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Viverra adipiscing at in tellus integer feugiat scelerisque varius. Eu mi bibendum neque egestas congue quisque egestas diam."
-            }
+        <CommonTextField
+          className={"mt-3"}
+          text="Order ID #31654646"
+          letterSpacing={"3px"}
+          fontSize={"20px"}
+        />
+
+        <Commonheading
+          className={"mb-3"}
+          level={2}
+          heading={`Thanks For Shopping`}
+        />
+        <CommonTextField
+          textAlign={"center"}
+          text="Donec ac odio tempor orci dapibus. Dui accumsan sit amet nulla facilisi morbi tempus iaculis urna. Viverra adipiscing at in tellus integer feugiat scelerisque varius. Eu mi bibendum neque egestas congue quisque egestas diam."
+        />
+        <div style={{ width: "50%" }}>
+          <CommonButton
+            classname={"mt-3"}
+            child={"Continue"}
+            width={"100%"}
+            height={"50px"}
           />
-          <Link href={`productDetail/1`}>
-            <CommonButton
-              child="Continue"
-              classname="product-details"
-              width={160}
-            />
-          </Link>
         </div>
       </div>
     </>

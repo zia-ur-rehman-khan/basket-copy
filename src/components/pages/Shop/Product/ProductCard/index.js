@@ -21,15 +21,15 @@ const ProductCard = ({ productData }) => {
               <Row>
                 <Col span={12}>
                   <Commonheading
-                    level={4}
+                    level={5}
                     heading={"White Jersey"}
                     color="#000000"
                   />
-                  <Commonheading
+                  {/* <Commonheading
                     level={5}
                     heading={"Organic Cotton"}
                     color="rgba(0, 0, 0, 0.5)"
-                  />
+                  /> */}
                 </Col>
                 <Col span={12}>
                   <ul className="product-reviews">

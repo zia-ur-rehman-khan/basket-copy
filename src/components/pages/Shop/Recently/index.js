@@ -84,9 +84,9 @@ const Index = () => {
   ];
   return (
     <>
-      <div className="product-side">
-        <div className="d-flex justify-content-between align-items-center mt-5">
-          <Commonheading level={2} heading={"Recently Products"} />
+      <div className="product-side  mb-5">
+        <div className="d-flex justify-content-between align-items-center mt-4">
+          <Commonheading level={2} heading={"Recently viewed"} />
           {/* <CommonButton child="View More" /> */}
         </div>
         {/* <div className="card-parent mt-3"> */}

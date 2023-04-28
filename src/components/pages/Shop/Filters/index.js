@@ -6,95 +6,44 @@ const handleChange = (value) => {
 };
 
 import CommonButton from "components/common/Button";
+import CommonSelect from "components/common/Select";
 
 const Index = () => {
   return (
     <>
-      <Select
-        labelInValue
-        defaultValue={{
-          value: "lucy",
-          label: "Lucy (101)",
-        }}
-        style={{
-          width: 120,
-        }}
-        onChange={handleChange}
+      <CommonSelect
+        placeholder="Price : Min | Max"
         options={[
-          {
-            value: "jack",
-            label: "Jack (100)",
-          },
-          {
-            value: "lucy",
-            label: "Lucy (101)",
-          },
+          { value: "jack", label: "America" },
+          { value: "lucy", label: "canada" },
+          { value: "Yiminghe", label: "USA" },
         ]}
       />
-      <Select
-        labelInValue
-        defaultValue={{
-          value: "lucy",
-          label: "Lucy (101)",
-        }}
-        style={{
-          width: 120,
-        }}
-        onChange={handleChange}
+      <CommonSelect
+        placeholder="Merchandise type : Lorem"
         options={[
-          {
-            value: "jack",
-            label: "Jack (100)",
-          },
-          {
-            value: "lucy",
-            label: "Lucy (101)",
-          },
+          { value: "jack", label: "America" },
+          { value: "lucy", label: "canada" },
+          { value: "Yiminghe", label: "USA" },
         ]}
       />
-      <Select
-        labelInValue
-        defaultValue={{
-          value: "lucy",
-          label: "Lucy (101)",
-        }}
-        style={{
-          width: 120,
-        }}
-        onChange={handleChange}
+      <CommonSelect
+        placeholder="Colour : All"
         options={[
-          {
-            value: "jack",
-            label: "Jack (100)",
-          },
-          {
-            value: "lucy",
-            label: "Lucy (101)",
-          },
+          { value: "jack", label: "America" },
+          { value: "lucy", label: "canada" },
+          { value: "Yiminghe", label: "USA" },
         ]}
       />
-      <Select
-        labelInValue
-        defaultValue={{
-          value: "lucy",
-          label: "Lucy (101)",
-        }}
-        style={{
-          width: 120,
-        }}
-        onChange={handleChange}
+      <CommonSelect
+        placeholder="Sort by : All"
         options={[
-          {
-            value: "jack",
-            label: "Jack (100)",
-          },
-          {
-            value: "lucy",
-            label: "Lucy (101)",
-          },
+          { value: "jack", label: "America" },
+          { value: "lucy", label: "canada" },
+          { value: "Yiminghe", label: "USA" },
         ]}
       />
-      <CommonButton child="Reset Filters" />
+      <CommonButton child="Reset Filters" height={"40px"}/>
     </>
   );
 };

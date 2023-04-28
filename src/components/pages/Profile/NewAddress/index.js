@@ -1,56 +1,155 @@
 import React from "react";
 
+import { Input } from "antd";
+import { Row, Col } from "antd";
+const { TextArea } = Input;
+
 import Commonheading from "components/common/Heading";
 import CommonTextField from "components/common/TextField";
-import { Input, Row, Col } from "antd";
+import CommonInputField from "components/common/Input";
+
 import CommonButton from "components/common/Button";
+import CommonSelect from "components/common/Select";
 
 const Index = () => {
   return (
     <>
-      <div className="product-side">
-        <div className="d-flex justify-content-between align-items-center mt-5">
-          <Commonheading level={2} heading={"Add New Address"} />
-        </div>
-        <Input placeholder="Select Shipment method" />
-        <Row gutter={[16, 16]}>
-          <Col span={12}>
-            <Input placeholder="First Name" />
+      <div className="form_wrapper">
+        <Commonheading heading={"Add New Address"} level={2} className={"mb-4"}/>
+        <Row gutter={[14, 14]} className="signUp-main">
+          <Col
+            xxl={{ span: 24 }}
+            xl={{ span: 24 }}
+            lg={{ span: 24 }}
+            md={{ span: 24 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonSelect
+              placeholder="Select State"
+              options={[
+                { value: "jack", label: "America" },
+                { value: "lucy", label: "canada" },
+                { value: "Yiminghe", label: "USA" },
+              ]}
+            />
           </Col>
-          <Col span={12}>
-            <Input placeholder="Last Name" />
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonInputField placeholder="First Name" />
           </Col>
-        </Row>
-        <Row gutter={[16, 16]}>
-          <Col span={12}>
-            <Input placeholder="Email" />
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonInputField placeholder="Last Name" />
           </Col>
-          <Col span={12}>
-            <Input placeholder="Phone Number" />
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonInputField placeholder="Email " />
           </Col>
-        </Row>
-        <Input placeholder="Address" />
-        <Input placeholder="Suite, Apartment, etc " />
-        <Row gutter={[16, 16]}>
-          <Col span={12}>
-            <Input placeholder="City" />
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonInputField type={"number"} placeholder="Phone Number" />
           </Col>
-          <Col span={12}>
-            <Input placeholder="Country/Region" />
+          <Col span={24}>
+            <CommonInputField placeholder="Address" />
           </Col>
-        </Row>
-        <Row gutter={[16, 16]}>
-          <Col span={12}>
-            <Input placeholder="State" />
+          <Col span={24}>
+            <CommonInputField placeholder="Suite, Apartment, etc " />
           </Col>
-          <Col span={12}>
-            <Input placeholder="Zip Code" />
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonSelect
+              placeholder="City"
+              options={[
+                { value: "jack", label: "America" },
+                { value: "lucy", label: "canada" },
+                { value: "Yiminghe", label: "USA" },
+              ]}
+            />
+          </Col>
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonSelect
+              placeholder="Country/Region"
+              options={[
+                { value: "jack", label: "America" },
+                { value: "lucy", label: "canada" },
+                { value: "Yiminghe", label: "USA" },
+              ]}
+            />
+          </Col>
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonSelect
+              placeholder="State"
+              options={[
+                { value: "jack", label: "America" },
+                { value: "lucy", label: "canada" },
+                { value: "Yiminghe", label: "USA" },
+              ]}
+            />
+          </Col>
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 12 }}
+            sm={{ span: 24 }}
+            xs={{ span: 24 }}
+          >
+            <CommonInputField placeholder="Zip Code" type={"text"} />
           </Col>
         </Row>
         <CommonButton
-          child="Save Detail"
-          classname="product-price"
-          // topClass="load-products"
+          child={"Submit"}
+          classname={"mt-4"}
+          height={"45px"}
+          width={"100%"}
+          onClick={() => {
+            handelRoute("");
+          }}
         />
       </div>
     </>

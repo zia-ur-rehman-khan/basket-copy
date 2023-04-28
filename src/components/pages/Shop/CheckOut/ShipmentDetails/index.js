@@ -10,18 +10,18 @@ const Index = () => {
     <>
       <div>
         <Commonheading level={4} heading="Shipment Details" />
-        <Commonheading level={4} heading="Use Saved Addresses" />
-        <div>
-          <div>
+        <Commonheading level={5} heading="Use Saved Addresses" />
+        <div className="radius p-3 mt-2" style={{ background: "#1D1D1D" }}>
+          <div className="mt-3 mb-3">
             <Row>
               <Col span={18}>
-                <Commonheading level={4} heading="Country: United States" />
-                <Commonheading level={4} heading="State: Texas" />
+                <Commonheading level={5} heading="Country: United States" />
+                <Commonheading level={5} heading="State: Texas" />
                 <Commonheading
-                  level={4}
+                  level={5}
                   heading="Address: 10515 Fox Ave Fairdale, Kentucky(KY), 40118"
                 />
-                <Commonheading level={4} heading="Phone: +44-123-456-789" />
+                <Commonheading level={5} heading="Phone: +44-123-456-789" />
               </Col>
               <Col span={6}>
                 <Radio></Radio>
@@ -29,23 +29,29 @@ const Index = () => {
             </Row>
           </div>
           <hr />
-          <div>
+          <div className="mt-3 mb-3">
             <Row>
               <Col span={18}>
-                <Commonheading level={4} heading="Country: United States" />
-                <Commonheading level={4} heading="State: Texas" />
+                <Commonheading level={5} heading="Country: United States" />
+                <Commonheading level={5} heading="State: Texas" />
                 <Commonheading
-                  level={4}
+                  level={5}
                   heading="Address: 10515 Fox Ave Fairdale, Kentucky(KY), 40118"
                 />
-                <Commonheading level={4} heading="Phone: +44-123-456-789" />
+                <Commonheading level={5} heading="Phone: +44-123-456-789" />
               </Col>
               <Col span={6}>
-                <Radio></Radio>
+                <Radio checked={false}></Radio>
               </Col>
             </Row>
           </div>
-          <CommonButton width={"200px"} child="Add New Address" />
+          <CommonButton
+            width={"100%"}
+            child="Add New Address"
+            background={"#1D1D1D"}
+            color={"#FF6600"}
+            border={"1px solid #FF6600"}
+          />
         </div>
       </div>
     </>

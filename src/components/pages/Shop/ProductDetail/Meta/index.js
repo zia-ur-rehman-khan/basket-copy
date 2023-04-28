@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <>
       <div className="product-side">
-        <p>product meta wil be display here</p>
+        <p></p>
         <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
           <Col span={12}>
             <ProductGallery />

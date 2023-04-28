@@ -11,20 +11,83 @@ import React from "react";
 
 const Index = () => {
   const products = [
-    { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
-    { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
-    { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
-    { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
-    { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
-    { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
-    { src: basketBall, width: 218, height: 218, heading:"White Jersey", subHeading:"Organic Cotton", price:"£20.00", reveiws:5, category:"featured"},
+    {
+      src: basketBall,
+      width: 218,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: basketBall,
+      width: 218,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: basketBall,
+      width: 218,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: basketBall,
+      width: 218,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: basketBall,
+      width: 218,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: basketBall,
+      width: 218,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: basketBall,
+      width: 218,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
   ];
   return (
     <>
       <div className="product-side">
-        <div className="d-flex justify-content-between align-items-center mt-5">
+        <div className="d-flex justify-content-between align-items-center mt-4">
           <Commonheading level={2} heading={"Similar Products"} />
-          {/* <CommonButton child="View More" /> */}
+          <CommonButton child="View All" />
         </div>
         {/* <div className="card-parent mt-3"> */}
         <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
