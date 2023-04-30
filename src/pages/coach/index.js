@@ -11,29 +11,43 @@ import userAvatar from "../../public/profile/user-avatar.png";
 // Data
 import { personalInfo } from "data";
 
+// Next
+import { useRouter } from "next/router";
+
 // Ant D
 import { Row, Col } from "antd";
 import Link from "next/link";
 
 const AdminDashboard = () => {
+
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/coach/edit-profile");
+  };
+
   return (
     <AdminLayout>
       {/* Title  */}
       <Row>
-        <Col span={12}>
+        <Col lg={{ span: 12 }}
+          md={{ span: 12 }}
+          sm={{ span: 24 }}
+        >
           <DashboardTitle title="Personal Information" />
         </Col>
         <Col
-          span={12}
+          lg={{ span: 12 }}
+          md={{ span: 12 }}
+          sm={{ span: 24 }}
+
           style={{
             display: "flex",
             justifyContent: "flex-end",
             paddingRight: "3rem",
           }}
         >
-          <Link href="/coach/edit-profile">
-            <a className="primary__btn">Edit</a>
-          </Link>
+          <CommonButton child={"Edit"} onClick={handelRoute} />
         </Col>
       </Row>
       {/* Title  */}
@@ -47,17 +61,6 @@ const AdminDashboard = () => {
       {/* Profile thumb  */}
 
       {/* contact info  */}
-      {/* {
-        personalInfo.map((pInfo, i) => (
-          <Information
-            key={i}
-            ico={pInfo.ico}
-            text={pInfo.text}
-            labelValue={pInfo.labelValue}
-          />
-        ))
-      
-      } */}
       <Information />
       {/* contact info  */}
     </AdminLayout>

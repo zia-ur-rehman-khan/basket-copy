@@ -4,7 +4,6 @@ import AdminLayout from 'components/dashboard/AdminLayout'
 
 // Ant D
 import { Button, Form, Input, Row, Col, Select } from 'antd';
-import TextArea from 'antd/lib/input/TextArea';
 import { DatePicker, TimePicker } from 'antd';
 import moment from 'moment';
 
@@ -17,6 +16,7 @@ const options = [
 ]
 
 const CreateSession = () => {
+    const { TextArea } = Input
     return (
         <AdminLayout>
             <DashboardTitle title={"Create Session"} />
@@ -46,7 +46,11 @@ const CreateSession = () => {
                             <TextArea placeholder='Enter Session Description' rows={4} />
                         </Form.Item>
                     </Col>
-                    <Col span={12}>
+                    <Col
+                        lg={{ span: 12 }}
+                        md={{ span: 12 }}
+                        sm={{ span: 24 }}
+                        xs={{ span: 24 }}>
                         <Form.Item
                             name="select-date"
                             rules={[
@@ -58,7 +62,11 @@ const CreateSession = () => {
                             <DatePicker />
                         </Form.Item>
                     </Col>
-                    <Col span={12}>
+                    <Col
+                        lg={{ span: 12 }}
+                        md={{ span: 12 }}
+                        sm={{ span: 24 }}
+                        xs={{ span: 24 }}>
                         <Form.Item
                             name="select-time"
                             rules={[
@@ -69,9 +77,13 @@ const CreateSession = () => {
                         >
                             <TimePicker defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} />
                         </Form.Item>
-                        
+
                     </Col>
-                    <Col span={12}>
+                    <Col
+                        lg={{ span: 12 }}
+                        md={{ span: 12 }}
+                        sm={{ span: 24 }}
+                        xs={{ span: 24 }}>
                         <Form.Item
                             name="Select how much will you charge for this session"
                             rules={[
@@ -83,7 +95,12 @@ const CreateSession = () => {
                             <Select options={options} placeholder="City" />
                         </Form.Item>
                     </Col>
-                    <Col span={12} style={{ paddingRight: "10px" }}>
+                    <Col
+                        lg={{ span: 12 }}
+                        md={{ span: 12 }}
+                        sm={{ span: 24 }}
+                        xs={{ span: 24 }}
+                        style={{ paddingRight: "10px" }}>
                         <Form.Item>
                             <Button type="primary" htmlType="submit" >
                                 Save Changes
@@ -92,7 +109,7 @@ const CreateSession = () => {
                     </Col>
                 </Row>
             </Form>
-        </AdminLayout>
+        </AdminLayout >
     )
 }
 ``

@@ -43,7 +43,13 @@ const Upload = () => {
     }
     return (
         <Row gutter={30}>
-            <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }}>
+            <Col
+                lg={{ span: 12 }}
+                md={{ span: 24 }}
+                sm={{ span: 24 }}
+                xs={{ span: 24 }}
+
+            >
                 <Form className='dashboard__form'>
                     <Row gutter={20}>
                         <Col span={24}>
@@ -91,15 +97,21 @@ const Upload = () => {
                     {/* <button className="btn" onClick={clearFiles}>x</button> */}
                 </div>
             </Col>
-            <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }}>
+            <Col
+                lg={{ span: 12 }}
+                md={{ span: 24 }}
+                sm={{ span: 24 }}
+                xs={{ span: 24 }}
+
+            >
                 <div className="preview">
                     {imagePreview != null && <img src={imagePreview} alt="" />}
                     {videoPreview != null && (
                         <div className="uploaded__video-wrapp">
                             <video
-                            src={videoPreview}
-                            ref={videoRef}
-                            controls={false}
+                                src={videoPreview}
+                                ref={videoRef}
+                                controls={false}
                             ></video>
                             <button onClick={handleVideo}>
                                 {

@@ -18,7 +18,12 @@ const BecomePartnerForm = () => {
     return (
         <Form className='dashboard__form'>
             <Row gutter={20}>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="name"
                         rules={[
@@ -30,7 +35,12 @@ const BecomePartnerForm = () => {
                         <Input placeholder='Enter Name' type='text' />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="your-email"
                         rules={[
@@ -42,7 +52,12 @@ const BecomePartnerForm = () => {
                         <Input placeholder='Enter your Email' type='email' />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="phone-number"
                         rules={[
@@ -54,7 +69,12 @@ const BecomePartnerForm = () => {
                         <Input placeholder='Phone Number' type='tel' />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="address"
                         rules={[
@@ -66,7 +86,12 @@ const BecomePartnerForm = () => {
                         <Input placeholder='Enter your address' type='text' />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="select city"
                         rules={[
@@ -78,7 +103,12 @@ const BecomePartnerForm = () => {
                         <Select options={city} placeholder="City" />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="select state"
                         rules={[
@@ -90,7 +120,12 @@ const BecomePartnerForm = () => {
                         <Select options={state} placeholder="State" />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="zip"
                         rules={[
@@ -102,7 +137,12 @@ const BecomePartnerForm = () => {
                         <Input placeholder='Enter Your Zip' type='text' />
                     </Form.Item>
                 </Col>
-                <Col span={12}>
+                <Col 
+                lg={{ span : 12 }}
+                md={{ span : 12 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <Form.Item
                         name="addtional-comments"
                         rules={[
@@ -116,7 +156,12 @@ const BecomePartnerForm = () => {
                 </Col>
 
             </Row>
-            <Col span={12} style={{ paddingRight: "10px" }}>
+            <Col 
+            lg={{ span : 12 }}
+            md={{ span : 12 }}
+            sm={{ span : 24 }}
+            xs={{ span : 24 }}
+            style={{ paddingRight: "10px" }}>
                 <Form.Item>
                     <Button type="primary" htmlType="submit" >
                         Save Changes

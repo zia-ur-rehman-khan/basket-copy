@@ -21,7 +21,8 @@ import VideoCard from 'components/dashboard/VideoCard'
 import CommonButton from 'components/common/Button'
 
 // Ant D 
-import { Col, Row, Tabs } from 'antd';
+import { Col, Row } from 'antd';
+import { useRouter } from 'next/router'
 
 // Data 
 const tutorials = [
@@ -101,6 +102,13 @@ const tutorials = [
 
 
 const PurchasedVideos = () => {
+
+    const { push } = useRouter();
+
+    const handelRoute = () => {
+        push("/coach/upload-video");
+    };
+
     return (
         <AdminLayout>
             <Row>
@@ -108,7 +116,7 @@ const PurchasedVideos = () => {
                     <DashboardTitle title={"Videos"} />
                 </Col>
                 <Col span={12} style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '3rem' }}>
-                    <CommonButton child={"Upload Video"} />
+                    <CommonButton child={"Upload Video"} onClick={handelRoute} />
                 </Col>
             </Row>
 

@@ -37,7 +37,7 @@ const coachInfo = [
     {
         id: 4,
         img: coachFour,
-        name: 'Clarence Schmidt',
+        name: 'Clarence Schmi',
         price: 250,
     },
     {
