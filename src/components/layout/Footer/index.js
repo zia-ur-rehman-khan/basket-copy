@@ -150,13 +150,9 @@ const Footer = () => {
           dataSource={data}
           renderItem={(item) => (
             <List.Item>
-              <List.Item.Meta
-                title={
-                  <a href={item.url}>
-                    <CommonTextField text={item.title} />
-                  </a>
-                }
-              />
+              <a href={item.url}>
+                <CommonTextField text={item.title} />
+              </a>
             </List.Item>
           )}
         />
@@ -180,13 +176,9 @@ const Footer = () => {
           dataSource={data2}
           renderItem={(item) => (
             <List.Item>
-              <List.Item.Meta
-                title={
-                  <a href={item.url}>
-                    <CommonTextField text={item.title} />
-                  </a>
-                }
-              />
+              <a href={item.url}>
+                <CommonTextField text={item.title} />
+              </a>
             </List.Item>
           )}
         />
@@ -223,13 +215,9 @@ const Footer = () => {
           dataSource={data4}
           renderItem={(item) => (
             <List.Item>
-              <List.Item.Meta
-                title={
-                  <a href={item.url}>
-                    <CommonTextField text={item.title} />
-                  </a>
-                }
-              />
+              <a href={item.url}>
+                <CommonTextField text={item.title} />
+              </a>
             </List.Item>
           )}
         />
