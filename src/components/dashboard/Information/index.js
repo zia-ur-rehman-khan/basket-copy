@@ -8,7 +8,12 @@ const Information = () => {
             <Row>
                 {
                     personalInfo?.map((pInfo, i) => (
-                        <Col span={12} key={i} >
+                        <Col
+                            lg={{ span: 12 }}
+                            md={{ span: 12 }}
+                            sm={{ span: 24 }}
+                            xs={{ span: 24 }}
+                            key={i} >
                             <div className='info__box'>
                                 <Row>
                                     <Col span={2}>{pInfo?.ico}</Col>
@@ -25,7 +30,12 @@ const Information = () => {
             <Row>
                 {
                     schollInfo?.map((pInfo, i) => (
-                        <Col span={12} key={i} >
+                        <Col
+                            lg={{ span: 12 }}
+                            md={{ span: 12 }}
+                            sm={{ span: 24 }}
+                            xs={{ span: 24 }}
+                            span={12} key={i} >
                             <div className='info__box'>
                                 <Row>
                                     <Col span={2}>{pInfo?.ico}</Col>

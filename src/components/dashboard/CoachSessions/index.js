@@ -1,5 +1,7 @@
 import Link from "next/link";
 import AllEvents from "../AllEvents";
+import CommonButton from "components/common/Button";
+import { useRouter } from "next/router";
 
 // My Sessions Data
 const createdSessions = [
@@ -30,6 +32,11 @@ const completedSessions = [
 ];
 
 const CoachSessions = () => {
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/coach/create-session");
+  };
   return (
     <div>
       <h3 className="color__light head__sm">Created Sessions</h3>
@@ -51,9 +58,7 @@ const CoachSessions = () => {
           name={session.name}
         />
       ))}
-      <Link href="/coach/create-session">
-        <a className="primary__btn full__w">Create Session</a>
-      </Link>
+      <CommonButton child={"Create Session"} onClick={handelRoute} />
     </div>
   );
 };

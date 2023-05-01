@@ -33,7 +33,7 @@ const EditProfile = () => {
       <DashboardTitle title="Edit Personal Information" />
       <Form className='dashboard__form'>
         <Row gutter={20}>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="first-name"
               rules={[
@@ -45,7 +45,7 @@ const EditProfile = () => {
               <Input placeholder='Kennith' type='text' />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="last-name"
               rules={[
@@ -57,7 +57,7 @@ const EditProfile = () => {
               <Input placeholder='Martina' type='text' />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="phone-number"
               rules={[
@@ -69,7 +69,7 @@ const EditProfile = () => {
               <Input placeholder='+1-234-567-890' type='tel' />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="your-email"
               rules={[
@@ -93,7 +93,7 @@ const EditProfile = () => {
               <TextArea placeholder='Address' rows={4} />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="zip"
               rules={[
@@ -105,7 +105,7 @@ const EditProfile = () => {
               <Input placeholder='Zip' type='number' />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="select region"
               rules={[
@@ -117,7 +117,7 @@ const EditProfile = () => {
               <Select options={regions} placeholder="Region" />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="select city"
               rules={[
@@ -129,7 +129,7 @@ const EditProfile = () => {
               <Select options={city} placeholder="City" />
             </Form.Item>
           </Col>
-          <Col span={12}>
+          <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
             <Form.Item
               name="select state"
               rules={[
@@ -142,7 +142,7 @@ const EditProfile = () => {
             </Form.Item>
           </Col>
         </Row>
-        <Col span={12} style={{ paddingRight: "10px" }}>
+        <Col lg={{ span: 12 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }} style={{ paddingRight: "10px" }}>
           <Form.Item>
             <Button type="primary" htmlType="submit" >
               Save Changes
