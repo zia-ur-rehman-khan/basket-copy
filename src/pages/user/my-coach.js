@@ -82,7 +82,12 @@ const MyCoach = () => {
         <UserLayout>
             <DashboardTitle title="My Coach" />
             <Row>
-                <Col span={20}>
+                <Col 
+                lg={{ span : 20 }}
+                md={{ span : 20 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     {
                         coachInfo.map((coach, i) => (
                             <div className="coach__info-wrapp" key={i}>
@@ -104,7 +109,12 @@ const MyCoach = () => {
                         ))
                     }
                 </Col>
-                <Col span={4}>
+                <Col 
+                lg={{ span : 4 }}
+                md={{ span : 4 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                >
                     <CommonButton child="View Profile" />
                 </Col>
             </Row>

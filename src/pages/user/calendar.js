@@ -75,10 +75,20 @@ const CalendarOutlet = () => {
     <UserLayout>
       <DashboardTitle title="Calendar" />
       <Row gutter={25}>
-        <Col span={12}>
+        <Col 
+        lg={{ span : 12 }}
+        md={{ span : 24 }}
+        sm={{ span : 24 }}
+        xs={{ span : 24 }}
+        >
           <Tabs defaultActiveKey="1" items={tabItems} />
         </Col>
-        <Col span={12}>
+        <Col 
+        lg={{ span : 12 }}
+        md={{ span : 24 }}
+        sm={{ span : 24 }}
+        xs={{ span : 24 }}
+        >
           <div className="calendar__wrapp">
             <Calendar onChange={setDate} defaultValue={date} />
             <ul className="events__highlighter">
