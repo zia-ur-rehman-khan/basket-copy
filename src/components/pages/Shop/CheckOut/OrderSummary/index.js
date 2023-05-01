@@ -1,4 +1,4 @@
-import { Input, Row, Col, Column, Table, Image } from "antd";
+import { Input, Row, Col, Table, Image } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import React from "react";
@@ -33,6 +33,8 @@ const data = [
     quantity: "05",
   },
 ];
+
+const { Column } = Table;
 
 const Index = () => {
   return (
