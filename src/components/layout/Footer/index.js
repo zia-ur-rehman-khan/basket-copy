@@ -77,9 +77,6 @@ const Footer = () => {
 
   const data3 = [
     {
-      title: "Contact Details",
-    },
-    {
       title: "Location: South Croydon, Surrey, UK",
     },
     {
@@ -109,10 +106,14 @@ const Footer = () => {
     },
   ];
 
-  const isUser = useRouter().pathname.startsWith('/user')
-  const isAdmin = useRouter().pathname.startsWith('/coach')
+  const isUser = useRouter().pathname.startsWith("/user");
+  const isAdmin = useRouter().pathname.startsWith("/coach");
   return (
-    <Row justify="space-around" className={`bg-grey p-5 radius ${isAdmin || isUser ? 'hide-true' : ''}`} gutter={[0, 50]}>
+    <Row
+      justify="space-around"
+      className={`bg-grey p-5 radius ${isAdmin || isUser ? "hide-true" : ""}`}
+      gutter={[0, 50]}
+    >
       <Col
         xxl={{ span: 6 }}
         xl={{ span: 6 }}
@@ -213,7 +214,7 @@ const Footer = () => {
           )}
         />
         <CommonTextField
-          className={"pb-2 mt-3"}
+          className={"pb-2 mt-2"}
           text={"Company"}
           fontSize={"21px"}
           fontWeight={"600"}
