@@ -141,9 +141,30 @@ const Header = () => {
         <div className="right-side">
           <Space size={35}>
             <Space>
-              <Image src={profile} width={20} height={20} alt="logo" />
-              <Image src={heart} width={20} height={20} alt="logo" />
-              <Image src={cart} width={20} height={20} alt="logo" />
+              <Image
+                src={profile}
+                width={20}
+                height={20}
+                alt="logo"
+                className="c-pointer"
+                onClick={() => handelRoute("/user")}
+              />
+              <Image
+                src={heart}
+                width={20}
+                height={20}
+                alt="logo"
+                className="c-pointer"
+                onClick={() => handelRoute("/user/wishlist")}
+              />
+              <Image
+                src={cart}
+                width={20}
+                height={20}
+                alt="logo"
+                className="c-pointer"
+                onClick={() => handelRoute("/cart")}
+              />
             </Space>
             <Space direction={screens.xl ? "horizontal" : "vertical"}>
               <CommonButton

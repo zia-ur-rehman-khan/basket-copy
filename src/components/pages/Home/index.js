@@ -81,7 +81,9 @@ const Home = () => {
           </>
         }
       />
-      <Product />
+      <div className="common-padding">
+        <Product />
+      </div>
       <WithUS />
       <div className="common-padding">
         <Event />
