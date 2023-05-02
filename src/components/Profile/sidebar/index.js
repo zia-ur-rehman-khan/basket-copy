@@ -18,14 +18,14 @@ function Sidebar() {
       {
         isAdmin && (
           userNav.map((nav, i) => (
-            <li key={i} className={isActive == nav.route && styles.active__link}><Link href={nav.route}><a>{nav.linkText} <span><BsArrowRight /></span></a></Link> </li>
+            <li key={i} className={isActive == nav.route ? styles.active__link : ''}><Link href={nav.route}><a>{nav.linkText} <span><BsArrowRight /></span></a></Link> </li>
           ))
         )
       }
       {
         isUser && (
           coachNav.map((nav, i) => (
-            <li key={i} className={isActive == nav.route && styles.active__link}><Link href={nav.route}><a>{nav.linkText} <span><BsArrowRight /></span></a></Link></li>
+            <li key={i} className={isActive == nav.route ? styles.active__link : ''}><Link href={nav.route}><a>{nav.linkText} <span><BsArrowRight /></span></a></Link></li>
           ))
         )
       }

@@ -1,16 +1,10 @@
-// Components 
-import DashboardTitle from 'components/dashboard/Title'
-import UserLayout from 'components/dashboard/UserLayout'
-import BecomePartnerForm from 'components/dashboard/BecomePartnerForm'
+import dynamic from "next/dynamic"
+
+const DynamicPartner = dynamic(() => import("components/pages/User/Partner"))
 
 const BecomePartner = () => {
     return (
-        <UserLayout>
-            <DashboardTitle title="Become A Partner" />
-            <>
-                <BecomePartnerForm />
-            </>
-        </UserLayout>
+        <DynamicPartner />
     )
 }
 

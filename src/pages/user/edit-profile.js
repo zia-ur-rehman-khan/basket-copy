@@ -1,16 +1,11 @@
-// Components 
-import UserLayout from 'components/dashboard/UserLayout'
-import DashboardTitle from 'components/dashboard/Title';
-import EditPofileInfo from 'components/dashboard/EditInformation';
+import dynamic from "next/dynamic";
 
+const DynamicEditInfo = dynamic(() => import("components/pages/User/InfoEdit"))
 
-const EditProfile = () => {
+const EditInformation = () => {
   return (
-    <UserLayout>
-      <DashboardTitle title="Edit Personal Information" />
-      <EditPofileInfo />
-    </UserLayout>
-  )
-}
+    <DynamicEditInfo />
+  );
+};
 
-export default EditProfile
+export default EditInformation;
