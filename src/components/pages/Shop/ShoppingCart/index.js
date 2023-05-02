@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Space, Table, Tag, Column, Image } from "antd";
+import { Row, Col, Space, Table, Tag, Image } from "antd";
 import Link from "next/link";
 import { DeleteOutlined } from "@ant-design/icons";
 
@@ -72,6 +72,8 @@ const data = [
     subtotal: "100.00",
   },
 ];
+
+const { Column } = Table;
 
 const Index = () => {
   const { push } = useRouter();

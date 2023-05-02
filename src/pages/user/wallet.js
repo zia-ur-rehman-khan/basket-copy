@@ -57,7 +57,13 @@ const Wallet = () => {
         <UserLayout>
             <DashboardTitle title="My Wallet" />
             <Row gutter={20}>
-                <Col span={16}>
+                <Col 
+                lg={{ span : 16 }}
+                md={{ span : 24 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                
+                >   
                     {
                         wallets.map(wallet => (
                             <div className="wallet__row" key={wallet.id}>
@@ -72,7 +78,13 @@ const Wallet = () => {
                         ))
                     }
                 </Col>
-                <Col span={8}>
+                <Col 
+                lg={{ span : 8 }}
+                md={{ span : 24 }}
+                sm={{ span : 24 }}
+                xs={{ span : 24 }}
+                
+                >
                     <div className="wallet__balance">
                         <small className="color__light">Wallet Balance</small>
                         <h4>{ totalPoints }<sup>Pts</sup></h4>

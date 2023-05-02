@@ -26,7 +26,7 @@ const CommonVideoPreview = ({ src }) => {
         }
         ref={videoRef}
       ></video>
-      <button className={playVideo && "video-button"}>
+      <button className={playVideo ? "video-button" : ""}>
         {playVideo ? <AiFillPauseCircle /> : <AiFillPlayCircle />}
       </button>
     </div>
