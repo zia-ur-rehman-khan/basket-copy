@@ -1,11 +1,9 @@
-import dynamic from "next/dynamic"
+import dynamic from "next/dynamic";
 
-const DynamicPartner = dynamic(() => import("components/pages/User/Partner"))
+const DynamicPartner = dynamic(() => import("components/pages/User/Partner"));
 
 const BecomePartner = () => {
-    return (
-        <DynamicPartner />
-    )
-}
+  return <DynamicPartner />;
+};
 
-export default BecomePartner
+export default BecomePartner;

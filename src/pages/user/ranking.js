@@ -1,32 +1,11 @@
-// Ant D 
-import { Col, Row } from 'antd'
+import dynamic from "next/dynamic";
 
-// Components
-import ProfileThumb from 'components/dashboard/ProfileThumb'
-import RankingTable from 'components/dashboard/Rankings/RankingTable'
-import RankingHighlight from 'components/dashboard/Rankings/RankingHighlight'
-import DashboardTitle from 'components/dashboard/Title'
-import UserLayout from 'components/dashboard/UserLayout'
-
-// Images 
-import rankingThumb from 'public/profile/user-thumb.png'
+const DynamicRanking = dynamic(() =>
+  import("components/pages/User/UserRanking")
+);
 
 const Ranking = () => {
-    return (
-        <UserLayout>
-            <Row gutter={30}>
-                <Col span={16}>
-                    <DashboardTitle title="Ranking" />
-                    <RankingTable />
-                </Col>
-                <Col span={8}>
-                    <DashboardTitle title="My Rankings" />
-                    <ProfileThumb image={rankingThumb} name="Herbert Douglas" username="@Herbert Douglas" />
-                    <RankingHighlight />
-                </Col>
-            </Row>
-        </UserLayout>
-    )
-}
+  return <DynamicRanking />;
+};
 
-export default Ranking
+export default Ranking;

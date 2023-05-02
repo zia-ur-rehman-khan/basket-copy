@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic";
 
-const DynamicCalendar = dynamic(() => import("components/pages/User/UserCalendar"))
+const DynamicCalendar = dynamic(() =>
+  import("components/pages/User/UserCalendar")
+);
 
 const CalendarOutlet = () => {
-  return (
-    <DynamicCalendar />
-  );
+  return <DynamicCalendar />;
 };
 
 export default CalendarOutlet;

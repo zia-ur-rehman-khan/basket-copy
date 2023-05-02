@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic";
 
-const DynamicProfile = dynamic(() => import("components/pages/User/UserProfile"))
+const DynamicProfile = dynamic(() =>
+  import("components/pages/User/UserProfile")
+);
 
 const UserDashboard = () => {
-  return (
-    <DynamicProfile />
-  );
-}
+  return <DynamicProfile />;
+};
 
 export default UserDashboard;

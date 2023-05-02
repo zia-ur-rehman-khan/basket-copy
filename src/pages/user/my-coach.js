@@ -1,12 +1,9 @@
-import dynamic from "next/dynamic"
+import dynamic from "next/dynamic";
 
-const DynamicCoach = dynamic(() => import("components/pages/User/UserCoach"))
+const DynamicCoach = dynamic(() => import("components/pages/User/UserCoach"));
 
 const MyCoach = () => {
-    const [size, setSize] = useState(20);
-    return (
-        <DynamicCoach />
-    )
-}
+  return <DynamicCoach />;
+};
 
-export default MyCoach
+export default MyCoach;

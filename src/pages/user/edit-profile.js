@@ -1,11 +1,9 @@
 import dynamic from "next/dynamic";
 
-const DynamicEditInfo = dynamic(() => import("components/pages/User/InfoEdit"))
+const DynamicEditInfo = dynamic(() => import("components/pages/User/InfoEdit"));
 
 const EditInformation = () => {
-  return (
-    <DynamicEditInfo />
-  );
+  return <DynamicEditInfo />;
 };
 
 export default EditInformation;
