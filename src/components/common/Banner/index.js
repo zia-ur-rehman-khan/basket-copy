@@ -8,7 +8,7 @@ const CommonBanner = ({ text1, Component, heading, content, src }) => {
   return (
     <div className="banner-image">
       <Space className="banner-content">
-        <TextField text={text1} fontSize="29.64px" />
+        <TextField text={text1} fontSize="22px" />
 
         {heading ? <Commonheading heading={heading} /> : Component}
 

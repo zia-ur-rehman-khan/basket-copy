@@ -115,16 +115,19 @@ const Footer = () => {
       gutter={[0, 50]}
     >
       <Col
-        xxl={{ span: 6 }}
-        xl={{ span: 6 }}
+        xxl={{ span: 7 }}
+        xl={{ span: 7 }}
         lg={{ span: 10 }}
-        md={{ span: 16 }}
+        md={{ span: 24 }}
         sm={{ span: 24 }}
       >
-        <Space direction="vertical">
+        <Space direction="vertical" style={{ width: "80%" }}>
           <Image src={logo} width={104} height={79} alt="logo" />
 
-          <CommonTextField text="iBall is a Basketball Foundation specializing in training, development coaching and Basketball themed events management (Birthday’s, Camps and tournaments)" />
+          <CommonTextField
+            text="iBall is a Basketball Foundation specializing in training, development coaching and Basketball themed events management (Birthday’s, Camps and tournaments)"
+            width={"80%"}
+          />
           <Space size={5}>
             {socialIcons.map((t, index) => (
               <Image key={index} src={t} width={32} height={32} alt="logo" />
@@ -133,8 +136,8 @@ const Footer = () => {
         </Space>
       </Col>
       <Col
-        xxl={{ span: 4 }}
-        xl={{ span: 4 }}
+        xxl={{ span: 3 }}
+        xl={{ span: 3 }}
         lg={{ span: 10 }}
         md={{ span: 12 }}
         sm={{ span: 12 }}
@@ -184,8 +187,8 @@ const Footer = () => {
         />
       </Col>
       <Col
-        xxl={{ span: 4 }}
-        xl={{ span: 4 }}
+        xxl={{ span: 5 }}
+        xl={{ span: 5 }}
         lg={{ span: 10 }}
         md={{ span: 12 }}
         sm={{ span: 12 }}

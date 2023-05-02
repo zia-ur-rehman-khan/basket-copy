@@ -19,9 +19,7 @@ const ProductCard = ({ image }) => {
             <Divider />
             <CommonTextField
               text="Basketball with Net and Ring for Home and Outdoors"
-              className="black"
-              fontSize="23px"
-              fontWeight="600"
+              className="black card-title"
             />
             <CommonTextField
               text="Pt 2000"

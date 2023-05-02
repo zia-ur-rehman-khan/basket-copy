@@ -9,10 +9,15 @@ import Card from "./Card";
 import React from "react";
 
 const WithUS = () => {
-  const temp = [image, image1, image2, image3];
+  const temp = [
+    { src: image, title: "Coaches", url: "/what-we-do/coach-region" },
+    { src: image1, title: "Schools", url: "/school" },
+    { src: image2, title: "I ball Players", url: "/about" },
+    { src: image3, title: "Partners & Sponsors", url: "/partners-sponsers" },
+  ];
   return (
-    <div className="bg-secondary with-us-section d-flex flex-column align-items-center justify-content-center">
-      <CommonTextField text="Ball With Us" />
+    <div className="bg-grey with-us-section d-flex flex-column align-items-center justify-content-center">
+      <CommonTextField text="BALL WITH US" />
       <Commonheading level={2} heading="Come Ball with Us" />
       <Row gutter={[33, 33]} justify="center" className="mt-5">
         {temp.map((_t, i) => (
@@ -24,7 +29,7 @@ const WithUS = () => {
             md={{ span: 10 }}
             sm={{ span: 10 }}
           >
-            <Card src={_t} />
+            <Card data={_t} />
           </Col>
         ))}
       </Row>
