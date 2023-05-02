@@ -1,12 +1,20 @@
 import { Input } from "antd";
 import { Col, Row } from "antd";
+import CommonButton from "components/common/Button";
 import CommonInputField from "components/common/Input";
 import CommonSelect from "components/common/Select";
 import CommonTextField from "components/common/TextField";
+import { useRouter } from "next/router";
 import React from "react";
 
 const PlayerForm = ({ coach }) => {
   const { TextArea } = Input;
+
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push(coach ? "/coach" : "/user");
+  };
 
   return (
     <div>
@@ -195,6 +203,14 @@ const PlayerForm = ({ coach }) => {
           </Row>
         </>
       )}
+      <CommonButton
+        child={"Submit"}
+        classname={"mt-4"}
+        height={"45px"}
+        onClick={() => {
+          handelRoute();
+        }}
+      />
     </div>
   );
 };
