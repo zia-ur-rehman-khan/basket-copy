@@ -41,42 +41,28 @@ const EventCard = ({ src }) => {
           <Space className="p-2" size={11} direction="vertical">
             <Divider />
             <CommonTextField
-              text="Basketball with Net and Ring for Home and Outdoors"
-              className="black"
-              fontSize="23px"
-              fontWeight="600"
+              text="Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod"
+              className="black card-title"
             />
             <CommonTextField
               className="black"
               text="Lorem ipsum dolor sit amet, consectetur adipisng elit, sed do eiusmod tempor incididunt."
             />
-            <Space style={{ width: "100%" }} align="baseline">
+            <Space style={{ width: "100%" }} align="baseline" size={30}>
               <Space>
                 <Image src={time} width={22} height={22} alt="time" />
-                <CommonTextField
-                  fontSize={"16px"}
-                  className="black"
-                  text="05:30 Pm"
-                />
+                <CommonTextField className="black" text="05:30 Pm" />
               </Space>
               <Space>
                 <Image src={calender} width={19} height={22} alt="time" />
-                <CommonTextField
-                  className="black"
-                  text="24 Nov 2022"
-                  fontSize={"16px"}
-                />
+                <CommonTextField className="black" text="24 Nov 2022" />
               </Space>
-              <Space>
+              {/* <Space>
                 <Image src={dollar} width={32} height={19} alt="time" />
-                <CommonTextField
-                  className="black"
-                  text="$32"
-                  fontSize={"16px"}
-                />
-              </Space>
+                <CommonTextField className="black" text="$32" />
+              </Space> */}
             </Space>
-            <CommonButton width={"100%"} child="Learn More" />
+            <CommonButton child="Learn More" />
           </Space>
         </>
       }
