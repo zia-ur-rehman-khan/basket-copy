@@ -7,6 +7,7 @@
 
 .ant-divider-horizontal {
   margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .hide-true {
@@ -28,12 +29,11 @@
 
 
 
-// .px-to-em(@value) {
-//     font-size: @value
-// }
+.responsive-spacing(@value) {
+  padding: @value 30px;
 
+  @media @xs {
+    padding: 20px 0 20px 0;
 
-
-// .test {
-//     .px-to-em(100px);
-// }
+  }
+}

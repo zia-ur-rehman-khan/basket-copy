@@ -24,7 +24,12 @@ const CommonBanner = ({
           <TextField text={content} />
         </div>
         {showButton && (
-          <CommonButton child={"Learn More"} height={"37.5px"} width="140px" />
+          <CommonButton
+            child={"Learn More"}
+            height={"37.5px"}
+            width="140px"
+            classname={"mt-2"}
+          />
         )}
       </Space>
       <div>
