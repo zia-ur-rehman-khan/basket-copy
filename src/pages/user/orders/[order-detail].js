@@ -61,7 +61,7 @@ const OrderDetail = () => {
             key={orders.id}
             image={orders.img}
             qty={orders.qty}
-            price={orders.price}
+            price={orders.price.toFixed(2)}
             name={orders.itemName}
           />
         ))}

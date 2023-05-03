@@ -1,80 +1,86 @@
 .dashboard__table {
+  table {
+    padding: 8px;
+    background: #4b4a54 !important;
+  }
 
-    table {
-        padding: 8px;
-        background: #4B4A54 !important;
-    }
+  table thead tr th {
+    background: #ff6600 !important;
+    color: #fff;
+  }
 
-    table thead tr th {
-        background: #ff6600 !important;
-        color: #fff;
-    }
+  table thead tr:hover td {
+    background: transparent !important;
+  }
 
-    table thead tr:hover td {
-        background: transparent !important;
-    }
+  .ant-table-tbody > tr.ant-table-row:hover > td,
+  .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+    background: #fafafa1a !important;
+  }
 
-    .ant-table-tbody>tr.ant-table-row:hover>td,
-    .ant-table-tbody>tr>td.ant-table-cell-row-hover {
-        background: #fafafa1a !important;
-    }
+  thead {
+    border-radius: 10px !important;
+  }
 
-    thead {
-        border-radius: 10px !important;
-    }
+  .table__name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
 
-    .table__name {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+  .table__name p {
+    margin: 0;
+  }
 
-    .table__name p {
-        margin: 0;
-    }
+  thead {
+    border-radius: 10px !important;
+    font-size: 16px;
+  }
 
-    thead {
-        border-radius: 10px !important;
-        font-size: 16px;
-    }
+  td {
+    color: #ffffff83;
+  }
 
-    td {
-        color: #ffffff83
-    }
-
-    ul.ant-pagination.ant-table-pagination.ant-table-pagination-right {
-        display: none;
-    }
-
-
+  ul.ant-pagination.ant-table-pagination.ant-table-pagination-right {
+    display: none;
+  }
 }
 
 .order__table span,
 .order__table td {
-    color: #fff;
-    font-size: 16px;
+  color: #fff;
+  font-size: 16px;
 }
 
 .order__table a {
-    color: #ff6600;
+  color: #ff6600;
 }
 
-.order__table .ant-table-tbody>tr>td {
-    border-bottom: 1px solid #f0f0f061;
+.order__table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f0f0f061;
 }
 
 .color__green {
-    color: #00BC26 !important;
+  color: #00bc26 !important;
 }
 
 .color__green svg {
-    transform: translate(6px, 2px);
+  transform: translate(6px, 2px);
 }
 
 .whishlist-table {
-    button {
-        background-color: transparent;
-        border: 0;
-        outline: none;
-    }
+  button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+  }
+}
+
+.ant-table-container table > thead > tr:first-child th:first-child
+ {
+  border-bottom-left-radius: 6px !important;
+}
+
+.ant-table-container table > thead > tr:first-child th:last-child {
+    border-bottom-right-radius: 6px !important;
 }

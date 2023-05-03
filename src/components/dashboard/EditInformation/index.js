@@ -110,7 +110,7 @@ const EditPofileInfo = () => {
                 },
               ]}
             >
-              <CommonSelect options={regions} placeholder="Region" />
+              <CommonSelect options={regions} placeholder="Select Region" />
             </Form.Item>
           </Col>
           <Col span={12}>
@@ -122,7 +122,7 @@ const EditPofileInfo = () => {
                 },
               ]}
             >
-              <CommonSelect options={city} placeholder="City" />
+              <CommonSelect options={city} placeholder="Select City" />
             </Form.Item>
           </Col>
           <Col span={12}>
@@ -134,7 +134,7 @@ const EditPofileInfo = () => {
                 },
               ]}
             >
-              <CommonSelect options={state} placeholder="State" />
+              <CommonSelect options={state} placeholder="Select State" />
             </Form.Item>
           </Col>
         </Row>

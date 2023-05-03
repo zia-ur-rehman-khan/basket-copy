@@ -86,6 +86,7 @@ export const userNav = [
     {
         linkText: 'My Wallet ', route: '/coach/wallet',
     },
+   
 ]
 
 export const personalInfo = [

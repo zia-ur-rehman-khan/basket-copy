@@ -37,6 +37,7 @@ function Sidebar() {
             </Link>{" "}
           </li>
         ))}
+
       {isUser &&
         coachNav?.map((nav, i) => (
           <li
@@ -53,6 +54,11 @@ function Sidebar() {
             </Link>
           </li>
         ))}
+      <li style={{ marginTop: "2rem" }}>
+        <Link href="/">
+          <a>Logout</a>
+        </Link>
+      </li>
     </ul>
   );
 }
