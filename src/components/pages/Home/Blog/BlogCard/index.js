@@ -16,7 +16,7 @@ const BlogCard = ({ src }) => {
 
   return (
     <CommonCard
-      onClick={() => handelRoute(10)}
+      style={{ margin: "0 10px" }}
       child={
         <>
           <div>
@@ -27,7 +27,7 @@ const BlogCard = ({ src }) => {
               height={304}
             />
           </div>
-          <Space className="p-2" size={11} direction="vertical">
+          <Space style={{ padding: "13.5px" }} size={11} direction="vertical">
             <Divider />
             <CommonTextField
               text="Basketball with Net and Ring for Home and Outdoors"
@@ -38,7 +38,11 @@ const BlogCard = ({ src }) => {
               text="Lorem ipsum dolor sit amet, consectetur adipisng elit, sed do eiusmod tempor incididunt."
             />
 
-            <CommonButton width={"100%"} child="Learn More" />
+            <CommonButton
+              width={"100%"}
+              child="Learn More"
+              onClick={() => handelRoute(10)}
+            />
           </Space>
         </>
       }

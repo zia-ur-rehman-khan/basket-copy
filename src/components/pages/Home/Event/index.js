@@ -9,9 +9,10 @@ import event2 from "public/event/event2.png";
 import event3 from "public/event/event3.png";
 import event4 from "public/event/event4.png";
 import { useRouter } from "next/router";
+import CommonDraggableCarousal from "components/common/DraggableCarousal";
 
 const Event = () => {
-  const array = [event1, event2, event3, event4];
+  const array = [event1, event2, event3, event4, event1, event2];
 
   const { push } = useRouter();
 
@@ -26,20 +27,11 @@ const Event = () => {
         <CommonButton child="View More" onClick={handelRoute} />
       </div>
 
-      <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
+      <CommonDraggableCarousal>
         {array.map((_t, key) => (
-          <Col
-            key={key}
-            xxl={{ span: 6 }}
-            xl={{ span: 6 }}
-            lg={{ span: 8 }}
-            md={{ span: 12 }}
-            sm={{ span: 16 }}
-          >
-            <EventCard src={_t} />
-          </Col>
+          <EventCard src={_t} key={key} />
         ))}
-      </Row>
+      </CommonDraggableCarousal>
     </div>
   );
 };

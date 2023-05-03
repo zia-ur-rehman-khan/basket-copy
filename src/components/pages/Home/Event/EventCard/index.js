@@ -27,7 +27,7 @@ const EventCard = ({ src }) => {
 
   return (
     <CommonCard
-      onClick={() => handelRoute(10)}
+      style={{ margin: "0 10px" }}
       child={
         <>
           <div>
@@ -38,7 +38,7 @@ const EventCard = ({ src }) => {
               height={304}
             />
           </div>
-          <Space className="p-2" size={11} direction="vertical">
+          <Space style={{ padding: "13.5px" }} size={11} direction="vertical">
             <Divider />
             <CommonTextField
               text="Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod"
@@ -62,7 +62,7 @@ const EventCard = ({ src }) => {
                 <CommonTextField className="black" text="$32" />
               </Space> */}
             </Space>
-            <CommonButton child="Learn More" />
+            <CommonButton child="Learn More" onClick={() => handelRoute(10)} />
           </Space>
         </>
       }
