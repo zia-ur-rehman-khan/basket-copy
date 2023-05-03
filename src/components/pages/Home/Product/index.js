@@ -21,7 +21,7 @@ const Product = () => {
   ];
 
   return (
-    <div className="">
+    <div className="product-main-card">
       <div className="d-flex justify-content-between align-items-center ">
         <Commonheading level={2} heading={"Featured Product"} />
         <CommonButton child="View More" />

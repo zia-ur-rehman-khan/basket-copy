@@ -16,7 +16,7 @@ const CommonBanner = ({
   return (
     <div className="banner-image">
       <Space className="banner-content">
-        <TextField text={text1} fontSize="22px" />
+        <TextField text={text1} fontSize="22px" className={"text-uppercase"} />
 
         {heading ? <Commonheading heading={heading} /> : Component}
 
@@ -24,7 +24,12 @@ const CommonBanner = ({
           <TextField text={content} />
         </div>
         {showButton && (
-          <CommonButton child={"Learn More"} height={"37.5px"} width="140px" />
+          <CommonButton
+            child={"Learn More"}
+            height={"37.5px"}
+            width="140px"
+            classname={"mt-2"}
+          />
         )}
       </Space>
       <div>

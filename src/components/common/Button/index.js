@@ -6,7 +6,7 @@ const CommonButton = ({
   classname,
   topClass,
   width = "100%",
-  height,
+  height = "37.5px",
   background,
   borderRadius = "4.5px",
   border,
@@ -15,12 +15,14 @@ const CommonButton = ({
   htmlType,
   disabled,
   type = "primary",
+  fontSize = "12px",
 }) => {
   return (
     <div className={`button-parent ${topClass || ""} `}>
       <Button
         type={type}
         style={{
+          fontSize,
           width,
           height,
           background,

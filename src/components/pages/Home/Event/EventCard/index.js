@@ -10,7 +10,7 @@ import calender from "public/event/calender.svg";
 import dollar from "public/event/dollar.svg";
 import { useRouter } from "next/router";
 
-const EventCard = ({ src }) => {
+const EventCard = ({ src, styling }) => {
   const { push, asPath, pathname, query } = useRouter();
 
   const { type } = query;
@@ -27,7 +27,7 @@ const EventCard = ({ src }) => {
 
   return (
     <CommonCard
-      style={{ margin: "0 10px" }}
+      style={styling}
       child={
         <>
           <div>

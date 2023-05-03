@@ -15,8 +15,8 @@ const Blog = ({ array, noMore }) => {
   };
 
   return (
-    <div>
-      <div className="d-flex justify-content-between align-items-center mt-5">
+    <div className="blog-main-card">
+      <div className="d-flex justify-content-between align-items-center ">
         <Commonheading level={2} heading={"Read Our Blogs"} />
         {!noMore && <CommonButton child="View More" onClick={handelRoute} />}
       </div>
