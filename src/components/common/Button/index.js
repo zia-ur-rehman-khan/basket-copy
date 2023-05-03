@@ -8,7 +8,7 @@ const CommonButton = ({
   width = "100%",
   height,
   background,
-  borderRadius = "6px",
+  borderRadius = "4.5px",
   border,
   color = "#ffffff",
   onClick,

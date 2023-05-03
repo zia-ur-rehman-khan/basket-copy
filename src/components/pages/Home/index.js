@@ -20,7 +20,7 @@ import { useRouter } from "next/router";
 import CommonVideoPreview from "components/common/VideoPreview";
 
 const Home = () => {
-  const array = [blog1, blog2, blog3, blog4];
+  const array = [blog1, blog2, blog3, blog4, blog1, blog2, blog3];
 
   const { push } = useRouter();
 
@@ -31,7 +31,8 @@ const Home = () => {
   return (
     <>
       <CommonBanner
-        text1={"Welcome to Iball"}
+        showButton
+        text1={"WELCOME TO IBALL"}
         src={banner}
         content={
           "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"
@@ -63,23 +64,31 @@ const Home = () => {
         component={<CommonVideoPreview />}
         content={
           <>
-            <CommonTextField fontSize="20px" text="Learn more about Iball" />
+            <CommonTextField
+              fontSize="15px"
+              text="Learn more about Iball"
+              className={"text-uppercase"}
+            />
             <Commonheading
+              className={"mt-3"}
               level={2}
               heading="Learn who we are and what we do"
             />
-            <Space direction="vertical" size={24}>
+            <Space direction="vertical" size={24} className="mt-4">
               <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
               <CommonButton
-                child="learn more"
+                child="LEARN MORE"
                 type="primary"
                 onClick={handelRoute}
+                width="40%"
               />
             </Space>
           </>
         }
       />
-      <Product />
+      <div className="common-padding">
+        <Product />
+      </div>
       <WithUS />
       <div className="common-padding">
         <Event />

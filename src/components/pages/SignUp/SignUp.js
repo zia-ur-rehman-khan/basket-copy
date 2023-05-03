@@ -47,15 +47,6 @@ const SignUpForm = () => {
         </Space>
       </Space>
       <Tabs defaultActiveKey="1" items={tabs} className="register-tab" />
-
-      <CommonButton
-        child={"Submit"}
-        classname={"mt-4"}
-        height={"45px"}
-        onClick={() => {
-          handelRoute("/login");
-        }}
-      />
     </div>
   );
 };

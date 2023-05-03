@@ -3,6 +3,7 @@
     padding: 10px 43px;
     align-items: center;
     justify-content: space-around;
+    gap: 20px;
 
 
     @media (max-width: 1000px) {
@@ -13,7 +14,7 @@
 
 
     .header-text {
-        transition: color 0.3s;
+
 
         &:hover {
             color: @primary-color !important;
@@ -23,12 +24,18 @@
     .left-side {
         width: 75%;
 
+        svg {
+            fill: @white-color;
+        }
+
         .ant-space {
             @media @lg {
                 gap: 20px !important;
 
             }
         }
+
+
     }
 
     .right-side {
@@ -79,4 +86,47 @@
         flex-direction: row-reverse;
 
     }
+}
+
+
+
+.event-dropDown {
+    ul {
+        background-color: black;
+
+        .ant-dropdown-menu-item {
+
+            .header-text {
+
+
+                &:hover {
+                    color: @primary-color !important;
+                }
+            }
+
+            &:hover {
+                background-color: black;
+
+
+            }
+        }
+    }
+
+
+
+
+
+    // li {
+    //     background-color: black;
+    // }
+
+
+
+    // .ant-dropdown-menu-item {
+    //     transition: 0s;
+
+    //     &:hover {
+    //         background-color: black;
+    //     }
+    // }
 }
