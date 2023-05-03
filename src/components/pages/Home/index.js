@@ -70,7 +70,7 @@ const Home = () => {
               className={"text-uppercase"}
             />
             <Commonheading
-              className={"mt-3"}
+              className={"mt-1"}
               level={2}
               heading="Learn who we are and what we do"
             />

@@ -13,7 +13,12 @@ import React from "react";
 import { useRouter } from "next/router";
 
 const Meet = () => {
-  const array = [meet1, meet2, meet3, meet4];
+  const array = [
+    { src: meet1, name: "William Lawmann", designation: "Founder" },
+    { src: meet2, name: "Jaden Gonzales", designation: "Coach" },
+    { src: meet4, name: "Naseya Cottrell", designation: "Coach" },
+    { src: meet3, name: "Aaron Lawmann", designation: "Coach" },
+  ];
 
   const { push } = useRouter();
 
@@ -25,10 +30,14 @@ const Meet = () => {
     <div>
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Space direction="vertical">
-          <CommonTextField text="Vision & History" />
+          <CommonTextField
+            text="Vision & History"
+            letterSpacing="2px"
+            className={"text-uppercase"}
+          />
           <Commonheading level={2} heading={"Meet the people Behind iball"} />
         </Space>
-        <CommonButton child="View More" onClick={handelRoute} />
+        <CommonButton child="View All" onClick={handelRoute} />
       </div>
       <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (
@@ -40,7 +49,7 @@ const Meet = () => {
             md={{ span: 12 }}
             sm={{ span: 16 }}
           >
-            <MeetCard src={_t} />
+            <MeetCard data={_t} />
           </Col>
         ))}
       </Row>

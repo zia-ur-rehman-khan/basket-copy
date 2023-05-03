@@ -31,14 +31,24 @@ const About = () => {
         src={contentImage}
         content={
           <>
-            <CommonTextField fontSize="20px" text="Learn more about Iball" />
-            <Commonheading
-              level={2}
-              heading="Learn who we are and what we do"
+            <CommonTextField
+              fontSize="15px"
+              text="Learn more about Iball"
+              className={"text-uppercase"}
             />
-            <Space direction="vertical" size={24}>
+            <Commonheading className={"mt-1"} level={2} heading="who we are" />
+            <Space direction="vertical" size={24} className="mt-4">
               <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-              <CommonButton child="learn more" type="primary" />
+              <CommonTextField
+                text={"Our Mission"}
+                fontWeight={600}
+                fontSize={"16.5px"}
+              />
+              <CommonTextField
+                text={
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit gravida rutrum. Fames ac turpis egestas sed tempus. Fringilla est ullamcorper eget nulla facilisi etiam. "
+                }
+              />
             </Space>
           </>
         }
@@ -54,14 +64,18 @@ const About = () => {
         src={contentImage}
         content={
           <>
-            <CommonTextField fontSize="20px" text="Learn more about Iball" />
-            <Commonheading
-              level={2}
-              heading="Learn who we are and what we do"
+            <CommonTextField
+              fontSize="15px"
+              text="Vision & History"
+              className={"text-uppercase"}
             />
-            <Space direction="vertical" size={24}>
+            <Commonheading
+              className={"mt-1"}
+              level={2}
+              heading="Our Vision & History"
+            />
+            <Space direction="vertical" size={24} className="mt-4">
               <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
-              <CommonButton child="learn more" type="primary" />
             </Space>
           </>
         }

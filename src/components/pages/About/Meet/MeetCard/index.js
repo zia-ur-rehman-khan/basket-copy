@@ -4,7 +4,9 @@ import CommonCard from "components/common/Card";
 import Image from "next/image";
 import React from "react";
 
-const MeetCard = ({ src }) => {
+const MeetCard = ({ data }) => {
+  const { src, name, designation } = data;
+
   return (
     <CommonCard
       child={
@@ -19,12 +21,17 @@ const MeetCard = ({ src }) => {
           </div>
           <Space className="p-2" size={11} align="center" direction="vertical">
             <CommonTextField
-              text={"William Lawmann"}
+              text={name}
               className={"black"}
-              fontSize={"32px"}
+              fontSize={"24.6px"}
               fontWeight={"bold"}
             />
-            <CommonTextField text={"Founder"} className={"black"} />
+            <CommonTextField
+              text={designation}
+              className={"black"}
+              fontSize={"18.75"}
+              fontWeight={"bold"}
+            />
           </Space>
         </>
       }

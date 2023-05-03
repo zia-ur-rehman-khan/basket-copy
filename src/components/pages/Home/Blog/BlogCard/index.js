@@ -16,7 +16,7 @@ const BlogCard = ({ src }) => {
 
   return (
     <CommonCard
-      style={{ margin: "0 10px" }}
+      style={{ margin: "0 9px" }}
       child={
         <>
           <div>
