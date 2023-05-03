@@ -8,6 +8,7 @@ import tempImage from "public/product/product1.png";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
+import CommonTextField from "components/common/TextField";
 
 const Index = () => {
   const { push } = useRouter();
@@ -21,7 +22,7 @@ const Index = () => {
       <div className="product_body_wrapper">
         <Row>
           <Col span={12}>
-            <Commonheading level={4} heading={"Black iBall Hoodie"} />
+            <Commonheading level={3} heading={"Black iBall Hoodie"} />
             <div className="d-flex">
               <Commonheading
                 level={5}
@@ -36,11 +37,8 @@ const Index = () => {
           </Col>
         </Row>
         <Commonheading level={4} heading={"Description"} />
-        <Commonheading
-          level={5}
-          heading={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-          }
+        <CommonTextField
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
           className={"mt-2"}
         />
 
@@ -54,7 +52,11 @@ const Index = () => {
                 color="#ffffff"
                 classname="m-2 mt-0 mb-0"
               />
-              <Commonheading level={5} heading={"05"} />
+              <Commonheading
+                level={5}
+                heading={"05"}
+                classname="m-2 mt-0 mb-0"
+              />
               <CommonButton
                 child={"+"}
                 background={"#FF6600"}
@@ -65,30 +67,39 @@ const Index = () => {
           </Col>
           <Col span={12}>
             <div className="product_meta_colorvariation d-flex">
-              <Commonheading level={5} heading={"Colors :"} />
+              <Commonheading level={5} heading={"Colors : "} />
               <CommonButton
                 child={" "}
                 background={"#454545"}
                 color="#ffffff"
-                classname="m-2 mt-0 mb-0"
+                // classname="m-2"
+                style={{
+                  margin: "0px 10px 0px 10px",
+                }}
               />
               <CommonButton
                 child={" "}
                 background={"#B81818"}
                 color="#ffffff"
-                classname="m-2 mt-0 mb-0"
+                style={{
+                  margin: "0px 10px 0px 10px",
+                }}
               />
               <CommonButton
                 child={" "}
                 background={"#46B472"}
                 color="#ffffff"
-                classname="m-2 mt-0 mb-0"
+                style={{
+                  margin: "0px 10px 0px 10px",
+                }}
               />
               <CommonButton
                 child={" "}
                 background={"#2861B6"}
                 color="#ffffff"
-                classname="m-2 mt-0 mb-0"
+                style={{
+                  margin: "0px 10px 0px 10px",
+                }}
               />
             </div>
           </Col>
