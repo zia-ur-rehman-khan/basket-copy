@@ -20,7 +20,7 @@ import { useRouter } from "next/router";
 import CommonVideoPreview from "components/common/VideoPreview";
 
 const Home = () => {
-  const array = [blog1, blog2, blog3, blog4];
+  const array = [blog1, blog2, blog3, blog4, blog1, blog2, blog3];
 
   const { push } = useRouter();
 
@@ -31,6 +31,7 @@ const Home = () => {
   return (
     <>
       <CommonBanner
+        showButton
         text1={"WELCOME TO IBALL"}
         src={banner}
         content={
@@ -63,7 +64,11 @@ const Home = () => {
         component={<CommonVideoPreview />}
         content={
           <>
-            <CommonTextField fontSize="20px" text="Learn more about Iball" />
+            <CommonTextField
+              fontSize="15px"
+              text="Learn more about Iball"
+              className={"text-uppercase"}
+            />
             <Commonheading
               className={"mt-3"}
               level={2}
