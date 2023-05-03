@@ -16,7 +16,7 @@ const CommonBanner = ({
   return (
     <div className="banner-image">
       <Space className="banner-content">
-        <TextField text={text1} fontSize="22px" />
+        <TextField text={text1} fontSize="22px" className={"text-uppercase"} />
 
         {heading ? <Commonheading heading={heading} /> : Component}
 

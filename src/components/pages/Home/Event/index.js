@@ -29,7 +29,7 @@ const Event = () => {
 
       <CommonDraggableCarousal>
         {array.map((_t, key) => (
-          <EventCard src={_t} key={key} />
+          <EventCard styling={{ margin: "0 9px" }} src={_t} key={key} />
         ))}
       </CommonDraggableCarousal>
     </div>

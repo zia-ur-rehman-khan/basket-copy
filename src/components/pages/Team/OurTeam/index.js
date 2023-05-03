@@ -11,7 +11,16 @@ import meet4 from "public/meet/meet4.png";
 import React from "react";
 
 const OurTeam = () => {
-  const array = [meet1, meet2, meet3, meet4, meet1, meet2, meet3, meet4];
+  const array = [
+    { src: meet1, name: "William Lawmann", designation: "Founder" },
+    { src: meet2, name: "Jaden Gonzales", designation: "Coach" },
+    { src: meet4, name: "Naseya Cottrell", designation: "Coach" },
+    { src: meet3, name: "Aaron Lawmann", designation: "Coach" },
+    { src: meet1, name: "William Lawmann", designation: "Founder" },
+    { src: meet2, name: "Jaden Gonzales", designation: "Coach" },
+    { src: meet4, name: "Naseya Cottrell", designation: "Coach" },
+    { src: meet3, name: "Aaron Lawmann", designation: "Coach" },
+  ];
 
   return (
     <div>
@@ -29,7 +38,7 @@ const OurTeam = () => {
             md={{ span: 12 }}
             sm={{ span: 16 }}
           >
-            <MeetCard src={_t} />
+            <MeetCard data={_t} />
           </Col>
         ))}
       </Row>

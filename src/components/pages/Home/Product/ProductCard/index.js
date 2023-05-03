@@ -9,7 +9,7 @@ const ProductCard = ({ image }) => {
   const { src, width, height } = image;
   return (
     <CommonCard
-      style={{ margin: "0 10px" }}
+      style={{ margin: "0 9px" }}
       child={
         <div className="product-card-home">
           <div className="product-image">
