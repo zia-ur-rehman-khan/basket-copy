@@ -11,7 +11,7 @@ const ProductCard = ({ image }) => {
     <CommonCard
       style={{ margin: "0 10px" }}
       child={
-        <>
+        <div className="product-card-home">
           <div className="product-image">
             <Image
               src={src}
@@ -30,15 +30,15 @@ const ProductCard = ({ image }) => {
             <CommonTextField
               text="Pt 2000"
               color="#FF6600"
-              fontSize="23px"
+              fontSize="18.75px"
               fontWeight="600"
             />
-            <Space>
-              <CommonButton child="Add to Cart" />
+            <div className="button-session">
+              <CommonButton child="Add to Cart" topClass="cart" />
               <CommonButton classname="black" child="Add to Wishlist" />
-            </Space>
+            </div>
           </Space>
-        </>
+        </div>
       }
     />
   );

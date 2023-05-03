@@ -28,7 +28,6 @@ const BlogCard = ({ src }) => {
             />
           </div>
           <Space style={{ padding: "13.5px" }} size={11} direction="vertical">
-            <Divider />
             <CommonTextField
               text="Basketball with Net and Ring for Home and Outdoors"
               className="black card-title"
