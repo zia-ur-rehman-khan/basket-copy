@@ -19,6 +19,7 @@ const Card = ({ data }) => {
         text={title}
         className="text-primary c-pointer"
         onClick={handelRoute}
+        fontWeight={600}
       />
     </Space>
   );

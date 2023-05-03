@@ -31,7 +31,7 @@ const EventCard = ({ data, academy }) => {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
         />
       </Space>
-      <CommonButton width={"100%"} child="Add to Wishlist" />
+      <CommonButton child="Learn More" />
     </Space>
   );
 };
