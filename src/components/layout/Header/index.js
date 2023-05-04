@@ -110,7 +110,7 @@ const Header = () => {
             />
             <Space size={26}>
               {navList.map((t, index) => (
-                <>
+                <div key={index}>
                   {t.name === "Event" ? (
                     <Dropdown
                       overlayClassName={"event-dropDown"}
@@ -138,7 +138,7 @@ const Header = () => {
                       text={t.name}
                     />
                   )}
-                </>
+                </div>
               ))}
             </Space>
             <Search
