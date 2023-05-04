@@ -1,8 +1,9 @@
-import React from 'react'
-const DashboardTitle = ({title}) => {
+import CommonHeading from "components/common/Heading";
+import React from "react";
+const DashboardTitle = ({ title }) => {
   return (
-    <h2 className="dashboard__title">{title}</h2>
-  )
-}
+    <CommonHeading heading={title} level={3} mb={30} />
+  );
+};
 
-export default DashboardTitle
+export default DashboardTitle;
