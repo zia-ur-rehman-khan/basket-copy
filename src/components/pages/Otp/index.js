@@ -19,7 +19,7 @@ const OTP = () => {
   return (
     <div className="main-forgotPassword">
       <div className="child-forgot">
-        <CommonHeading heading={"Enter OTP"} />
+        <CommonHeading heading={"Enter OTP"} fontSize={"45px"} />
         <CommonTextField
           text={
             "We've sent a one-time password to your phone number/email. Please enter the code below to verify your account."
