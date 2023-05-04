@@ -23,6 +23,7 @@ import image2 from "public/about/banner.png";
 import image3 from "public/school/schoolBanner.png";
 import Image from "next/image";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import CommonVideoPreview from "components/common/VideoPreview";
 
 const ViewMore = ({ picture }) => {
   const array = [blog6, blog5, blog2, blog4, blog1, blog2, blog7, blog4];
@@ -79,9 +80,13 @@ const ViewMore = ({ picture }) => {
         arrows={true}
         dots={false}
       >
-        {temp.map((_t, key) => (
-          <Image src={_t} alt="carousal" key={key} />
-        ))}
+        {temp.map((_t, key) =>
+          picture ? (
+            <Image src={_t} alt="carousal" key={key} />
+          ) : (
+            <CommonVideoPreview key={key} />
+          )
+        )}
       </Carousel>
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"View More"} />
