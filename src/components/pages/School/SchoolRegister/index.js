@@ -46,9 +46,9 @@ const SchoolRegister = ({ contactUs }) => {
       />
       <Row gutter={[50, 30]} className="common-padding">
         <Col
-          xxl={{ span: 12 }}
-          xl={{ span: 12 }}
-          lg={{ span: 12 }}
+          xxl={{ span: 13 }}
+          xl={{ span: 13 }}
+          lg={{ span: 13 }}
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
@@ -61,16 +61,17 @@ const SchoolRegister = ({ contactUs }) => {
               text={
                 "We’d love to hear from you. Our team is always ready and willing to take on your needs"
               }
+              className={"mt-5"}
             />
-            <Space className="justify-content-between w-100" wrap={true}>
+            <Space className="w-100 mt-3" size={18} wrap>
               {icons.map((_t, index) => (
                 <Space
                   direction="vertical"
                   align="center"
-                  className="bg-grey radius p-3 "
+                  className="bg-grey radius contact-us-card justify-content-center "
                   key={index}
                 >
-                  <Image src={_t} alt={"icon"} />
+                  <Image src={_t} alt={"icon"} width={45} height={45} />
                   <CommonTextField text={"Chat: admin@iball.uk"} />
                 </Space>
               ))}
@@ -78,9 +79,9 @@ const SchoolRegister = ({ contactUs }) => {
           </Space>
         </Col>
         <Col
-          xxl={{ span: 12 }}
-          xl={{ span: 12 }}
-          lg={{ span: 12 }}
+          xxl={{ span: 11 }}
+          xl={{ span: 11 }}
+          lg={{ span: 11 }}
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
