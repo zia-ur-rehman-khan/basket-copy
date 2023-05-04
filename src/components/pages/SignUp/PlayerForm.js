@@ -90,7 +90,7 @@ const PlayerForm = ({ coach }) => {
           xs={{ span: 24 }}
         >
           <CommonSelect
-            placeholder="Select State"
+            placeholder="Select Region"
             options={[
               { value: "jack", label: "America" },
               { value: "lucy", label: "canada" },
@@ -107,7 +107,7 @@ const PlayerForm = ({ coach }) => {
           xs={{ span: 24 }}
         >
           <CommonSelect
-            placeholder="Select State"
+            placeholder="Select City"
             options={[
               { value: "jack", label: "America" },
               { value: "lucy", label: "canada" },

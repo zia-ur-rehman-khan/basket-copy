@@ -20,20 +20,20 @@ const SignUpForm = () => {
 
   const tabs = [
     { key: "1", label: "Sign Up as a Coach", children: <PlayerForm coach /> },
-    { key: "2", label: "Sign Up as a iball Player", children: <PlayerForm /> },
+    { key: "2", label: "Sign Up as an iball Player", children: <PlayerForm /> },
   ];
 
   return (
     <div className="mt-5">
-      <Space direction="vertical" size={5}>
+      <Space direction="vertical" size={15}>
         <CommonTextField
           text={"Welcome to Iball"}
           fontSize="29.64px"
           letterSpacing={"5px"}
         />
 
-        <CommonHeading heading={"Sign Up as a iBall Player"} level={2} />
-        <Space size={15} className="mb-3">
+        <CommonHeading heading={"Sign Up as an iBall Player"} level={2} />
+        <Space size={8} className="mb-3">
           <CommonTextField text={"Already A memeber ?"} />
           <CommonTextField
             text={"Sign In"}
