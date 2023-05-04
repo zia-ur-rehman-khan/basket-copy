@@ -29,11 +29,17 @@
 
 
 
-.responsive-spacing(@value) {
-  padding: @value 30px;
+.responsive-spacing(@value , @second : none) {
+
+  & when (@second=none) {
+    padding: @value 30px;
+  }
+
+  & when (@second =bottom) {
+    padding: 0px 30px @value 30px;
+  }
 
   @media @xs {
     padding: 20px 0 20px 0;
-
   }
 }

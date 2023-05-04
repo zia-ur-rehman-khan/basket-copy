@@ -44,20 +44,24 @@ const School = () => {
         }}
         component={<CommonVideoPreview />}
       >
-        <CommonTextField fontSize="20px" text="Learn more about Iball" />
-        <Commonheading level={2} heading="What We do" />
-        <Space direction="vertical" size={24}>
+        <CommonTextField
+          fontSize="15px"
+          text="Learn more about Iball"
+          className={"text-uppercase"}
+        />
+        <Commonheading className={"mt-1"} level={2} heading="What We do" />
+        <Space direction="vertical" size={24} className="mt-4">
           <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
           <CommonButton
             child="Register"
             type="primary"
-            width="100px"
             onClick={handelRoute}
+            width="30%"
           />
         </Space>
       </ImageContent>
 
-      <div className="common-padding">
+      <div className="work-with-spacing">
         <WorkWith />
       </div>
     </>
