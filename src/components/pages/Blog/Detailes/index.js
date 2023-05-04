@@ -11,8 +11,9 @@ const BlogDetailes = () => {
       <Image src={banner} alt="logo" priority={true} />
       <div className="common-padding">
         <CommonHeading
+          fontSize={"37px"}
           heading={
-            "Lorem ipsum dolor sit amet, consecte adipiscing elit, 0 sed do eiusmod"
+            "Lorem ipsum dolor sit amet, consecte adipiscing elit, 0 \n sed do eiusmod"
           }
           className={"mb-5"}
         />
