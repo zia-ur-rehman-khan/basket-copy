@@ -47,6 +47,7 @@ const Offer = () => {
                 text={`0${index + 1}`}
                 className={"primary"}
                 fontSize={"24px"}
+                fontWeight={600}
               />
             </div>
             <CommonTextField

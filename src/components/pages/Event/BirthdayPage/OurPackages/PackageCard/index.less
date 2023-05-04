@@ -1,21 +1,29 @@
 .package-card {
     background: @light-grey;
     transition: box-shadow .3s;
-    height: 700px;
     justify-content: center;
     align-items: center;
     display: flex;
     padding: 0 20px;
+
+    h3 {
+        color: black !important
+    }
 
     &:hover {
         box-shadow: 0 0 11px @primary-color;
     }
 }
 
+.package-card-parent {
+    height: 594px;
+    max-width: 436px;
+}
+
+
 .package-color-card {
     background: @bg-gray-color;
     transition: box-shadow .3s;
-    height: 700px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -27,6 +35,8 @@
         border-color: @light-grey !important;
         color: @bg-gray-color !important;
     }
+
+
 
     &:hover {
         box-shadow: 0 0 11px @primary-color;
