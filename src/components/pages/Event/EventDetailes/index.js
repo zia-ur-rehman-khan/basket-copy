@@ -33,6 +33,7 @@ const EventDetailes = () => {
       />
 
       <ImageContent
+        className={"align-items-start"}
         responsive={{
           imageSmall: 24,
           imagelarge: 12,
@@ -41,7 +42,7 @@ const EventDetailes = () => {
         }}
         component={
           <>
-            <Space direction="vertical">
+            <Space direction="vertical" size={20}>
               <Commonheading level={2} heading={"Event Description"} />
               <CommonTextField fontSize={"16px"} text={data.detailesText} />
               <CommonTextField fontSize={"16px"} text={data.detailesText2} />
