@@ -16,7 +16,7 @@ const ForgotPassword = () => {
   return (
     <div className="main-forgotPassword">
       <div className="child-forgot">
-        <CommonHeading heading={"Forgot Password"} />
+        <CommonHeading heading={"Forgot Password"} fontSize={"45px"} />
         <CommonTextField
           text={
             "Enter the email address associated with your account and we will send you a password reset link."

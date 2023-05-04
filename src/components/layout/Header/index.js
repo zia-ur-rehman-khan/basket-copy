@@ -83,6 +83,16 @@ const Header = () => {
         />
       ),
     },
+    {
+      key: "5",
+      label: (
+        <TextField
+          className={`${type === "community" ? "primary" : ""} header-text`}
+          onClick={() => handelRoute("/event/camps")}
+          text={"Camps"}
+        />
+      ),
+    },
   ];
 
   return (
@@ -100,7 +110,7 @@ const Header = () => {
             />
             <Space size={26}>
               {navList.map((t, index) => (
-                <>
+                <div key={index}>
                   {t.name === "Event" ? (
                     <Dropdown
                       overlayClassName={"event-dropDown"}
@@ -128,7 +138,7 @@ const Header = () => {
                       text={t.name}
                     />
                   )}
-                </>
+                </div>
               ))}
             </Space>
             <Search

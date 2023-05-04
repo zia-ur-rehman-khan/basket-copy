@@ -37,12 +37,15 @@ const RoadMap = () => {
     },
     {
       title: "What We Do",
+      url: "/what-we-do",
     },
     {
       title: "Who we Work With",
+      url: "/school",
     },
     {
       title: "Our Sponsers",
+      url: "/partners-sponsers",
     },
     {
       title: "Contact Us",
@@ -54,9 +57,11 @@ const RoadMap = () => {
     },
     {
       title: "Blogs",
+      url: "/blog",
     },
     {
       title: "Services",
+      url: "/service",
     },
     {
       title: "Our Achievements ",
@@ -67,6 +72,7 @@ const RoadMap = () => {
   const data4 = [
     {
       title: "Coaches",
+      url: "/what-we-do/coach-region",
     },
     {
       title: "Schools",
@@ -108,13 +114,15 @@ const RoadMap = () => {
   const Login = [
     {
       title: "Sign In",
+      url: "/login",
     },
     {
       title: "Sign Up",
-      url: "/school",
+      url: "/sign-up",
     },
     {
       title: "Forgot Password",
+      url: "/forgot-password",
     },
   ];
 

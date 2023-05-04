@@ -11,7 +11,7 @@ const PacakgeCard = ({ data }) => {
 
   return (
     <div
-      className={`radius c-pointer ${
+      className={`radius c-pointer  package-card-parent ${
         type == "Most Popular" ? "package-color-card" : "package-card"
       }`}
       style={{
@@ -20,12 +20,14 @@ const PacakgeCard = ({ data }) => {
       }}
     >
       <Space size={size} direction="vertical">
-        <CommonButton child={type} classname={"grey"} />
-        <Commonheading
-          level={3}
-          heading={heading}
-          className={`${type != "Most Popular" && "black"}`}
+        <CommonButton
+          child={type}
+          classname={"grey"}
+          className="text-uppercase"
+          fontSize="9px"
+          width="89px"
         />
+        <Commonheading level={3} heading={heading} />
         <Space>
           <Commonheading heading={price} color="#4DC3D1" />
           <Commonheading
@@ -38,6 +40,7 @@ const PacakgeCard = ({ data }) => {
           text="What You will get"
           className={`${type != "Most Popular" && "black"}`}
           fontWeight={"bold"}
+          fontSize={"16px"}
         />
 
         {get.map((t, i) => (
@@ -46,12 +49,11 @@ const PacakgeCard = ({ data }) => {
               <Image
                 src={tick}
                 alt="Picture of the author"
-                width={19}
-                height={19}
+                width={12}
+                height={12}
               />
               <Space direction="vertical">
                 <CommonTextField
-                  fontSize={"22px"}
                   text={t}
                   className={`${type != "Most Popular" && "black"}`}
                 />

@@ -25,15 +25,20 @@ const Payment = () => {
 
   return (
     <Space direction="vertical" size={30} style={{ width: "100%" }}>
-      <div className="d-flex flex-column align-items-center">
+      <Space className="d-flex flex-column align-items-center">
         <CommonTextField
           fontSize={"29.64px"}
           text={"Payment"}
           letterSpacing={"4px"}
+          className={"text-uppercase"}
         />
         <Commonheading heading={"Enter Payment Details"} />
-        <CommonTextField text={"Payment Detail"} />
-      </div>
+        <CommonTextField
+          text={"Payment Detail"}
+          fontWeight={"lighter"}
+          fontSize={"15px"}
+        />
+      </Space>
       <Row gutter={[24, 24]}>
         <Col
           xxl={{ span: 12 }}

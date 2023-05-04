@@ -16,7 +16,7 @@ import CommonVideoPreview from "components/common/VideoPreview";
 const Achievement = () => {
   return (
     <>
-      <CommonBanner src={banner} heading={"Road Map"} />
+      <CommonBanner src={banner} heading={"Our Achievements "} />
 
       <ImageContent
         responsive={{
@@ -28,13 +28,18 @@ const Achievement = () => {
         src={contentImage}
         content={
           <>
-            <CommonTextField fontSize="20px" text="OUR ACHIEVEMENTS" />
+            <CommonTextField
+              fontSize="15px"
+              text="Our Achievements "
+              className={"text-uppercase"}
+            />
             <Commonheading
+              className={"mt-1"}
               level={2}
               heading="What iBall  have achieved so Far"
             />
-            <Space direction="vertical" size={24}>
-              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Ultricies mi eget mauris pharetra et. Ultrices neque ornare aenean euismod elementum. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Id venenatis a condimentum vitae sapien. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Sed vulputate mi sit amet mauris. Malesuada bibendum arcu vitae elementum curabitur vitae. Pretium nibh ipsum consequat nisl vel pretium lectus quam id." />
+            <Space direction="vertical" size={24} className="mt-4">
+              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
             </Space>
           </>
         }

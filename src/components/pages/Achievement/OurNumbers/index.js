@@ -14,7 +14,7 @@ const OurNumbers = () => {
   ];
 
   return (
-    <div className="bg-grey common-padding radius">
+    <div className="bg-grey our-number-parent radius">
       <Commonheading
         heading={"Our Numbers Says It All"}
         level={2}
