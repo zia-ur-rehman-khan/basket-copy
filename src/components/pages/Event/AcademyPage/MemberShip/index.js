@@ -53,6 +53,7 @@ const MemberShip = () => {
         ))}
       </Space>
       <CommonTextField
+        fontWeight={600}
         className={"primary mt-5"}
         fontSize={"27px"}
         text={"Only $35.50"}
