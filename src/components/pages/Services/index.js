@@ -44,7 +44,7 @@ const Service = () => {
 
   return (
     <div className="service-main">
-      <CommonBanner src={banner} heading={"Road Map"} />
+      <CommonBanner src={banner} heading={"Services"} />
 
       <ImageContent
         responsive={{
@@ -56,10 +56,18 @@ const Service = () => {
         src={contentImage}
         content={
           <>
-            <CommonTextField fontSize="20px" text="OUR  SERVICES" />
-            <Commonheading level={2} heading="What iBall  Offers" />
-            <Space direction="vertical" size={24}>
-              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit gravida rutrum. Fames ac turpis egestas sed tempus. Fringilla est ullamcorper eget nulla facilisi etiam. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus." />
+            <CommonTextField
+              fontSize="15px"
+              text="Our Services"
+              className={"text-uppercase"}
+            />
+            <Commonheading
+              className={"mt-1"}
+              level={2}
+              heading="What iBall  Offers"
+            />
+            <Space direction="vertical" size={24} className="mt-4">
+              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
               <List
                 dataSource={data}
                 renderItem={(item) => (
@@ -80,17 +88,23 @@ const Service = () => {
         }}
         component={
           <>
-            <CommonTextField fontSize="20px" text="OUR MEMBERSHIPS" />
+            <CommonTextField
+              fontSize="15px"
+              text="Our Memberships"
+              className={"text-uppercase"}
+            />
             <Commonheading
+              className={"mt-1"}
               level={2}
               heading="Why You Should buy Our Memberships"
             />
-            <Space direction="vertical" size={24}>
-              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit gravida rutrum. Fames ac turpis egestas sed tempus. Fringilla est ullamcorper eget nulla facilisi etiam. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus. Diam volutpat commodo sed egestas egestas fringilla phasellus. Odio pellentesque diam volutpat commodo sed. Id aliquet lectus proin nibh nisl. Vehicula ipsum a arcu cursus. Ut etiam sit amet nisl purus in. Ut tellus elementum sagittis vitae et leo duis ut. Eu volutpat odio facilisis mauris sit." />
+            <Space direction="vertical" size={24} className="mt-4">
+              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
               <CommonButton
-                child={"Get Started"}
-                width="50%"
+                child="Get Started"
+                type="primary"
                 onClick={handelRoute}
+                width="30%"
               />
             </Space>
           </>

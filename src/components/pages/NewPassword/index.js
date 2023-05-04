@@ -15,7 +15,7 @@ const NewPassword = () => {
   return (
     <div className="main-forgotPassword">
       <div className="child-forgot">
-        <CommonHeading heading={"Create New Password"} />
+        <CommonHeading heading={"Create New Password"} fontSize={"45px"} />
         <CommonTextField
           text={
             "Please enter a new password that is at least 8 characters long, including a combination of letters and numbers."

@@ -16,8 +16,10 @@ import { Select } from "antd";
 import { Space } from "antd";
 import CommonSelect from "components/common/Select";
 import WorkWithCard from "components/pages/School/WorkWith/card";
+import { useRouter } from "next/router";
 
 const OurPartner = ({ head }) => {
+  const { push } = useRouter();
   const array = [
     sponser1,
     sponser2,
@@ -29,11 +31,22 @@ const OurPartner = ({ head }) => {
     sponser8,
   ];
 
+  const handelRoute = () => {
+    if (head != "Sponsor") {
+      push("/user/become-partner");
+    }
+  };
+
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center ">
         <Commonheading level={2} heading={`Our ${head}s`} />
-        <CommonButton child={`${head} With Us`} />
+        <CommonButton
+          child={`${
+            head == "Sponsor" ? "Sponsor Our Course" : "Partner With Us"
+          }`}
+          onClick={handelRoute}
+        />
       </div>
       <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (

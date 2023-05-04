@@ -38,13 +38,18 @@ const BirthdayPage = () => {
         src={contentImage}
         content={
           <>
-            <CommonTextField fontSize="20px" text="Birthday Party Packages" />
+            <CommonTextField
+              fontSize="15px"
+              text="Birthday Party Packages"
+              className={"text-uppercase"}
+            />
             <Commonheading
+              className={"mt-1"}
               level={2}
               heading="Basketball-Themed Birthday Party Packages"
             />
-            <Space direction="vertical" size={24}>
-              <CommonTextField text="Our coaches have been organizing Baskteball themed Birthday themed Birthday Parties for our clients since 2018 and we are proud to be officially launching our Birthday Packages to all our clients." />
+            <Space direction="vertical" size={24} className="mt-4">
+              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
               <CommonTextField text="Read More" color="#4DC3D1" />
             </Space>
           </>

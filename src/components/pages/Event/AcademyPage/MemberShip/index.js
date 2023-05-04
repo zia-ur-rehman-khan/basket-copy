@@ -22,9 +22,13 @@ const MemberShip = () => {
   ];
   return (
     <div className="bg-grey member-ship-card radius">
-      <Space size={20} direction="vertical">
-        <Commonheading level={4} heading={"Academy memberships"} />
-        <CommonTextField fontSize={"22px"} text="You can access following" />
+      <Space size={30} direction="vertical">
+        <Commonheading level={2} heading={"Academy memberships"} />
+        <CommonTextField
+          fontSize={"22px"}
+          text="You can access following"
+          fontWeight={600}
+        />
         {temp.map((t, i) => (
           <>
             <Space align="baseline" key={i}>
@@ -38,6 +42,7 @@ const MemberShip = () => {
               <Space direction="vertical">
                 <CommonTextField
                   fontSize={"22px"}
+                  fontWeight={600}
                   text={t?.point}
                   className={"primary"}
                 />
@@ -48,7 +53,8 @@ const MemberShip = () => {
         ))}
       </Space>
       <CommonTextField
-        className={"primary mt-3"}
+        fontWeight={600}
+        className={"primary mt-5"}
         fontSize={"27px"}
         text={"Only $35.50"}
       />
