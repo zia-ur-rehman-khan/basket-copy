@@ -25,7 +25,7 @@ const membership = () => {
     return (
         <UserLayout>
             <DashboardTitle title="My Membership" />
-            <Tabs defaultActiveKey="1" items={tabItems} />
+            <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs"/>
         </UserLayout>
     )
 }

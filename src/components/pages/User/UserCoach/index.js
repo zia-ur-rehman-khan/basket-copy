@@ -21,6 +21,8 @@ import thumbOne from "public/profile/thumb1.png";
 import thumbTwo from "public/profile/thumb2.png";
 import thumbThree from "public/profile/thumb3.png";
 import thumbFour from "public/profile/thumb4.png";
+import CommonHeading from "components/common/Heading";
+import CommonTextField from "components/common/TextField";
 
 // Videos
 // import vid from 'public/video/video.mp4'
@@ -85,14 +87,15 @@ const Index = () => {
                 <Image src={coachAvatar} alt=" " />
               </div>
               <div className="coach__info">
-                <h2 className="color__light">About Coach</h2>
+                {/* <h2 className="color__light">About Coach</h2> */}
+                <CommonHeading level={4} heading={"About Coach"} mb={15} />
                 <div className="info__row">
-                  <p className="color__light">Name: {coach.name}</p>
-                  <p className="color__light">Height: {coach.height}</p>
+                  <CommonTextField text={`Name: ${coach.name}`} />
+                  <CommonTextField text={`Height: ${coach.height}`} />
                 </div>
                 <div className="info__row">
-                  <p className="color__light">Contact: {coach.phone}</p>
-                  <p className="color__light">Age: {coach.age}</p>
+                  <CommonTextField text={`Contact: ${coach.phone}`} />
+                  <CommonTextField text={`Age: ${coach.height} Years`} />
                 </div>
               </div>
             </div>

@@ -87,7 +87,7 @@ const Index = () => {
           sm={{ span: 24 }}
           xs={{ span: 24 }}
         >
-          <Tabs defaultActiveKey="1" items={tabItems} />
+          <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs" />
         </Col>
         <Col
           lg={{ span: 12 }}

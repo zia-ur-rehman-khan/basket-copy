@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col } from "antd";
-import { personalInfo, schollInfo } from "data";
+import { personalInfo } from "data";
+import CommonTextField from "components/common/TextField";
 const Information = () => {
   return (
     <div className="information__wrapp">
@@ -17,8 +18,17 @@ const Information = () => {
               <Row>
                 <Col span={2}>{pInfo?.ico}</Col>
                 <Col span={12}>
-                  <p className="label__text">{pInfo?.text}</p>
-                  <p className="label__value">{pInfo?.labelValue}</p>
+                  <CommonTextField
+                    text={`${pInfo?.text}:`}
+                    fontSize="13.5px"
+                    color="#fafafa99"
+                  />
+                  <CommonTextField
+                    text={pInfo?.labelValue}
+                    fontSize="16.5px"
+                    color="#fafafa99"
+                    mt={10}
+                  />
                 </Col>
               </Row>
             </div>

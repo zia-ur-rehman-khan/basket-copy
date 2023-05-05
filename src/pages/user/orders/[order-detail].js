@@ -10,6 +10,8 @@ import { Col, Row } from "antd";
 // Images
 import orderOne from "public/profile/ordered1.png";
 import orderTwo from "public/profile/ordered2.png";
+import CommonTextField from "components/common/TextField";
+import CommonHeading from "components/common/Heading";
 
 // Data
 const ordersData = [
@@ -35,6 +37,29 @@ const ordersData = [
     price: 20.0,
   },
 ];
+
+const orderSummary = [
+  {
+    id: 1,
+    text: "Tax",
+    amount: 5.0,
+  },
+  {
+    id: 2,
+    text: "Estimated Shipping Cost",
+    amount: 5.0,
+  },
+  {
+    id: 3,
+    text: "Promo Applied",
+    amount: 5.0,
+  },
+];
+
+const orderTotal = orderSummary
+  .map((total) => total.amount)
+  .reduce((acc, cur) => acc + cur, 0)
+  .toFixed(2);
 
 const OrderDetail = () => {
   return (
@@ -66,42 +91,22 @@ const OrderDetail = () => {
           />
         ))}
         <div className="orders__total-wrapp">
-          {/* <div className='order__titles'></div>
-                    <div className='order__totals'></div> */}
+          {orderSummary?.map((summary) => (
+            <div className="total__row">
+              <span>
+                <CommonTextField text={summary?.text} />
+              </span>
+              <span>
+                <CommonTextField text={`$${summary?.amount.toFixed(2)}`} />
+              </span>
+            </div>
+          ))}
           <div className="total__row">
             <span>
-              <p>Tax</p>
+              <CommonHeading level={4} heading={"Order Total"} />
             </span>
             <span>
-              <p>£5.00</p>
-            </span>
-          </div>
-          <div className="total__row">
-            <span>
-              <p>Estimated Shipping Cost</p>
-            </span>
-            <span>
-              <p>£5.00</p>
-            </span>
-          </div>
-          <div className="total__row">
-            <span>
-              <p>Promo Applied</p>
-            </span>
-            <span>
-              <p>£5.00</p>
-            </span>
-          </div>
-          <div className="total__row">
-            <span>
-              <p>
-                <strong>Order Total</strong>
-              </p>
-            </span>
-            <span>
-              <p>
-                <strong>£5.00</strong>
-              </p>
+              <CommonHeading level={4} heading={`$${orderTotal}`} />
             </span>
           </div>
         </div>

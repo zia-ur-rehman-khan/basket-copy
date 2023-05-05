@@ -190,7 +190,7 @@ const CurrentCoach = () => {
   return (
     <UserLayout>
       <DashboardTitle title="Current Coaching" />
-      <Tabs defaultActiveKey="1" items={tabItems} className="register-tab" />
+      <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs" />
     </UserLayout>
   );
 };

@@ -51,7 +51,7 @@ const Videos = () => {
                     <CommonButton child={"Upload Video"} />
                 </Col>
             </Row>
-            <Tabs defaultActiveKey="1" items={tabItems} />
+            <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs"/>
         </UserLayout>
     );
 };

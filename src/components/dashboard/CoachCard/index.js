@@ -8,7 +8,7 @@ const CoachCard = ({ image, name, price }) => {
     <Card className="coach__card">
       <Image src={image} alt=" " />
       <CommonHeading level={4} heading={name} mb={5} />
-      <CommonTextField text={`${price}`} />
+      <CommonTextField text={`${price}`} mb={15}/>
       <CommonButton child={"Book Now"} />
     </Card>
   );

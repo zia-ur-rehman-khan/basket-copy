@@ -155,8 +155,9 @@ const Index = () => {
           <Sort />
         </Col>
       </Row>
-
-      <Tabs defaultActiveKey="1" items={tabItems} />
+      {/* <div className="main-signUp"> */}
+        <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs" />
+      {/* </div> */}
     </AdminLayout>
   );
 };

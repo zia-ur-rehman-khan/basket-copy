@@ -1,5 +1,6 @@
 import { Form, Input, Row, Col } from "antd";
 import CommonButton from "components/common/Button";
+import CommonHeading from "components/common/Heading";
 import CommonInputField from "components/common/Input";
 import CommonSelect from "components/common/Select";
 
@@ -26,7 +27,8 @@ const EditPofileInfo = () => {
   const { TextArea } = Input;
   return (
     <>
-      <h3 className="color__light head__sm">Personal Information</h3>
+      {/* <h3 className="color__light head__sm"></h3> */}
+      <CommonHeading heading={"Personal Information"} level={3} mb={10}/>
       <Form className="dashboard__form">
         <Row gutter={20}>
           <Col span={12}>
@@ -140,7 +142,7 @@ const EditPofileInfo = () => {
         </Row>
 
         {/* School information */}
-        <h3 className="color__light head__sm">School Information</h3>
+        <CommonHeading heading={"School Information"} level={3} mb={10}/>
         <Row gutter={20}>
           <Col span={12}>
             <Form.Item

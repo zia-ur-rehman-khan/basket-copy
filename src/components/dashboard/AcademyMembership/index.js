@@ -1,4 +1,6 @@
 // Next
+import CommonHeading from "components/common/Heading";
+import CommonTextField from "components/common/TextField";
 import Image from "next/image";
 // images
 import check from "public/profile/check.svg";
@@ -25,14 +27,15 @@ const academyData = [
 const AcademyMembership = () => {
   return (
     <div className="academy__membership">
-      <h2 className="color__light">You Can Access</h2>
+      {/* <h2 className="color__light">You Can Access</h2> */}
+      <CommonHeading level={4} heading={"You Can Access"} />
       <div className="features__outer">
         {academyData.map((data, i) => (
           <div className="features__wrapp" key={i}>
             <Image src={check} alt=" " width={50} />
             <div className="academy__features">
-              <h3>{data.title}</h3>
-              <p>{data.text}</p>
+              <CommonHeading level={3} heading={data.title} mb={10} />
+              <CommonTextField text={data.text} />
             </div>
           </div>
         ))}

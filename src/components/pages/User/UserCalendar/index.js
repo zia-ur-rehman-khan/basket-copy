@@ -12,6 +12,7 @@ import "react-calendar/dist/Calendar.css";
 
 // AntD
 import { Col, Row, Tabs } from "antd";
+import CommonTextField from "components/common/TextField";
 
 // Events Data
 const events = [
@@ -76,14 +77,30 @@ const Index = () => {
       <DashboardTitle title="Calendar" />
       <Row gutter={25}>
         <Col span={12}>
-          <Tabs defaultActiveKey="1" items={tabItems} />
+          <Tabs
+            defaultActiveKey="1"
+            items={tabItems}
+            className="full__w-tabs"
+          />
         </Col>
         <Col span={12}>
           <div className="calendar__wrapp">
-            <Calendar onChange={setDate} defaultValue={date} />
+            <Calendar onChange={setDate} defaultValue={date} startWeekDay={0}/>
             <ul className="events__highlighter">
-              <li className="current__events">Events</li>
-              <li className="upcoming__events">Events</li>
+              <li className="current__events">
+                <CommonTextField
+                  text="Events"
+                  color="#ff6600"
+                  fontSize={"15.24px"}
+                />
+              </li>
+              <li className="upcoming__events">
+                <CommonTextField
+                  text="Events"
+                  color="#ffc700"
+                  fontSize={"15.24px"}
+                />
+              </li>
             </ul>
           </div>
         </Col>

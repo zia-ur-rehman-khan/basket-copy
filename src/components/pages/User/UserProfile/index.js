@@ -4,14 +4,12 @@ import DashboardTitle from "components/dashboard/Title";
 import ProfileThumb from "components/dashboard/ProfileThumb";
 import Information from "components/dashboard/Information/Information";
 import CommonButton from "components/common/Button";
-import { useRouter } from "next/router";
-
+import SchoolInformation from "components/dashboard/Information/SchoolInformation";
 // React Icons
 import userAvatar from "public/profile/user-avatar.png";
-
 // Ant D
 import { Row, Col } from "antd";
-import SchoolInformation from "components/dashboard/Information/SchoolInformation";
+import { useRouter } from "next/router";
 
 const Index = () => {
   const { push } = useRouter();
