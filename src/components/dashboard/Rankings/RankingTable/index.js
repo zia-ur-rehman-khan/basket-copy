@@ -96,7 +96,14 @@ const data = [
 const RankingTable = ({ className }) => {
   return (
     <Table dataSource={data} className={`dashboard__table ${className}`}>
-      <Column title="No" dataIndex="key" key="key" />
+      <Column
+        title="No"
+        dataIndex="key"
+        key="key"
+        render={(_, record) => (
+          <>{record.key < 10 ? <>0{record.key}</> : record.key}</>
+        )}
+      />
       <Column
         title="Name"
         dataIndex="name"

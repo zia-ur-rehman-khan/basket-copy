@@ -94,7 +94,14 @@ const tabItems = [
         dataSource={data}
         className="dashboard__table order__table billing__table"
       >
-        <Column title="SNo" dataIndex="key" key="key" />
+        <Column
+          title="SNo"
+          dataIndex="id"
+          key="id"
+          render={(_, record) => (
+            <>{record.id < 10 ? <>0{record.id}</> : record.id}</>
+          )}
+        />
         <Column
           title="Name"
           dataIndex="name"
@@ -118,7 +125,7 @@ const tabItems = [
           title="Amount"
           dataIndex="amount"
           key="key"
-          render={(_, record) => <span>£ {record.amount}</span>}
+          render={(_, record) => <span>£ {record.amount.toFixed(2)}</span>}
         />
       </Table>
     ),

@@ -58,7 +58,7 @@ const CoachSessions = () => {
           name={session.name}
         />
       ))}
-      <CommonButton child={"Create Session"} onClick={handelRoute} />
+      <CommonButton child={"Create Session"} onClick={handelRoute}/>
     </div>
   );
 };

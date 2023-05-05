@@ -1,5 +1,8 @@
 // Component
 import { Button, Col, Row } from "antd";
+import CommonButton from "components/common/Button";
+import CommonHeading from "components/common/Heading";
+import CommonTextField from "components/common/TextField";
 import AdminLayout from "components/dashboard/AdminLayout";
 import DashboardTitle from "components/dashboard/Title";
 import Image from "next/image";
@@ -18,33 +21,44 @@ const Index = () => {
     <AdminLayout>
       <DashboardTitle title={"Partner/sponsor"} />
       <div className="donate__banner">
-        {/* <div className='donate__bg'>
-                    <Image src={donateBg} alt=' ' priority={true} />
-                </div> */}
-        <Row align="middle">
-          <Col span={14}>
-            <div className="donate__text">
-              <h1>Donate To Iball Players</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-              </p>
-              <Button>Donate</Button>
-            </div>
-          </Col>
-          <Col span={10}>
-            <div className="donate__img">
-              <Image src={donate} alt=" " priority={true} />
-            </div>
-          </Col>
-        </Row>
+        <div className="donate__bg">
+          <Image src={donateBg} alt=" " priority={true} height={245}/>
+        </div>
+        <div className="donate__text-wrapp">
+          <Row align="middle">
+            <Col span={14}>
+              <div className="donate__text">
+                <CommonHeading level={1} heading={"Donate To Iball Players"} />
+                <CommonTextField
+                  mb={15}
+                  text={
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  }
+                />
+                <CommonButton
+                  child={"Donate Now"}
+                  width="30%"
+                  background={"#fff"}
+                  border={"none"}
+                  color="#000"
+                />
+              </div>
+            </Col>
+            <Col span={10}>
+              <div className="donate__img">
+                <Image src={donate} alt=" " priority={true} />
+              </div>
+            </Col>
+          </Row>
+        </div>
       </div>
 
       <div style={{ marginTop: "3rem" }} className="donate__info">
-        <p className="color__light">
-          To find out how you can work with or support iBall Basketball
-          Foundation please email Or Call
-        </p>
+        <CommonTextField
+          text={
+            "To find out how you can work with or support iBall Basketball Foundation please email Or Call"
+          }
+        />
         <Link href="tel:1234567890">
           <a>
             <FaPhoneAlt />

@@ -4,7 +4,6 @@ import { userNav, coachNav } from "data";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import styles from "./Style.module.css";
-import CommonTextField from "components/common/TextField";
 
 function Sidebar() {
   const admin = useRouter();
@@ -26,7 +25,6 @@ function Sidebar() {
           <li
             key={i}
             className={isActive == nav?.route ? styles.active__link : ""}
-            // className={isActive(nav.route) ? styles.active__link : ""}
           >
             <Link href={nav?.route}>
               <a>

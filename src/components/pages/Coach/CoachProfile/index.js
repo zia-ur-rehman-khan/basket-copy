@@ -1,7 +1,6 @@
 // Components
 import DashboardTitle from "components/dashboard/Title";
 import UserLayout from "components/dashboard/UserLayout";
-import CoachCard from "components/dashboard/CoachCard";
 
 // Images for tabs
 import coachOne from "public/profile/coach1.png";
@@ -14,80 +13,82 @@ import coachSeven from "public/profile/coach7.png";
 import coachEight from "public/profile/coach8.png";
 import coachNine from "public/profile/coach9.png";
 import coachTen from "public/profile/coach10.png";
+import ProfileCard from "components/dashboard/CoachCard/ProfileCard";
 
 const coachInfo = [
   {
     id: 1,
     img: coachOne,
     name: "Molly Carroll",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 2,
     img: coachTwo,
     name: "Wallace Boone",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 3,
     img: coachThree,
     name: "Malcolm Leonard",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 4,
     img: coachFour,
     name: "Clarence Schmi",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 5,
     img: coachFive,
     name: "Trevor Dawson",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 6,
     img: coachSix,
     name: "Dallas Hunter",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 7,
     img: coachSeven,
     name: "Jeffery Blair",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 8,
     img: coachEight,
     name: "Derrick Duncan",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 9,
     img: coachNine,
     name: "Frankie Griffith",
-    price: 250,
+    desig: "Iball Coach",
   },
   {
     id: 10,
     img: coachTen,
     name: "Alejandro Mack",
-    price: 250,
+    desig: "Iball Coach",
   },
 ];
 
 const Index = () => {
   return (
     <UserLayout>
-      <DashboardTitle title="Current Coaching" />
-      {coachInfo.map((card) => (
-        <CoachCard
-          key={card.id}
-          image={card.img}
-          name={card.name}
-          price={card.price}
+      <DashboardTitle title="Coach Profile" />
+      {coachInfo?.map((card) => (
+        <ProfileCard
+          key={card?.id}
+          image={card?.img}
+          name={card?.name}
+          desig={card?.desig}
+          btnText="View Profile"
         />
       ))}
     </UserLayout>

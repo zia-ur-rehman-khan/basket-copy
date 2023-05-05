@@ -2,7 +2,7 @@
 import UserLayout from "components/dashboard/UserLayout";
 import DashboardTitle from "components/dashboard/Title";
 import ProfileThumb from "components/dashboard/ProfileThumb";
-import Information from "components/dashboard/Information";
+import Information from "components/dashboard/Information/Information";
 import CommonButton from "components/common/Button";
 import { useRouter } from "next/router";
 
@@ -11,6 +11,7 @@ import userAvatar from "public/profile/user-avatar.png";
 
 // Ant D
 import { Row, Col } from "antd";
+import SchoolInformation from "components/dashboard/Information/SchoolInformation";
 
 const Index = () => {
   const { push } = useRouter();
@@ -48,6 +49,7 @@ const Index = () => {
 
       {/* contact info  */}
       <Information />
+      <SchoolInformation />
       {/* contact info  */}
     </UserLayout>
   );

@@ -3,6 +3,8 @@ import { Button, Form, Input, Row, Col } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import Image from "next/image";
+import CommonInputField from "components/common/Input";
+import CommonButton from "components/common/Button";
 
 const Upload = () => {
   const [imagePreview, setImagePreview] = useState(null);
@@ -58,7 +60,7 @@ const Upload = () => {
                   },
                 ]}
               >
-                <Input placeholder="Enter Video Title" type="text" />
+                <CommonInputField placeholder="Enter Video Title" type="text" />
               </Form.Item>
             </Col>
             <Col span={24}>
@@ -70,22 +72,20 @@ const Upload = () => {
                   },
                 ]}
               >
-                <TextArea placeholder="Video Description" rows={4} />
+                <TextArea placeholder="Enter Video Description" rows={4} />
               </Form.Item>
             </Col>
           </Row>
           <Form.Item>
-            <Button
+            <CommonButton
               type="default"
               onClick={() => filePicekerRef.current.click()}
-            >
-              Browse Video
-            </Button>
+              child={"Browse Video"}
+              color="#FF6600"
+            />
           </Form.Item>
           <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Upload Video
-            </Button>
+            <CommonButton child={"Upload Video"} htmlType="submit" />
           </Form.Item>
         </Form>
         <div className="btn-container">

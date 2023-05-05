@@ -115,7 +115,7 @@ export const personalInfo = [
         text: 'Select State', labelValue: 'California', ico: <FaMapMarked />
     },
     {
-        text: 'City', labelValue: 'New York', ico: <BsBuildings />
+        text: 'Select City', labelValue: 'New York', ico: <BsBuildings />
     },
 ]
 

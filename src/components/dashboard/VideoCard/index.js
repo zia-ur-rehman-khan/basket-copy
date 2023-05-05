@@ -18,11 +18,9 @@ const VideoCard = ({ image, title, text, name, thumb, id }) => {
         </div>
         <div className="card__body">
           <Link href={`/user/coach/${id}`}>
-            {/* <h4>{title}</h4> */}
-            <CommonHeading heading={title} level={4} mb={10}/>
+            <CommonHeading heading={title} level={4} mb={10} fontWeight={600} />
           </Link>
-          {/* <p>{text}</p> */}
-          <CommonTextField text={text} mb={15}/>
+          <CommonTextField text={text} mb={15} />
           <ul>
             <li>
               <Image src={thumb} alt=" " /> <span>{name}</span>

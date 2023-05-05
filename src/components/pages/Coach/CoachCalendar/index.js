@@ -12,6 +12,7 @@ import "react-calendar/dist/Calendar.css";
 // AntD
 import { Col, Row, Tabs } from "antd";
 import CoachSessions from "components/dashboard/CoachSessions";
+import CommonTextField from "components/common/TextField";
 
 // Events Data
 const events = [
@@ -38,8 +39,9 @@ const events = [
 const Index = () => {
   // Calendar Customizer
   const [date, setDate] = useState([
-    new Date(2023, 3, 1),
-    new Date(2023, 3, 5),
+    // new Date(2023, 3, 1),
+    // new Date(2023, 3, 5),
+    new Date(),
   ]);
   useEffect(() => {
     const calendarDays = document.querySelectorAll(
@@ -70,6 +72,10 @@ const Index = () => {
       children: <CoachSessions />,
     },
   ];
+  
+  const locale = {
+    startWeekDay : 0
+  }
 
   return (
     <AdminLayout>
@@ -90,10 +96,22 @@ const Index = () => {
           xs={{ span: 24 }}
         >
           <div className="calendar__wrapp">
-            <Calendar onChange={setDate} defaultValue={date} />
+            <Calendar onChange={setDate} defaultValue={date} locale={locale} />
             <ul className="events__highlighter">
-              <li className="current__events">Events</li>
-              <li className="upcoming__events">Events</li>
+              <li className="current__events">
+                <CommonTextField
+                  text="Events"
+                  color="#ff6600"
+                  fontSize={"15.24px"}
+                />
+              </li>
+              <li className="upcoming__events">
+                <CommonTextField
+                  text="Events"
+                  color="#ffc700"
+                  fontSize={"15.24px"}
+                />
+              </li>
             </ul>
           </div>
         </Col>

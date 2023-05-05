@@ -16,6 +16,7 @@
   border-radius: 20px;
   padding: 20px;
   overflow: hidden;
+  margin: 10px 0;
 
   .react-calendar {
     background: transparent;
@@ -36,7 +37,7 @@
     color: #fff;
     border-radius: 50%;
     height: 40px;
-    width: 40px;
+    min-width: 40px !important;
     font-size: 26px;
     transition: 0.4s ease;
   }
@@ -71,9 +72,9 @@
   .events__highlighter {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
     list-style: none;
-    margin: 20px 0 0 17px;
+    margin: 20px 0 0 34px;
 
     li {
       font-size: 20px;
@@ -83,11 +84,11 @@
     li:before {
       content: "";
       position: absolute;
-      left: -18px;
+      left: -30px;
       top: 50%;
       transform: translateY(-50%);
-      width: 10px;
-      height: 10px;
+      width: 20px;
+      height: 20px;
       background: red;
       border-radius: 50%;
     }
@@ -186,6 +187,7 @@
     .total__row {
       display: flex;
       justify-content: space-between;
+      margin : .8rem 0;
 
       span {
         color: #fff;

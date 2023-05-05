@@ -95,7 +95,14 @@ const MyOrders = () => {
         </Col>
       </Row>
       <Table dataSource={data} className="dashboard__table order__table">
-        <Column title="SNo" dataIndex="key" key="key" />
+        <Column
+          title="SNo"
+          dataIndex="key"
+          key="key"
+          render={(_, record) => (
+            <>{record.id < 10 ? <>0{record.id}</> : record.id}</>
+          )}
+        />
         <Column title="OrderNo" dataIndex="orderNo" key="key" />
         <Column title="Order Date" dataIndex="date" key="key" />
         <Column title="Status" dataIndex="status" key="key" />
@@ -111,7 +118,12 @@ const MyOrders = () => {
             </>
           )}
         />
-        <Column title="Total" dataIndex="total" key="key" />
+        <Column
+          title="Total"
+          dataIndex="total"
+          key="key"
+          render={(_, record) => <>${record.total.toFixed(2)}</>}
+        />
         <Column
           title="Details"
           dataIndex="key"
