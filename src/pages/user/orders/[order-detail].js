@@ -91,8 +91,8 @@ const OrderDetail = () => {
           />
         ))}
         <div className="orders__total-wrapp">
-          {orderSummary?.map((summary) => (
-            <div className="total__row">
+          {orderSummary?.map((summary, index) => (
+            <div className="total__row" key={index}>
               <span>
                 <CommonTextField text={summary?.text} />
               </span>
