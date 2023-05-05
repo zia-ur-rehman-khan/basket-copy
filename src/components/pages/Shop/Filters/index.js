@@ -7,10 +7,11 @@ const handleChange = (value) => {
 
 import CommonButton from "components/common/Button";
 import CommonSelect from "components/common/Select";
+import { Space } from "antd";
 
 const Index = () => {
   return (
-    <>
+    <Space wrap>
       <CommonSelect
         placeholder="Price : Min | Max"
         options={[
@@ -43,8 +44,8 @@ const Index = () => {
           { value: "Yiminghe", label: "USA" },
         ]}
       />
-      <CommonButton child="Reset Filters" height={"40px"}/>
-    </>
+      <CommonButton child="Reset Filters" height={"40px"} />
+    </Space>
   );
 };
 

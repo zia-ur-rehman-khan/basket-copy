@@ -8,13 +8,14 @@
     overflow: hidden;
 
     .ant-card-body {
-        padding: 0;
+        padding: 0 !important;
     }
 
     img {
         width: 100% !important;
         height: 160px !important;
         object-fit: cover;
+        border-radius: 10px;
     }
 
     .card__head {
@@ -35,11 +36,13 @@
         padding: 16px;
         color: #fff;
 
+
         ul {
             list-style: none;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin: 0;
         }
 
         li:has(img) {

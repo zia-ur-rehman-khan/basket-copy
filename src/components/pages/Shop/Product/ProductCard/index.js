@@ -4,80 +4,93 @@ import CommonTextField from "components/common/TextField";
 import CommonCard from "components/common/Card";
 import Image from "next/image";
 import React from "react";
+import star from "public/product/star.png";
+import heart from "public/product/heart.png";
+
 import Link from "next/link";
 import Commonheading from "components/common/Heading";
+import { useRouter } from "next/router";
 
-const ProductCard = ({ productData }) => {
+const ProductCard = ({ productData, styling, featured }) => {
   const { id, src, width, height, category } = productData;
+  const temp = [star, star, star, star, star];
+
+  const { push } = useRouter();
+
+  const handelClick = () => {
+    push("productDetail/1");
+  };
+
   return (
     <CommonCard
+      style={styling}
+      onClick={featured && handelClick}
       child={
-        <>
-          <div className="product-image-wrapper">
-            <Image src={src} alt="Picture " className="product-image" />
+        <div className="shop-product-parent w-100">
+          <div className="image-side d-flex justify-content-center ">
+            <Image
+              src={src}
+              alt="Picture of the author"
+              layout="fixed"
+              width={width}
+              height={height}
+            />
           </div>
-          <Space className="p-3" size={11} direction="vertical">
-            <div>
-              <Row>
-                <Col span={12}>
-                  <Commonheading
-                    level={5}
-                    heading={"White Jersey"}
-                    color="#000000"
-                  />
-                  {/* <Commonheading
-                    level={5}
-                    heading={"Organic Cotton"}
-                    color="rgba(0, 0, 0, 0.5)"
-                  /> */}
-                </Col>
-                <Col span={12}>
-                  <ul className="product-reviews">
-                    <li>⭐</li>
-                    <li>⭐</li>
-                    <li>⭐</li>
-                    <li>⭐</li>
-                    <li>⭐</li>
-                  </ul>
-                  {category == "all" ? (
-                    <Commonheading
-                      level={5}
-                      heading={"£20.00"}
-                      color={"#FF6600"}
-                      className={"product-price"}
-                    />
-                  ) : null}
-                </Col>
-              </Row>
-            </div>
-
-            <Space>
-              <Link href={`productDetail/1`}>
-                <CommonButton
-                  child="Learn More"
-                  classname="product-details"
-                  width={160}
-                />
-              </Link>
-              {category == "featured" ? (
-                <Commonheading
-                  level={5}
-                  heading={"£20.00"}
-                  color={"#FF6600"}
-                  className={"product-price"}
-                />
-              ) : null}
-              {category == "all" ? (
-                <CommonButton
-                  child="❤️"
-                  classname="product-favourite"
-                  background={"#000000"}
-                  color={"#000000"}
-                />
-              ) : null}
+          <Space className="p-3 w-100" size={5} direction="vertical">
+            <Space className="justify-content-between w-100">
+              <CommonTextField
+                text={"White Jersey"}
+                className={"black"}
+                fontWeight={600}
+                fontSize={"18px"}
+              />
+              <Space size={2}>
+                {temp.map((t, key) => (
+                  <Image src={t} alt="icon" key={key} width={18} height={17} />
+                ))}
+              </Space>
             </Space>
+            <Space className="justify-content-between w-100">
+              <CommonTextField
+                text={"Organic Cotton"}
+                fontWeight={500}
+                color="#00000080"
+              />
+              {!featured && (
+                <CommonTextField
+                  text={"£20.00"}
+                  className={"black"}
+                  fontWeight={600}
+                  fontSize={"18px"}
+                />
+              )}
+            </Space>
+            <div className="button-session w-100 mt-3 d-flex align-items-center">
+              <CommonButton
+                child={featured ? "Learn More" : "Add to Cart"}
+                topClass="cart"
+              />
+              {featured ? (
+                <CommonTextField
+                  text={"£20.00"}
+                  color="#FF6600"
+                  fontWeight={600}
+                  fontSize={"18px"}
+                />
+              ) : (
+                <div className="icon d-flex justify-content-center align-items-center">
+                  <Image
+                    src={heart}
+                    alt=""
+                    layout="fixed"
+                    width={18}
+                    height={15.75}
+                  />
+                </div>
+              )}
+            </div>
           </Space>
-        </>
+        </div>
       }
     />
   );

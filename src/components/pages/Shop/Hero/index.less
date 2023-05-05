@@ -1,21 +1,52 @@
 .carousel-wrapper {
+
   .slide {
-    height: 424px;
-    color: #fff;
-    text-align: left;
-    background: #364d79;
-    border-radius: 10px;
-    padding: 20px;
-    background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
-    background-size: cover;
-    background-position: center;
+    position: relative;
+
+    .slide_content {
+      position: absolute;
+      top: 40px;
+      width: 60%;
+    }
   }
-  .slide_content {
-    width: 44%;
-    .slide_heading {
-      padding: 20px 0px 20px 20px;
-      font-weight: 600;
-      font-style: normal;
+
+  .slick-dots {
+    margin-left: 10%;
+    margin-bottom: 6% !important;
+    display: block !important;
+
+    li {
+      background: @bg-gray-color;
+      width: 13px !important;
+      height: 13px !important;
+      border-radius: 50% !important;
+
+      button {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 50% !important;
+
+        &:hover {
+          background: @white;
+        }
+      }
+    }
+
+    .slick-active {
+      background: @white !important;
+
+      border-radius: 50% !important;
+
+
+      button {
+        background: inherit !important;
+        transition: none !important;
+        border-radius: 50% !important;
+        width: 100% !important;
+        height: 100% !important;
+
+
+      }
     }
   }
 }

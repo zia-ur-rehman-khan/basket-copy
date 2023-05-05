@@ -10,7 +10,7 @@ import calender from "public/event/calender.svg";
 import dollar from "public/event/dollar.svg";
 import { useRouter } from "next/router";
 
-const EventCard = ({ src, styling }) => {
+const EventCard = ({ src, styling, price }) => {
   const { push, asPath, pathname, query } = useRouter();
 
   const { type } = query;
@@ -48,19 +48,21 @@ const EventCard = ({ src, styling }) => {
               className="black"
               text="Lorem ipsum dolor sit amet, consectetur adipisng elit, sed do eiusmod tempor incididunt."
             />
-            <Space style={{ width: "100%" }} align="baseline" size={30}>
-              <Space>
-                <Image src={time} width={22} height={22} alt="time" />
+            <Space style={{ width: "100%" }} size={!price ? 30 : 5}>
+              <Space className="align-items-start">
+                <Image src={time} width={16.5} height={16.5} alt="time" />
                 <CommonTextField className="black" text="05:30 Pm" />
               </Space>
-              <Space>
-                <Image src={calender} width={19} height={22} alt="time" />
+              <Space className="align-items-start">
+                <Image src={calender} width={14.25} height={16.5} alt="time" />
                 <CommonTextField className="black" text="24 Nov 2022" />
               </Space>
-              {/* <Space>
-                <Image src={dollar} width={32} height={19} alt="time" />
-                <CommonTextField className="black" text="$32" />
-              </Space> */}
+              {price && (
+                <Space className="align-items-start">
+                  <Image src={dollar} width={24} height={14.25} alt="time" />
+                  <CommonTextField className="black" text="$32" />
+                </Space>
+              )}
             </Space>
             <CommonButton child="Learn More" onClick={() => handelRoute(10)} />
           </Space>

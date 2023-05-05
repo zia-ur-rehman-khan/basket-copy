@@ -104,7 +104,14 @@ const tutorialBill = [
 ];
 
 const columns = [
-  { title: "SNo", dataIndex: "key", key: "key" },
+  {
+    title: "SNo",
+    dataIndex: "key",
+    key: "key",
+    render: (_, record) => (
+      <>{record.id < 10 ? <>0{record.id}</> : record.id}</>
+    ),
+  },
   {
     title: "Name",
     dataIndex: "name, img",
@@ -128,7 +135,7 @@ const columns = [
     title: "Amount",
     dataIndex: "amount",
     key: "key",
-    render: (_, record) => <>£{record.amount}</>,
+    render: (_, record) => <>£{record.amount.toFixed(2)}</>,
   },
   // {
   //     title: "Action",
