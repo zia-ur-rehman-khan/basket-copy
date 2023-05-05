@@ -1,15 +1,9 @@
-// Components 
-import DashboardTitle from 'components/dashboard/Title'
-import UserLayout from 'components/dashboard/UserLayout'
-import UpdatePassword from 'components/dashboard/UpdatePassword'
+import dynamic from "next/dynamic";
+
+const DynamicPassword = dynamic(() => import("components/pages/User/Password"));
 
 const ChangePassword = () => {
-    return (
-        <UserLayout>
-            <DashboardTitle title="Change Password" />
-            <UpdatePassword/>
-        </UserLayout>
-    )
-}
+  return <DynamicPassword />;
+};
 
-export default ChangePassword
+export default ChangePassword;
