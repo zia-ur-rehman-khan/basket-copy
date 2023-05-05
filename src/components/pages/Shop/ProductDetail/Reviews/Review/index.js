@@ -16,12 +16,10 @@ const Index = () => {
   return (
     <>
       <CommonCard
+        style={{ margin: "0 9px" }}
         child={
           <>
             <Card
-              style={{
-                width: 300,
-              }}
               cover={
                 <div
                   className="review_content"
