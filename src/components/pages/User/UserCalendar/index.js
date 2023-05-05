@@ -37,7 +37,6 @@ const events = [
 ];
 
 const Index = () => {
-  // Calendar Customizer
   const [date, setDate] = useState([
     new Date(2023, 3, 1),
     new Date(2023, 3, 5),
@@ -85,7 +84,7 @@ const Index = () => {
         </Col>
         <Col span={12}>
           <div className="calendar__wrapp">
-            <Calendar onChange={setDate} defaultValue={date} startWeekDay={0}/>
+            <Calendar onChange={setDate} defaultValue={date} startWeekDay={0} />
             <ul className="events__highlighter">
               <li className="current__events">
                 <CommonTextField
