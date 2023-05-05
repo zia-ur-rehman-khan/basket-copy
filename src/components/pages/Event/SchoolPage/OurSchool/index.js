@@ -15,7 +15,7 @@ const OurSchool = () => {
       <div className="d-flex justify-content-between align-items-center mt-5">
         <Commonheading level={2} heading={"Our School Events"} />
       </div>
-      <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
+      <Row gutter={[18, 25]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (
           <Col
             key={key}
@@ -25,7 +25,7 @@ const OurSchool = () => {
             md={{ span: 12 }}
             sm={{ span: 16 }}
           >
-            <EventCard src={_t} />
+            <EventCard src={_t} price />
           </Col>
         ))}
       </Row>

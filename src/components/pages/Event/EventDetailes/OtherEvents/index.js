@@ -19,7 +19,7 @@ const OtherEvents = () => {
         <CommonButton child="View All" />
       </div>
 
-      <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
+      <Row gutter={[18, 25]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (
           <Col
             key={key}
@@ -29,7 +29,7 @@ const OtherEvents = () => {
             md={{ span: 12 }}
             sm={{ span: 16 }}
           >
-            <EventCard src={_t} />
+            <EventCard src={_t} price />
           </Col>
         ))}
       </Row>
