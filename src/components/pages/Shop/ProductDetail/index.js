@@ -8,7 +8,7 @@ import ProductMeta from "./Meta";
 const Index = () => {
   return (
     <>
-      <div className="carasoul-container">
+      <div className="detail-product">
         <ProductMeta />
         <ProductReviews />
         <SimilarProducts />

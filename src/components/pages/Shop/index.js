@@ -3,21 +3,21 @@ import FeaturedProducts from "./Featured";
 import AllProducts from "./All";
 import Hero from "./Hero";
 import CommonButton from "components/common/Button";
+import CommonTextField from "components/common/TextField";
 
 const Index = () => {
   return (
     <>
-      <div className="carasoul-container">
+      <div className="shop-parent">
         <Hero />
         <FeaturedProducts />
+
         <AllProducts />
-        <CommonButton
-          child="Load More"
-          classname="load-products-btn"
-          topClass="load-products"
-          style={{
-            margin:"50px auto 50px auto"
-          }}
+        <CommonTextField
+          topClass={"p-5"}
+          className={"primary "}
+          textAlign={"center"}
+          text="Load More"
         />
       </div>
     </>
