@@ -16,6 +16,7 @@ const CommonButton = ({
   disabled,
   type = "primary",
   fontSize = "12px",
+  padding,
 }) => {
   return (
     <div className={`button-parent ${topClass || ""} `}>
@@ -29,6 +30,7 @@ const CommonButton = ({
           borderRadius,
           color,
           border,
+          padding,
         }}
         className={classname}
         onClick={onClick}

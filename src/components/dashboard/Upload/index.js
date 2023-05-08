@@ -1,10 +1,12 @@
 import { useState, useRef } from "react";
 import { Button, Form, Input, Row, Col } from "antd";
-import TextArea from "antd/lib/input/TextArea";
+
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import Image from "next/image";
 import CommonInputField from "components/common/Input";
 import CommonButton from "components/common/Button";
+
+const { TextArea } = Input;
 
 const Upload = () => {
   const [imagePreview, setImagePreview] = useState(null);

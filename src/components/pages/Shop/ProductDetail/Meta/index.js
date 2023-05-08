@@ -9,11 +9,23 @@ const Index = () => {
     <>
       <div className="product-side">
         <p></p>
-        <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
-          <Col span={12}>
+        <Row gutter={[58, 58]} className="mt-5">
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 24 }}
+            sm={{ span: 24 }}
+          >
             <ProductGallery />
           </Col>
-          <Col span={12}>
+          <Col
+            xxl={{ span: 12 }}
+            xl={{ span: 12 }}
+            lg={{ span: 12 }}
+            md={{ span: 24 }}
+            sm={{ span: 24 }}
+          >
             <ProductBody />
           </Col>
         </Row>
