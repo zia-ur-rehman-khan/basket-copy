@@ -16,7 +16,6 @@ const Index = () => {
     { id: 3, content: "Get Your Favorite iBall Merchandise today" },
     { id: 2, content: "Get Your Favorite iBall Merchandise today" },
     { id: 2, content: "Get Your Favorite iBall Merchandise today" },
-    { id: 2, content: "Get Your Favorite iBall Merchandise today" },
   ];
 
   return (

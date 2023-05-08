@@ -5,78 +5,34 @@ import CommonCard from "components/common/Card";
 import Image from "next/image";
 
 import tempImage from "public/product/product2.png";
+import product5 from "public/product/product5.png";
+
 const Index = () => {
   return (
     <>
       <div className="product_gallery_wrapper">
-        <Row gutter={[10, 10]}>
+        <Row gutter={[20, 20]}>
           <Col span={18}>
             <div style={{ height: "100%" }}>
               <CommonCard
-                // className="d-flex flex-column justify-content-center align-items-center  "
-                child={
-                  <>
-                    <div>
-                      <Image src={tempImage} alt="Picture" />
-                    </div>
-                  </>
-                }
+                child={<Image src={tempImage} alt="Picture" />}
                 style={{ maxWidth: "100%" }}
               />
             </div>
           </Col>
           <Col span={6}>
-            <div
-              className="product_images"
-              style={{ margin: "10px 0px 10px 0px" }}
-            >
-              <CommonCard
-                style={{ padding: "10px" }}
-                child={
-                  <>
-                    <div>
-                      <Image src={tempImage} alt="Picture" />
-                      {/* <p>kdhskdjhsdks</p> */}
+            <Space direction="vertical">
+              {new Array(3).fill(1).map((_, index) => (
+                <CommonCard
+                  key={index}
+                  child={
+                    <div style={{ padding: "10px" }}>
+                      <Image src={product5} alt="Picture" />
                     </div>
-                  </>
-                }
-              />
-            </div>
-
-            <div
-              className="product_images"
-              style={{ margin: "10px 0px 10px 0px" }}
-            >
-              <CommonCard
-                style={{ padding: "10px" }}
-                child={
-                  <>
-                    <div>
-                      <Image src={tempImage} alt="Picture" />
-                      {/* <p>kdhskdjhsdks</p> */}
-                    </div>
-                  </>
-                }
-                className="product_images"
-              />
-            </div>
-            <div
-              className="product_images"
-              style={{ margin: "10px 0px 10px 0px" }}
-            >
-              <CommonCard
-                style={{ padding: "10px" }}
-                child={
-                  <>
-                    <div>
-                      <Image src={tempImage} alt="Picture" />
-                      {/* <p>kdhskdjhsdks</p> */}
-                    </div>
-                  </>
-                }
-                className="product_images"
-              />
-            </div>
+                  }
+                />
+              ))}
+            </Space>
           </Col>
         </Row>
       </div>
