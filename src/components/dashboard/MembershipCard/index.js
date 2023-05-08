@@ -3,6 +3,8 @@ import check from "public/profile/check.svg";
 
 // Next
 import Image from "next/image";
+import CommonHeading from "components/common/Heading";
+import CommonTextField from "components/common/TextField";
 
 const cardInfo = [
   {
@@ -20,7 +22,7 @@ const MembershipCard = () => {
       {cardInfo?.map((card, i) => (
         <div className="membership__card" key={i}>
           <div className="card__header">
-            <h2>{card?.name}</h2>
+            <CommonHeading heading={card?.name} level={2}/>
             <h2 className="card__price">
               £{card?.price}
               <sup>
@@ -29,12 +31,12 @@ const MembershipCard = () => {
             </h2>
           </div>
           <div className="card__body">
-            <h3>What You will get</h3>
-            <p>{card?.text}</p>
+            <CommonHeading level={3} heading={"What You will get"} mb={5} />
+            <CommonTextField text={card?.text} mb={15} />
             {card?.isActive ? (
               <p className="active__membership">
                 <Image src={check} alt=" " />
-                <span>Active Membership</span>
+                <CommonTextField text={"Active Membership"} />
               </p>
             ) : (
               ""

@@ -1,16 +1,15 @@
 // Components
-import UserLayout from "components/dashboard/UserLayout";
+import AdminLayout from "components/dashboard/AdminLayout";
 import DashboardTitle from "components/dashboard/Title";
 import EditPofileInfo from "components/dashboard/EditInformation";
-const EditInformation = () => {
+
+const EditProfile = () => {
   return (
-    <UserLayout>
-      {/* Title  */}
+    <AdminLayout>
       <DashboardTitle title="Edit Personal Information" />
-      {/* Title  */}
       <EditPofileInfo />
-    </UserLayout>
+    </AdminLayout>
   );
 };
 
-export default EditInformation;
+export default EditProfile;

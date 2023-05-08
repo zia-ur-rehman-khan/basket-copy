@@ -140,7 +140,7 @@ const Register = () => {
           <Radio value={1}></Radio>
         </Radio.Group>
       </div>
-      <CommonButton child={"submit"} onClick={handelRoute} height={"45px"} />
+      <CommonButton child={"Submit"} onClick={handelRoute} height={"45px"} />
     </Space>
   );
 };

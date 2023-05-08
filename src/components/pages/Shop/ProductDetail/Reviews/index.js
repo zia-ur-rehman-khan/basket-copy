@@ -6,6 +6,7 @@ import Review from "./Review";
 import Commonheading from "components/common/Heading";
 import CommonButton from "components/common/Button";
 import { useRouter } from "next/router";
+import CommonDraggableCarousal from "components/common/DraggableCarousal";
 
 const Index = () => {
   const { push } = useRouter();
@@ -95,20 +96,12 @@ const Index = () => {
           <Commonheading level={2} heading={"Reviews"} />
           <CommonButton child="Give Review" onClick={handelRoute} />
         </div>
-        <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
-          {reviews?.map((_t, key) => (
-            <Col
-              key={key}
-              xxl={{ span: 6 }}
-              xl={{ span: 6 }}
-              lg={{ span: 10 }}
-              md={{ span: 11 }}
-              sm={{ span: 15 }}
-            >
-              <Review productData={_t} key={key} />
-            </Col>
+
+        <CommonDraggableCarousal>
+          {reviews.map((_t, key) => (
+            <Review productData={_t} key={key} />
           ))}
-        </Row>
+        </CommonDraggableCarousal>
       </div>
     </>
   );

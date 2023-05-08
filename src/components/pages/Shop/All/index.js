@@ -3,7 +3,10 @@ import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import ProductFilters from "../Filters";
 
-import basketBall from "public/product/product1.png";
+import product5 from "public/product/product5.png";
+import product6 from "public/product/product6.png";
+import product7 from "public/product/product7.png";
+import product8 from "public/product/product8.png";
 import tshirt from "public/product/product2.png";
 import shoes from "public/product/product3.png";
 import socks from "public/product/product4.png";
@@ -14,112 +17,129 @@ import React from "react";
 const ALL = () => {
   const products = [
     {
-      id: 1,
-      src: basketBall,
-      width: 218,
-      height: 218,
+      src: product5,
+      width: 198,
+      height: 244,
       heading: "White Jersey",
       subHeading: "Organic Cotton",
       price: "£20.00",
       reveiws: 5,
-      category: "all",
+      category: "featured",
     },
     {
-      id: 2,
-      src: basketBall,
-      width: 218,
-      height: 218,
+      src: product8,
+      width: 198,
+      height: 233,
       heading: "White Jersey",
       subHeading: "Organic Cotton",
       price: "£20.00",
       reveiws: 5,
-      category: "all",
+      category: "featured",
     },
     {
-      id: 3,
-      src: basketBall,
-      width: 218,
+      src: product7,
+      width: 189,
       height: 218,
       heading: "White Jersey",
       subHeading: "Organic Cotton",
       price: "£20.00",
       reveiws: 5,
-      category: "all",
+      category: "featured",
     },
     {
-      id: 4,
-      src: basketBall,
-      width: 218,
+      src: product6,
+      width: 189,
       height: 218,
       heading: "White Jersey",
       subHeading: "Organic Cotton",
       price: "£20.00",
       reveiws: 5,
-      category: "all",
+      category: "featured",
     },
     {
-      id: 5,
-      src: basketBall,
-      width: 218,
-      height: 218,
+      src: product5,
+      width: 198,
+      height: 244,
       heading: "White Jersey",
       subHeading: "Organic Cotton",
       price: "£20.00",
       reveiws: 5,
-      category: "all",
+      category: "featured",
     },
     {
-      id: 6,
-      src: basketBall,
-      width: 218,
-      height: 218,
+      src: product8,
+      width: 198,
+      height: 233,
       heading: "White Jersey",
       subHeading: "Organic Cotton",
       price: "£20.00",
       reveiws: 5,
-      category: "all",
+      category: "featured",
     },
     {
-      id: 7,
-      src: basketBall,
-      width: 218,
+      src: product7,
+      width: 189,
       height: 218,
       heading: "White Jersey",
       subHeading: "Organic Cotton",
       price: "£20.00",
       reveiws: 5,
-      category: "all",
+      category: "featured",
+    },
+    {
+      src: product6,
+      width: 189,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
     },
   ];
   return (
     <>
-      <div className="all_products_wrapper">
-        <div className="d-flex justify-content-between align-items-center mt-5">
-          <Commonheading level={2} heading={"All Products"} />
-          <div className="product-filters">
-            {/* <CommonButton child="Reset Filters" /> */}
+      <div>
+        <Row
+          align={"middle"}
+          justify={"space-between"}
+          className="mt-5"
+          gutter={[0, 20]}
+        >
+          <Col
+            xxl={{ span: 5 }}
+            xl={{ span: 5 }}
+            lg={{ span: 12 }}
+            md={{ span: 24 }}
+            sm={{ span: 24 }}
+          >
+            <Commonheading level={2} heading={"All Products"} />
+          </Col>
+          <Col
+            xxl={{ span: 18 }}
+            xl={{ span: 18 }}
+            lg={{ span: 12 }}
+            md={{ span: 24 }}
+            sm={{ span: 24 }}
+            className="justify-content-end d-flex"
+          >
             <ProductFilters />
-          </div>
-        </div>
-        {/* <div className="card-parent mt-3"> */}
-        <Row gutter={[33, 33]} className="mt-5 card-parent" wrap={false}>
+          </Col>
+        </Row>
+        <Row gutter={[18, 24]} justify={"center"} className="mt-5 ">
           {products.map((_t, key) => (
-            <>
-              <Col
-                key={key}
-                xxl={{ span: 6 }}
-                xl={{ span: 6 }}
-                lg={{ span: 10 }}
-                md={{ span: 11 }}
-                sm={{ span: 15 }}
-              >
-                <ProductCard productData={_t} key={key} />
-              </Col>
-            </>
+            <Col
+              key={key}
+              xxl={{ span: 6 }}
+              xl={{ span: 6 }}
+              lg={{ span: 8 }}
+              md={{ span: 12 }}
+              sm={{ span: 16 }}
+            >
+              <ProductCard productData={_t} key={key} />
+            </Col>
           ))}
         </Row>
-
-        {/* </div> */}
       </div>
     </>
   );

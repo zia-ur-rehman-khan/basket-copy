@@ -18,16 +18,7 @@ const LoginFormData = ({ coach }) => {
   };
 
   return (
-    <div>
-      <CommonTextField
-        className={"mb-4 "}
-        text={
-          coach
-            ? "Fill The Information below To create a New Account"
-            : "Personal Information"
-        }
-      />
-
+    <div className="mt-5">
       <Row gutter={[14, 14]} className="signUp-main">
         <Col span={24}>
           <CommonInputField placeholder="First Name" />
@@ -38,14 +29,14 @@ const LoginFormData = ({ coach }) => {
         <Col span={24}>
           <div className="d-flex justify-content-between">
             <Space>
+              <Radio.Group>
+                <Radio value={1}></Radio>
+              </Radio.Group>
               <CommonTextField
                 text={"Remember Me"}
                 opacity="0.5"
                 fontSize={"14px"}
               />
-              <Radio.Group>
-                <Radio value={1}></Radio>
-              </Radio.Group>
             </Space>
             <CommonTextField
               text={"Forgot Password ?"}
@@ -74,6 +65,7 @@ const LoginFormData = ({ coach }) => {
           type="default"
           child={"Sign Up as a Coach"}
           height={"45px"}
+          color="#FF6600"
           onClick={() => handelRoute("/sign-up")}
         />
         <CommonButton
@@ -81,6 +73,7 @@ const LoginFormData = ({ coach }) => {
           type="default"
           child={"Sign Up as a Player"}
           height={"45px"}
+          color="#FF6600"
           onClick={() => handelRoute("/sign-up")}
         />
       </div>

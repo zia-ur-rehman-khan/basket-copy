@@ -86,6 +86,7 @@ export const userNav = [
     {
         linkText: 'My Wallet ', route: '/coach/wallet',
     },
+   
 ]
 
 export const personalInfo = [
@@ -93,10 +94,10 @@ export const personalInfo = [
         text: 'First Name', labelValue: 'Herbert', ico: <FaUserAlt />
     },
     {
-        text: 'Last Name:', labelValue: 'Douglas', ico: <FaUserAlt />
+        text: 'Last Name', labelValue: 'Douglas', ico: <FaUserAlt />
     },
     {
-        text: 'Phone:', labelValue: '+1-234-567-890', ico: <BsTelephoneFill />
+        text: 'Phone', labelValue: '+1-234-567-890', ico: <BsTelephoneFill />
     },
     {
         text: 'Email', labelValue: 'Iball@gmail.com', ico: <BsEnvelopeFill />
@@ -114,7 +115,7 @@ export const personalInfo = [
         text: 'Select State', labelValue: 'California', ico: <FaMapMarked />
     },
     {
-        text: 'City', labelValue: 'New York', ico: <BsBuildings />
+        text: 'Select City', labelValue: 'New York', ico: <BsBuildings />
     },
 ]
 

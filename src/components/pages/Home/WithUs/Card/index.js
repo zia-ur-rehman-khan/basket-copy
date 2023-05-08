@@ -1,13 +1,26 @@
 import { Space } from "antd";
 import CommonTextField from "components/common/TextField";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
-const Card = ({ src }) => {
+const Card = ({ data }) => {
+  const { src, title, url } = data;
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push(url);
+  };
+
   return (
-    <Space className="c-pointer" direction="vertical" align="center">
-      <Image src={src} alt="Picture of the author" width={333} height={240} />
-      <CommonTextField text="Coaches" className="text-primary" />
+    <Space direction="vertical" align="center">
+      <Image src={src} alt="Picture of the author" />
+      <CommonTextField
+        text={title}
+        className="text-primary c-pointer"
+        onClick={handelRoute}
+        fontWeight={600}
+      />
     </Space>
   );
 };

@@ -11,7 +11,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-Index: 1;
+        z-Index: 3;
         flex-direction: column;
         display: flex;
         width: 100%;
@@ -30,9 +30,13 @@
     .radial-background {
         z-Index: 1;
         position: absolute;
-        height: 100%;
+        height: 99%;
         width: 100%;
-        background: linear-gradient(180deg, #ffffff00 -11.47%, rgb(179 71 0 / 19%) 69.07%);
+        background: linear-gradient(180deg, #282624, #ff660040, rgba(255, 102, 0, 0) 93.07%);
+        border-radius: 11px;
+        transform: rotate(180deg);
+
+
     }
 
     @media @xs {

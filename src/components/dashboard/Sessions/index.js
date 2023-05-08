@@ -1,5 +1,6 @@
 import React from "react";
 import AllEvents from "../AllEvents";
+import CommonHeading from "components/common/Heading";
 
 // My Sessions Data
 const upcomingSessions = [
@@ -30,7 +31,7 @@ const booked = [
 const Sessions = () => {
   return (
     <div>
-      <h3 className="color__light head__sm">Upcomming Sessions</h3>
+      <CommonHeading level={4} heading={"Upcoming Sessions"} />
       {upcomingSessions.map((session, i) => (
         <AllEvents
           key={i}
@@ -39,7 +40,7 @@ const Sessions = () => {
           name={session.name}
         />
       ))}
-      <h3 className="color__light head__sm">Booked</h3>
+      <CommonHeading level={4} heading={"Booked"} />
       {booked.map((session, i) => (
         <AllEvents
           key={i}

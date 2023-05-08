@@ -32,10 +32,18 @@ const MemberShip = () => {
         md={{ span: 24 }}
         sm={{ span: 24 }}
       >
-        <Space direction="vertical">
-          <CommonTextField text="Iball membership" />
-          <Commonheading level={2} heading={"Membership Price"} />
-          <Commonheading level={2} heading={"£99/month"} />
+        <Space direction="vertical" size={15}>
+          <CommonTextField
+            text="Iball membership"
+            fontSize="22px"
+            letterSpacing="4px"
+          />
+          <Commonheading
+            level={2}
+            heading={"Membership Price"}
+            fontSize={"48px"}
+          />
+          <Commonheading level={2} heading={"£99/month"} fontSize={"48px"} />
         </Space>
       </Col>
       <Col

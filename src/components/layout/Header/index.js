@@ -12,6 +12,9 @@ import cart from "public/layout/svg/cart.svg";
 import heart from "public/layout/svg/heart.svg";
 import profile from "public/layout/svg/profile.svg";
 import React from "react";
+import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import { Dropdown } from "antd/lib";
+import Link from "next/link";
 
 const { Search } = Input;
 
@@ -19,7 +22,8 @@ const Header = () => {
   const [isMobile, setIsMobile] = React.useState(false);
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
-  const { push, asPath } = useRouter();
+  const { push, asPath, query } = useRouter();
+  const { type } = query;
 
   const isActive = (href) => {
     return asPath === href || asPath.startsWith(`${href}/`);
@@ -34,13 +38,62 @@ const Header = () => {
     { name: "School", url: "/school" },
   ];
 
-  const navRoute = (url) => {
-    push(url);
-  };
-
   const handelRoute = (t) => {
     push(t);
   };
+
+  const items = [
+    {
+      key: "1",
+      label: (
+        <TextField
+          className={`${type === "academy" ? "primary" : ""} header-text`}
+          onClick={() => handelRoute("/event/academy")}
+          text={"Academy/Club"}
+        />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <TextField
+          className={`${type === "school" ? "primary" : ""} header-text`}
+          onClick={() => handelRoute("/event/school")}
+          text={"School"}
+        />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <TextField
+          className={`${type === "birthday" ? "primary" : ""} header-text`}
+          onClick={() => handelRoute("/event/birthday")}
+          text={"Birthday"}
+        />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <TextField
+          className={`${type === "community" ? "primary" : ""} header-text`}
+          onClick={() => handelRoute("/event/community")}
+          text={"Community"}
+        />
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <TextField
+          className={`${type === "community" ? "primary" : ""} header-text`}
+          onClick={() => handelRoute("/event/camps")}
+          text={"Camps"}
+        />
+      ),
+    },
+  ];
 
   return (
     <>
@@ -57,12 +110,35 @@ const Header = () => {
             />
             <Space size={26}>
               {navList.map((t, index) => (
-                <TextField
-                  className={`${isActive(t.url) ? "primary" : ""} header-text`}
-                  onClick={() => navRoute(t.url)}
-                  key={index}
-                  text={t.name}
-                />
+                <div key={index}>
+                  {t.name === "Event" ? (
+                    <Dropdown
+                      overlayClassName={"event-dropDown"}
+                      menu={{
+                        items,
+                      }}
+                    >
+                      <Space>
+                        <TextField
+                          className={`${
+                            isActive(t.url) ? "primary" : ""
+                          } header-text`}
+                          onClick={() => handelRoute(t.url)}
+                          text={t.name}
+                        />
+                        <DownOutlined />
+                      </Space>
+                    </Dropdown>
+                  ) : (
+                    <TextField
+                      className={`${
+                        isActive(t.url) ? "primary" : ""
+                      } header-text`}
+                      onClick={() => handelRoute(t.url)}
+                      text={t.name}
+                    />
+                  )}
+                </div>
               ))}
             </Space>
             <Search
@@ -75,9 +151,30 @@ const Header = () => {
         <div className="right-side">
           <Space size={35}>
             <Space>
-              <Image src={profile} width={20} height={20} alt="logo" />
-              <Image src={heart} width={20} height={20} alt="logo" />
-              <Image src={cart} width={20} height={20} alt="logo" />
+              <Image
+                src={profile}
+                width={20}
+                height={20}
+                alt="logo"
+                className="c-pointer"
+                onClick={() => handelRoute("/user")}
+              />
+              <Image
+                src={heart}
+                width={20}
+                height={20}
+                alt="logo"
+                className="c-pointer"
+                onClick={() => handelRoute("/user/wishlist")}
+              />
+              <Image
+                src={cart}
+                width={20}
+                height={20}
+                alt="logo"
+                className="c-pointer"
+                onClick={() => handelRoute("/cart")}
+              />
             </Space>
             <Space direction={screens.xl ? "horizontal" : "vertical"}>
               <CommonButton

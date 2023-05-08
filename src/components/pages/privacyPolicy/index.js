@@ -7,7 +7,11 @@ import { Space } from "antd";
 const Privacypolicy = () => {
   return (
     <Space direction="vertical" className="common-padding" align="center">
-      <CommonHeading heading={"Terms & Conditions"} className="mb-3" />
+      <CommonHeading
+        heading={"Terms & Conditions"}
+        className="mb-5"
+        fontSize={"71px"}
+      />
       <Space direction="vertical" size={30}>
         <CommonTextField text={data.termsConditions1} />
         <CommonTextField text={data.termsConditions2} />

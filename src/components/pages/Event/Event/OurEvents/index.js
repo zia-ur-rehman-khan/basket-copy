@@ -18,25 +18,17 @@ const OurEvents = () => {
   ];
 
   return (
-    <div className="event-side mb-5">
-      <div className="d-flex justify-content-between align-items-center mt-5">
+    <div className="event-side common-padding">
+      <div className="d-flex justify-content-between align-items-center ">
         <Commonheading level={2} heading={"Our events"} />
       </div>
-      <Row gutter={[33, 33]} justify={"center"} className="mt-5 card-parent">
+      <div className="event-card-section">
         {temp.map((_t, key) => (
-          <Col
-            key={key}
-            xxl={{ span: 6 }}
-            xl={{ span: 6 }}
-            lg={{ span: 8 }}
-            md={{ span: 12 }}
-            sm={{ span: 16 }}
-          >
+          <div key={key} className="card-parent">
             <EventCard data={_t} key={key} />
-          </Col>
+          </div>
         ))}
-      </Row>
-      ,
+      </div>
     </div>
   );
 };

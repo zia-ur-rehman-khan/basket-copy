@@ -19,7 +19,7 @@ const LoginForm = () => {
 
   return (
     <div className="mt-5">
-      <Space direction="vertical" size={5}>
+      <Space direction="vertical" size={15}>
         <CommonTextField
           text={"Welcome to Iball"}
           fontSize="29.64px"
