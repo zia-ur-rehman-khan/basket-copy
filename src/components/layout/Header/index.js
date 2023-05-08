@@ -13,7 +13,7 @@ import heart from "public/layout/svg/heart.svg";
 import profile from "public/layout/svg/profile.svg";
 import React from "react";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
-import { Dropdown } from "antd/lib";
+import { Dropdown } from "antd";
 import Link from "next/link";
 
 const { Search } = Input;
