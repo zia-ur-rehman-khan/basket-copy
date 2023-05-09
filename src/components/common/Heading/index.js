@@ -21,6 +21,7 @@ const CommonHeading = ({
   title,
   lineHeight,
   level,
+  width,
 }) => {
   return (
     <Title
@@ -28,6 +29,7 @@ const CommonHeading = ({
       title={title}
       className={`${className || ""} ${onClick ? "cp" : ""}`}
       style={{
+        width,
         margin: 0,
         padding: 0,
         fontFamily: font,

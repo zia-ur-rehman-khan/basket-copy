@@ -22,10 +22,10 @@ const School = () => {
   return (
     <>
       <CommonBanner
-        text1={"Welcome to Iball"}
+        text1={"who we work with"}
         src={banner}
         content={
-          "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"
+          "We Coach in Primary and Secondary Schools across London. Your School can be next!"
         }
         heading={"Your School can be next!"}
       />

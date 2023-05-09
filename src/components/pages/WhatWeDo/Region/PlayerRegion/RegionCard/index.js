@@ -22,20 +22,22 @@ const RegionCard = ({ src }) => {
     <CommonCard
       onClick={() => handelRoute(10)}
       child={
-        <>
-          <Image src={src} alt="Picture of the author" />
+        <div className="region-parent">
+          <div className="image-side">
+            <Image
+              src={src}
+              alt="Picture of the author"
+              height={230}
+              width={200}
+              layout="fixed"
+            />
+          </div>
           <CommonTextField
-            text={"Catherine Lawson"}
-            className={"black mt-5"}
-            fontWeight="600"
-            fontSize={"25px"}
-          />
-          <CommonTextField
-            text={"View Profile"}
+            text={"View Coaches"}
             color="#4DC3D1"
-            className={"p-2"}
+            className={"p-2 mt-5"}
           />
-        </>
+        </div>
       }
     />
   );

@@ -104,7 +104,7 @@ const Service = () => {
                 child="Get Started"
                 type="primary"
                 onClick={handelRoute}
-                width="30%"
+                width="60%"
               />
             </Space>
           </>
