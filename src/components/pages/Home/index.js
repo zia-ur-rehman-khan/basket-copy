@@ -79,6 +79,7 @@ const Home = () => {
               <CommonButton
                 child="Learn more"
                 type="primary"
+                classname={"text-uppercase"}
                 onClick={handelRoute}
                 width="30%"
               />

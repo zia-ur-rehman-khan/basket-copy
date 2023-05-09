@@ -13,7 +13,7 @@ const OurCommunity = () => {
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center mt-5">
-        <Commonheading level={2} heading={"Our Academy/Club Events"} />
+        <Commonheading level={2} heading={"Our Community Events"} />
       </div>
       <Row gutter={[18, 25]} justify={"center"} className="mt-5 card-parent">
         {array.map((_t, key) => (

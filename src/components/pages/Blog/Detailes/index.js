@@ -13,9 +13,10 @@ const BlogDetailes = () => {
         <CommonHeading
           fontSize={"37px"}
           heading={
-            "Lorem ipsum dolor sit amet, consecte adipiscing elit, 0 \n sed do eiusmod"
+            "Lorem ipsum dolor sit amet, consecte adipiscing elit, 0 sed do eiusmod"
           }
           className={"mb-5"}
+          width="80%"
         />
         <CommonTextField text={data?.blog1} />
       </div>

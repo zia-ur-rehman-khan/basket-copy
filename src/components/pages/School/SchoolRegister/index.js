@@ -63,19 +63,17 @@ const SchoolRegister = ({ contactUs }) => {
               }
               className={"mt-5"}
             />
-            <Space className="w-100 mt-3" size={18} wrap>
+            <div className="w-100 mt-3 d-flex parent-contact-us">
               {icons.map((_t, index) => (
-                <Space
-                  direction="vertical"
-                  align="center"
-                  className="bg-grey radius contact-us-card justify-content-center "
+                <div
+                  className="bg-grey radius contact-us-card d-flex flex-column align-items-center justify-content-center  "
                   key={index}
                 >
                   <Image src={_t} alt={"icon"} width={45} height={45} />
                   <CommonTextField text={"Chat: admin@iball.uk"} />
-                </Space>
+                </div>
               ))}
-            </Space>
+            </div>
           </Space>
         </Col>
         <Col
