@@ -21,12 +21,12 @@ const LoginForm = () => {
     <div className="mt-5">
       <Space direction="vertical" size={15}>
         <CommonTextField
-          text={"Welcome to Iball"}
+          text={"Welcome Back to Iball"}
           fontSize="29.64px"
           letterSpacing={"5px"}
         />
 
-        <CommonHeading heading={"Sign Up as a iBall Player"} level={2} />
+        <CommonHeading heading={"Login in Your Account"} level={2} />
 
         <CommonTextField
           text={"Fill The Information below To create a New Account"}

@@ -8,7 +8,7 @@ const Privacypolicy = () => {
   return (
     <Space direction="vertical" className="common-padding" align="center">
       <CommonHeading
-        heading={"Terms & Conditions"}
+        heading={"Privacy Policy"}
         className="mb-5"
         fontSize={"71px"}
       />

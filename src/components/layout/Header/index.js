@@ -14,7 +14,6 @@ import profile from "public/layout/svg/profile.svg";
 import React from "react";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown } from "antd";
-import Link from "next/link";
 
 const { Search } = Input;
 
@@ -87,7 +86,7 @@ const Header = () => {
       key: "5",
       label: (
         <TextField
-          className={`${type === "community" ? "primary" : ""} header-text`}
+          className={`${type === "camps" ? "primary" : ""} header-text`}
           onClick={() => handelRoute("/event/camps")}
           text={"Camps"}
         />
@@ -180,8 +179,10 @@ const Header = () => {
               <CommonButton
                 type="default"
                 child={"Enquire Now"}
+                color="var(--primary-color)"
                 onClick={() => handelRoute("/contact-us")}
               />
+
               <CommonButton
                 child={"Sign Up"}
                 onClick={() => handelRoute("/sign-up")}

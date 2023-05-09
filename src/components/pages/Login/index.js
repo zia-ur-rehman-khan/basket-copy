@@ -21,6 +21,19 @@ const Login = () => {
         sm={{ span: 24 }}
       >
         <LoginForm />
+        <br />
+        <br />
+
+        <br />
+
+        <br />
+        <br />
+
+        <CommonTextField
+          text={
+            "By signing in, you acknowledge and agree to our terms and conditions."
+          }
+        />
       </Col>
       <Col
         xxl={{ span: 12 }}

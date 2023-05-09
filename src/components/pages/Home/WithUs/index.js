@@ -10,7 +10,7 @@ import React from "react";
 
 const WithUS = () => {
   const temp = [
-    { src: image, title: "Coaches", url: "/what-we-do/coach-region" },
+    { src: image, title: "Coaches", url: "/team" },
     { src: image1, title: "Schools", url: "/school" },
     { src: image2, title: "I ball Players", url: "/about" },
     { src: image3, title: "Partners & Sponsors", url: "/partners-sponsers" },
