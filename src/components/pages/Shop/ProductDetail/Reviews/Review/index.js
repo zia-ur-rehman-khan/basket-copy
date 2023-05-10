@@ -9,8 +9,12 @@ import { Avatar, Card } from "antd";
 const { Meta } = Card;
 
 import CommonCard from "components/common/Card";
+import profile from "public/product/profile.png";
+
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
+import Image from "next/image";
+import CommonTextField from "components/common/TextField";
 
 const Index = () => {
   return (
@@ -31,17 +35,30 @@ const Index = () => {
                     aliqua. Interdum consectetur libero id faucibus nisl
                     tincidunt eget nullam.
                   </p>
-                  {/* <Commonheading level={4} heading={"Andy Smith"} /> */}
                 </div>
               }
             >
               <Meta
+                style={{ paddingLeft: "10px" }}
                 avatar={
-                  <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+                  <Image src={profile} alt="profile" width={33} height={33} />
                 }
-                title="Andy Smith"
-                description="VP of Marketing"
-                // padding: 10px 10px 15px 10px;
+                title={
+                  <CommonTextField
+                    text={"Andy Smith"}
+                    fontWeight={600}
+                    className={"black"}
+                    fontSize={"14px"}
+                  />
+                }
+                description={
+                  <CommonTextField
+                    text={"VP Of Marketing"}
+                    fontSize={"11px"}
+                    color="#5F5F5F"
+                    letterSpacing={"1px"}
+                  />
+                }
               />
             </Card>
           </>

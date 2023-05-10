@@ -17,10 +17,12 @@ const CommonButton = ({
   type = "primary",
   fontSize = "12px",
   padding,
+  icon,
 }) => {
   return (
     <div className={`button-parent ${topClass || ""} `}>
       <Button
+        icon={icon}
         type={type}
         style={{
           fontSize,
