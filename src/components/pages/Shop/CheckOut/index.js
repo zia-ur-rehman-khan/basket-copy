@@ -20,15 +20,27 @@ const Index = () => {
           "d-flex flex-column align-content-center align-items-center mb-4"
         }
       />
-      <Row justify={"space-between"}>
-        <Col span={11}>
+      <Row justify={"space-between"} gutter={[0, 20]}>
+        <Col
+          xxl={{ span: 11 }}
+          xl={{ span: 11 }}
+          lg={{ span: 11 }}
+          md={{ span: 24 }}
+          sm={{ span: 24 }}
+        >
           <Space direction="vertical" size={40}>
             <ShipmentDetails />
             <BillingInformation />
             <PaymentDetails />
           </Space>
         </Col>
-        <Col span={11}>
+        <Col
+          xxl={{ span: 11 }}
+          xl={{ span: 11 }}
+          lg={{ span: 11 }}
+          md={{ span: 24 }}
+          sm={{ span: 24 }}
+        >
           <OrderSummary />
         </Col>
       </Row>
