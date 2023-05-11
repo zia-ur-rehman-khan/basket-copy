@@ -1,15 +1,18 @@
-import { Input, Row, Col, Table, Image } from "antd";
+import { Space } from "antd";
+import { Input, Row, Col, Table } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
+import CommonTextField from "components/common/TextField";
+import Image from "next/image";
 import React from "react";
+import cart from "public/product/cart.png";
 
 // Data
 const data = [
   {
     id: 1,
     key: "1",
-    productPicture:
-      "https://image.spreadshirtmedia.com/content/q_auto,f_auto,w_210/CMS/SSP/product_image_shirt_kids.png",
+    productPicture: cart,
     productName: "Iball White Jersey",
     price: 20.0,
     quantity: "05",
@@ -17,8 +20,7 @@ const data = [
   {
     id: 2,
     key: "2",
-    productPicture:
-      "https://image.spreadshirtmedia.com/content/q_auto,f_auto,w_210/CMS/SSP/product_image_shirt_kids.png",
+    productPicture: cart,
     productName: "Iball White Jersey",
     price: 20.0,
     quantity: "05",
@@ -26,8 +28,7 @@ const data = [
   {
     id: 3,
     key: "3",
-    productPicture:
-      "https://image.spreadshirtmedia.com/content/q_auto,f_auto,w_210/CMS/SSP/product_image_shirt_kids.png",
+    productPicture: cart,
     productName: "Iball White Jersey",
     price: 20.0,
     quantity: "05",
@@ -47,10 +48,10 @@ const Index = () => {
       <div className="radius mt-3 p-3" style={{ background: "#1D1D1D" }}>
         <Row>
           <Col span={12}>
-            <Commonheading
-              level={5}
-              heading="Products Details"
-              className={"mb-4"}
+            <CommonTextField
+              text="Products Details"
+              fontWeight={600}
+              fontSize={"15px"}
             />
           </Col>
           <Col
@@ -68,8 +69,9 @@ const Index = () => {
         </Row>
         <Table
           dataSource={data}
-          className="dashboard__table whishlist-table order__table"
           showHeader={false}
+          pagination={false}
+          className="shop-cart-table whishlist-table order__table"
         >
           <Column
             title="Product Image"
@@ -79,8 +81,8 @@ const Index = () => {
               <Image
                 src={record.productPicture}
                 alt=" "
-                width={74}
-                height={74}
+                width={55}
+                height={55}
               />
             )}
           />
@@ -99,28 +101,28 @@ const Index = () => {
           />
         </Table>
 
-        <div className="mt-3">
-          <Row>
-            <Col
-              span={12}
-              className="d-flex flex-column align-content-start align-items-start"
-            >
-              <Commonheading level={5} heading="Tax" />
-              <Commonheading level={5} heading="Estimated Shipping Cost" />
-              <Commonheading level={5} heading="Promo Applied" />
-              <Commonheading level={4} heading="Order Total" />
-            </Col>
-            <Col
-              span={12}
-              className="d-flex flex-column align-content-end align-items-end"
-            >
-              <Commonheading level={5} heading="£5.00" />
-              <Commonheading level={5} heading="£20.00" />
-              <Commonheading level={5} heading="-£10.00" />
-              <Commonheading level={5} heading="£300.00" />
-            </Col>
-          </Row>
-        </div>
+        <Space className="mt-3 justify-content-between w-100">
+          <Space direction="vertical">
+            <CommonTextField text="Tax" />
+            <CommonTextField text="Estimated Shipping Cost" />
+            <CommonTextField text="Promo Applied" />
+            <CommonTextField
+              text="Order Total"
+              fontWeight={600}
+              fontSize={"16.5px"}
+            />
+          </Space>
+          <Space direction="vertical">
+            <CommonTextField text="£5.00" />
+            <CommonTextField text="£20.00" />
+            <CommonTextField text="-£10.00" />
+            <CommonTextField
+              text="£300.00"
+              fontWeight={600}
+              fontSize={"16.5px"}
+            />
+          </Space>
+        </Space>
       </div>
     </>
   );

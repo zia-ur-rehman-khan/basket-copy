@@ -22,6 +22,7 @@ const Index = () => {
       query: {
         ...query,
         t: "payment",
+        m: "member",
       },
     });
   };
@@ -71,10 +72,11 @@ const Index = () => {
 
       <CommonButton
         width={"100%"}
-        child="Add New Address"
+        child="Add New Payment"
         background={"#1D1D1D"}
         color={"#FF6600"}
         border={"1px solid #FF6600"}
+        onClick={handelRoute}
       />
     </Space>
   );
