@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
     "/forgot-password",
     "/otp",
     "/new-password",
+    "/coming-soon",
   ].includes(pathname);
 
   return (
