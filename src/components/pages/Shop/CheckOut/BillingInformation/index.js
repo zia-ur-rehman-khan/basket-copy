@@ -5,14 +5,19 @@ import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import CommonInputField from "components/common/Input";
 import CommonSelect from "components/common/Select";
+import CommonTextField from "components/common/TextField";
 import React from "react";
 
 const Index = () => {
   return (
     <>
       <div>
-        <Commonheading level={4} heading="Billing information" className={"mb-2"}/>
-        <Row gutter={[14, 14]}>
+        <CommonTextField
+          text="Billing information"
+          fontWeight={600}
+          fontSize={"18px"}
+        />
+        <Row gutter={[14, 14]} className="mt-3">
           <Col
             xxl={{ span: 12 }}
             xl={{ span: 12 }}
