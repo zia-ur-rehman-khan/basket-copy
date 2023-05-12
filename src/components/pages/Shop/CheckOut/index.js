@@ -9,6 +9,7 @@ import OrderSummary from "./OrderSummary";
 import CommonButton from "components/common/Button";
 import { Space } from "antd";
 import { Divider } from "antd";
+import CommonTextField from "components/common/TextField";
 
 const Index = () => {
   return (
@@ -52,9 +53,9 @@ const Index = () => {
 
       <Row gutter={[10, 10]} className="mb-5">
         <Col span={18}>
-          <Commonheading
-            level={5}
-            heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          <CommonTextField
+            opacity={0.5}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
         </Col>
         <Col span={6}>
