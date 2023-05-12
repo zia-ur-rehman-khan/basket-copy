@@ -56,13 +56,18 @@ const Achievement = () => {
         component={<CommonVideoPreview />}
         content={
           <>
-            <CommonTextField fontSize="20px" text="OUR ACHIEVEMENTS" />
+            <CommonTextField
+              fontSize="15px"
+              text="Our Achievements "
+              className={"text-uppercase"}
+            />
             <Commonheading
+              className={"mt-1"}
               level={2}
               heading="Have A look to know more about our achievements"
             />
-            <Space direction="vertical" size={24}>
-              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit gravida rutrum. Fames ac turpis egestas sed tempus. Fringilla est ullamcorper eget nulla facilisi etiam. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus. Diam volutpat commodo sed egestas egestas ." />
+            <Space direction="vertical" size={24} className="mt-4">
+              <CommonTextField text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident." />
             </Space>
           </>
         }

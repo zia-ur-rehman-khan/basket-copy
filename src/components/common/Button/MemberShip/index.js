@@ -66,11 +66,7 @@ const MemberShip = () => {
         md={{ span: 24 }}
         sm={{ span: 24 }}
       >
-        <CommonButton
-          width={"200px"}
-          child="Buy Membership"
-          onClick={handelRoute}
-        />
+        <CommonButton child="Buy Membership" onClick={handelRoute} />
       </Col>
     </Row>
   );

@@ -23,6 +23,7 @@ const School = () => {
     <>
       <CommonBanner
         text1={"who we work with"}
+        width="100%"
         src={banner}
         content={
           "We Coach in Primary and Secondary Schools across London. Your School can be next!"

@@ -63,14 +63,17 @@ const Index = () => {
             xs={{ span: 24 }}
           >
             <Row gutter={[10, 10]}>
-              <Col className="d-flex justify-content-center align-items-center">
+              <Col
+                span={8}
+                className="d-flex justify-content-center align-items-center"
+              >
                 <div className="d-flex" style={{ gap: "10px" }}>
                   <Image src={refresh} alt="" width={15} height={15} />
                   <CommonTextField text={"Refresh Cart"} />
                 </div>
               </Col>
 
-              <Col>
+              <Col span={8}>
                 <CommonButton
                   child="Continue Shopping"
                   background={"#8F8F8F"}
@@ -78,11 +81,11 @@ const Index = () => {
                   border={"none"}
                 />
               </Col>
-              <Col>
+              <Col span={8}>
                 <CommonButton
+                  color="var(--primary-color)"
                   child="Clear Cart"
                   background={"#1D1D1D"}
-                  color={"#FFFFF"}
                 />
               </Col>
             </Row>
