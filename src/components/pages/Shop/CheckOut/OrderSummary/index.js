@@ -43,7 +43,7 @@ const Index = () => {
       <Commonheading level={4} heading="Order Summary" className={" mb-2"} />
       <div className="d-flex">
         <Input placeholder="Enter Promo Code" />
-        <CommonButton child="Apply" />
+        <CommonButton child="Apply" topClass="w-25" />
       </div>
       <div className="radius mt-3 p-3" style={{ background: "#1D1D1D" }}>
         <Row>
@@ -58,10 +58,9 @@ const Index = () => {
             span={12}
             className="d-flex flex-column align-content-end align-items-end"
           >
-            {" "}
             <CommonButton
               child="Edit"
-              classname={"bg-grey "}
+              background={"none"}
               border={"none"}
               color={"#FF6600"}
             />
