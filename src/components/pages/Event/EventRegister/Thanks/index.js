@@ -25,7 +25,7 @@ const Thanks = () => {
       />
       {m && (
         <CommonTextField
-          className={"mt-3"}
+          className={"mt-4 mb-2"}
           text="Order ID #31654646"
           letterSpacing={"3px"}
           fontSize={"20px"}
