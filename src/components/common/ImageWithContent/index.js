@@ -9,9 +9,10 @@ const ImageContent = ({
   responsive,
   component,
   children,
+  styleClass,
 }) => {
   return (
-    <div className="common-padding">
+    <div className={styleClass ? styleClass : ""}>
       <Row
         gutter={[58, 58]}
         align="middle"

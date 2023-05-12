@@ -47,6 +47,7 @@ const Service = () => {
       <CommonBanner src={banner} heading={"Services"} />
 
       <ImageContent
+        styleClass={"common-padding"}
         responsive={{
           imageSmall: 24,
           imagelarge: 12,
@@ -80,6 +81,7 @@ const Service = () => {
       />
 
       <ImageContent
+        styleClass={"academy-content-section-spacing"}
         responsive={{
           imageSmall: 24,
           imagelarge: 12,

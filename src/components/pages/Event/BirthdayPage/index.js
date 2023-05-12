@@ -29,6 +29,7 @@ const BirthdayPage = () => {
       <Offer />
 
       <ImageContent
+        styleClass={"common-padding"}
         responsive={{
           imageSmall: 24,
           imagelarge: 12,

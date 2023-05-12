@@ -19,6 +19,7 @@ const Achievement = () => {
       <CommonBanner src={banner} heading={"Our Achievements "} />
 
       <ImageContent
+        styleClass={"common-padding"}
         responsive={{
           imageSmall: 24,
           imagelarge: 12,
@@ -47,6 +48,7 @@ const Achievement = () => {
       <OurNumbers />
 
       <ImageContent
+        styleClass={"common-padding"}
         responsive={{
           imageSmall: 24,
           imagelarge: 14,

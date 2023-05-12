@@ -33,6 +33,7 @@ const EventDetailes = () => {
       />
 
       <ImageContent
+        styleClass={"common-padding"}
         className={"align-items-start"}
         responsive={{
           imageSmall: 24,

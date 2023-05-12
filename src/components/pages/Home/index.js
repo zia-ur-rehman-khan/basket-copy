@@ -55,6 +55,7 @@ const Home = () => {
       />
 
       <ImageContent
+        styleClass={"common-padding"}
         responsive={{
           imageSmall: 24,
           imagelarge: 14,
