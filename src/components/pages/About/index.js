@@ -22,6 +22,7 @@ const About = () => {
         }
       />
       <ImageContent
+        styleClass={"common-padding"}
         responsive={{
           imageSmall: 24,
           imagelarge: 12,
@@ -54,6 +55,7 @@ const About = () => {
         }
       />
       <ImageContent
+        styleClass={"about-section-spacing"}
         responsive={{
           imageSmall: 24,
           imagelarge: 12,
