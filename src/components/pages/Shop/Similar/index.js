@@ -12,9 +12,50 @@ import socks from "public/product/product4.png";
 // import ProductCard from "./ProductCard";
 import ProductCard from "../Product/ProductCard";
 import React from "react";
+import CommonDraggableCarousal from "components/common/DraggableCarousal";
 
 const Index = () => {
   const products = [
+    {
+      src: product5,
+      width: 198,
+      height: 244,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: product8,
+      width: 198,
+      height: 233,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: product7,
+      width: 189,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
+    {
+      src: product6,
+      width: 189,
+      height: 218,
+      heading: "White Jersey",
+      subHeading: "Organic Cotton",
+      price: "£20.00",
+      reveiws: 5,
+      category: "featured",
+    },
     {
       src: product5,
       width: 198,
@@ -64,20 +105,16 @@ const Index = () => {
           <CommonButton child="View All" />
         </div>
         {/* <div className="card-parent mt-3"> */}
-        <Row gutter={[18, 24]} justify={"center"} className="mt-5 ">
+
+        <CommonDraggableCarousal>
           {products.map((_t, key) => (
-            <Col
+            <ProductCard
+              productData={_t}
               key={key}
-              xxl={{ span: 6 }}
-              xl={{ span: 6 }}
-              lg={{ span: 8 }}
-              md={{ span: 12 }}
-              sm={{ span: 16 }}
-            >
-              <ProductCard productData={_t} key={key} />
-            </Col>
+              styling={{ margin: "0 9px" }}
+            />
           ))}
-        </Row>
+        </CommonDraggableCarousal>
 
         {/* </div> */}
       </div>

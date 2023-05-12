@@ -13,8 +13,10 @@ import React from "react";
 const LoginFormData = ({ coach }) => {
   const { push } = useRouter();
 
-  const handelRoute = (t) => {
-    push(t);
+  const handelRoute = (t, q) => {
+    if (q) {
+      push({ pathname: t, query: { type: q } });
+    } else push(t);
   };
 
   return (
@@ -66,7 +68,7 @@ const LoginFormData = ({ coach }) => {
           child={"Sign Up as a Coach"}
           height={"45px"}
           color="#FF6600"
-          onClick={() => handelRoute("/sign-up")}
+          onClick={() => handelRoute("/sign-up", "coach")}
         />
         <CommonButton
           topClass="w-100"
@@ -74,7 +76,7 @@ const LoginFormData = ({ coach }) => {
           child={"Sign Up as a Player"}
           height={"45px"}
           color="#FF6600"
-          onClick={() => handelRoute("/sign-up")}
+          onClick={() => handelRoute("/sign-up", "player")}
         />
       </div>
     </div>

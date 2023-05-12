@@ -12,6 +12,7 @@ const CommonBanner = ({
   content,
   src,
   showButton,
+  width,
 }) => {
   return (
     <div className="banner-image">
@@ -20,7 +21,7 @@ const CommonBanner = ({
 
         {heading ? <Commonheading heading={heading} /> : Component}
 
-        <div className="content-text">
+        <div className="content-text" style={{ width: width ? width : "60%" }}>
           <TextField text={content} />
         </div>
         {showButton && (

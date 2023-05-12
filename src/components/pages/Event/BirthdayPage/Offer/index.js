@@ -25,6 +25,7 @@ const Offer = () => {
             text="Iball birthday Package"
             letterSpacing={"6px"}
             fontSize={"29px"}
+            lineHeight={"30px"}
           />
           <Commonheading
             level={2}

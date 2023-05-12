@@ -41,7 +41,7 @@ const MemberShip = () => {
               />
               <Space direction="vertical">
                 <CommonTextField
-                  fontSize={"22px"}
+                  fontSize={"16.5px"}
                   fontWeight={600}
                   text={t?.point}
                   className={"primary"}
@@ -55,7 +55,7 @@ const MemberShip = () => {
       <CommonTextField
         fontWeight={600}
         className={"primary mt-5"}
-        fontSize={"27px"}
+        fontSize={"21px"}
         text={"Only $35.50"}
       />
     </div>

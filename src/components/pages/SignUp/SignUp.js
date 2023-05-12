@@ -12,7 +12,7 @@ import PlayerForm from "./PlayerForm";
 import { useRouter } from "next/router";
 
 const SignUpForm = () => {
-  const { push } = useRouter();
+  const { push, query } = useRouter();
 
   const handelRoute = (t) => {
     push(t);
@@ -46,7 +46,11 @@ const SignUpForm = () => {
           />
         </Space>
       </Space>
-      <Tabs defaultActiveKey="1" items={tabs} className="register-tab" />
+      <Tabs
+        defaultActiveKey={query.type === "player" ? "2" : "1"}
+        items={tabs}
+        className="register-tab"
+      />
     </div>
   );
 };
