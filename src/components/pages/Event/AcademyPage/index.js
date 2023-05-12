@@ -20,7 +20,7 @@ const AcademyPage = () => {
           "iBall Basketball Foundation’s key goal is to provide a digital  platform for aspiring basketball players of all abilities, ages and sexes across the globe"
         }
       />
-      <div className="common-padding">
+      <div className="academy-section-spacing">
         <OurAcademy />
         <CommonTextField
           topClass={"p-5"}
@@ -31,6 +31,7 @@ const AcademyPage = () => {
       </div>
 
       <ImageContent
+        styleClass={"academy-content-section-spacing"}
         className={"flex-row-reverse"}
         responsive={{
           imageSmall: 24,

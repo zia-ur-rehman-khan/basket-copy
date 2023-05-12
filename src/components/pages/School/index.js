@@ -37,6 +37,7 @@ const School = () => {
         />
       </div>
       <ImageContent
+        styleClass={"school-section-spacing"}
         responsive={{
           imageSmall: 24,
           imagelarge: 14,
