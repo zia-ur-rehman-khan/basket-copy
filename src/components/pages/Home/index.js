@@ -1,4 +1,3 @@
-import { Divider, Space } from "antd";
 import CommonBanner from "components/common/Banner";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
@@ -10,23 +9,43 @@ import Blog from "./Blog";
 import Event from "./Event";
 import Product from "./Product";
 import WithUS from "./WithUs";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import blog1 from "public/blog/blog1.png";
 import blog2 from "public/blog/blog2.png";
 import blog3 from "public/blog/blog3.png";
 import blog4 from "public/blog/blog4.png";
-// import video from "public/video/video.mp4";
 import { useRouter } from "next/router";
 import CommonVideoPreview from "components/common/VideoPreview";
+import { Modal } from "antd";
+import { Space } from "antd";
+import { Divider } from "antd";
+import CommingSoon from "./ComingSoon";
 
 const Home = () => {
   const array = [blog1, blog2, blog3, blog4, blog1, blog2, blog3];
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { push } = useRouter();
 
   const handelRoute = () => {
     push("/what-we-do");
   };
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    showModal();
+  }, []);
 
   return (
     <>
@@ -94,6 +113,17 @@ const Home = () => {
         <Event />
         <Blog array={array} />
       </div>
+
+      <Modal
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={null}
+        header={null}
+      >
+        <CommingSoon />
+      </Modal>
     </>
   );
 };
