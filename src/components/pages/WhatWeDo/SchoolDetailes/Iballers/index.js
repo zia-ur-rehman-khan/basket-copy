@@ -16,18 +16,18 @@ const { Search } = Input;
 
 const Iballers = ({ type }) => {
   const array = [
-    baller2,
-    baller1,
-    baller3,
-    baller4,
-    baller2,
-    baller1,
-    baller3,
-    baller4,
-    baller2,
-    baller1,
-    baller3,
-    baller4,
+    { url: baller2, number: "00", title: "Russ" },
+    { url: baller1, number: "09", title: "Joash Omao" },
+    { url: baller3, number: "00", title: "Wilbur Todd" },
+    { url: baller4, number: "00", title: "Jan Green" },
+    { url: baller2, number: "00", title: "Russ" },
+    { url: baller1, number: "09", title: "Joash Omao" },
+    { url: baller3, number: "00", title: "Wilbur Todd" },
+    { url: baller4, number: "00", title: "Jan Green" },
+    { url: baller2, number: "00", title: "Russ" },
+    { url: baller1, number: "09", title: "Joash Omao" },
+    { url: baller3, number: "00", title: "Wilbur Todd" },
+    { url: baller4, number: "00", title: "Jan Green" },
   ];
 
   return (
