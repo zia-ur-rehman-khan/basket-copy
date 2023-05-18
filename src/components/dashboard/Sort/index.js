@@ -13,15 +13,8 @@ const index = () => {
           { value: "Old", label: "Old" },
         ]}
         width={"120px"}
+        height={"38px"}
       />
-      {/* <Select
-        defaultValue="Select"
-        style={{ width: 120 }}
-        options={[
-          { value: "Newest", label: "Newest" },
-          { value: "Old", label: "Old" },
-        ]}
-      /> */}
     </div>
   );
 };

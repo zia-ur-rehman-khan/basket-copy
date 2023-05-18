@@ -3,12 +3,25 @@ import CommonHeading from "components/common/Heading";
 import CommonTextField from "components/common/TextField";
 import Image from "next/image";
 import Link from "next/link";
+import edit from "public/profile/icon-edit.svg";
+import deleteIco from "public/profile/icon-delete.svg";
+
 import { AiFillPlayCircle } from "react-icons/ai";
-const VideoCard = ({ image, title, text, name, thumb, id }) => {
+const VideoCard = ({ image, title, text, name, thumb, id, myTutorials }) => {
   return (
     <Card className="vid__card">
       <>
         <div className="card__head">
+          {myTutorials && (
+            <div className="edit__btns-wrapp">
+              <button>
+                <Image src={deleteIco} alt="Iball" />
+              </button>
+              <button>
+                <Image src={edit} alt="Iball" />
+              </button>
+            </div>
+          )}
           <Link href={`/user/coach/${id}`}>
             <>
               <Image src={image} alt=" " />

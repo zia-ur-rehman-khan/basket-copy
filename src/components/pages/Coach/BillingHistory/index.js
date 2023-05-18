@@ -98,6 +98,7 @@ const tabItems = [
           title="SNo"
           dataIndex="id"
           key="id"
+          width={"5%"}
           render={(_, record) => (
             <>{record.id < 10 ? <>0{record.id}</> : record.id}</>
           )}
@@ -106,25 +107,33 @@ const tabItems = [
           title="Name"
           dataIndex="name"
           key="key"
+          width={"25%"}
           render={(_, record) => (
             <div className="item">
-              <Image src={record.img} alt=" " />
+              <Image src={record.img} alt=" " width={50} height={50}/>
               <span>{record.name}</span>
             </div>
           )}
         />
-        <Column title="Description" dataIndex="description" key="key" />
+        <Column
+          title="Description"
+          dataIndex="description"
+          key="key"
+          width={"35%"}
+        />
         <Column
           title="Quantity"
           dataIndex="qty"
           key="key"
+          width={"10%"}
           render={(_, record) => <span>Qty {record.qty}</span>}
         />
-        <Column title="Date" dataIndex="date" key="key" />
+        <Column title="Date" dataIndex="date" key="key" width={"15%"} />
         <Column
           title="Amount"
           dataIndex="amount"
           key="key"
+          width={"10%"}
           render={(_, record) => <span>£ {record.amount.toFixed(2)}</span>}
         />
       </Table>
@@ -156,7 +165,7 @@ const Index = () => {
         </Col>
       </Row>
       {/* <div className="main-signUp"> */}
-        <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs" />
+      <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs" />
       {/* </div> */}
     </AdminLayout>
   );

@@ -122,9 +122,7 @@ const MyOrders = () => {
           title="Total"
           dataIndex="total"
           key="key"
-          render={(_, record) => (
-            <>${record.total}</>
-          )}
+          render={(_, record) => <>${record.total}</>}
         />
         <Column
           title="Details"

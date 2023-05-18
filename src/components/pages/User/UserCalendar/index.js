@@ -75,14 +75,24 @@ const Index = () => {
     <UserLayout>
       <DashboardTitle title="Calendar" />
       <Row gutter={25}>
-        <Col span={12}>
+        <Col
+          lg={{ span: 12 }}
+          md={{ span: 24 }}
+          sm={{ span: 24 }}
+          xs={{ span: 24 }}
+        >
           <Tabs
             defaultActiveKey="1"
             items={tabItems}
             className="full__w-tabs"
           />
         </Col>
-        <Col span={12}>
+        <Col
+          lg={{ span: 12 }}
+          md={{ span: 24 }}
+          sm={{ span: 24 }}
+          xs={{ span: 24 }}
+        >
           <div className="calendar__wrapp">
             <Calendar onChange={setDate} defaultValue={date} startWeekDay={0} />
             <ul className="events__highlighter">
