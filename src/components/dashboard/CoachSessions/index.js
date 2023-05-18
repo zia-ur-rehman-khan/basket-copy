@@ -33,6 +33,7 @@ const completedSessions = [
 
 const CoachSessions = () => {
   const { push } = useRouter();
+  console.log(useRouter().route)
 
   const handelRoute = () => {
     push("/coach/create-session");

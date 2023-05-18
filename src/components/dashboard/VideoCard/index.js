@@ -5,9 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import edit from "public/profile/icon-edit.svg";
 import deleteIco from "public/profile/icon-delete.svg";
+import { useRouter } from "next/router";
 
 import { AiFillPlayCircle } from "react-icons/ai";
 const VideoCard = ({ image, title, text, name, thumb, id, myTutorials }) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/coach/edit-video");
+  };
   return (
     <Card className="vid__card">
       <>
@@ -17,7 +22,7 @@ const VideoCard = ({ image, title, text, name, thumb, id, myTutorials }) => {
               <button>
                 <Image src={deleteIco} alt="Iball" />
               </button>
-              <button>
+              <button onClick={handleClick}>
                 <Image src={edit} alt="Iball" />
               </button>
             </div>
