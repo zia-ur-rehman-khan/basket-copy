@@ -6,9 +6,15 @@ import { Radio } from "antd";
 import CommonButton from "components/common/Button";
 import Commonheading from "components/common/Heading";
 import CommonTextField from "components/common/TextField";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Index = () => {
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/profile");
+  };
   return (
     <Space direction="vertical w-100" size={20}>
       <Space direction="vertical">
@@ -53,6 +59,7 @@ const Index = () => {
         background={"#1D1D1D"}
         color={"#FF6600"}
         border={"1px solid #FF6600"}
+        onClick={handelRoute}
       />
     </Space>
   );

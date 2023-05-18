@@ -51,7 +51,7 @@ const Index = () => {
     });
   }, []);
   const locale = {
-    firstDayOfWeek:1,
+    firstDayOfWeek: 1,
   };
 
   // Tabs Content

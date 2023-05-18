@@ -33,7 +33,6 @@ const completedSessions = [
 
 const CoachSessions = () => {
   const { push } = useRouter();
-  console.log(useRouter().route)
 
   const handelRoute = () => {
     push("/coach/create-session");
@@ -43,6 +42,7 @@ const CoachSessions = () => {
       <h3 className="color__light head__sm">Created Sessions</h3>
       {createdSessions.map((session, i) => (
         <AllEvents
+          sessionCompleted
           key={i}
           date={session.date}
           month={session.month}
@@ -59,7 +59,7 @@ const CoachSessions = () => {
           name={session.name}
         />
       ))}
-      <CommonButton child={"Create Session"} onClick={handelRoute}/>
+      <CommonButton child={"Create Session"} onClick={handelRoute} />
     </div>
   );
 };

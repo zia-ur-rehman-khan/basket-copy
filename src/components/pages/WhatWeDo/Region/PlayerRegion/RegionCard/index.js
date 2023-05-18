@@ -23,7 +23,7 @@ const RegionCard = ({ src }) => {
       onClick={() => handelRoute(10)}
       child={
         <>
-          <Image src={src} alt="Picture of the author" />
+          <Image src={src} alt="Picture of the author" className="fit__image" />
 
           <CommonTextField
             text={"View Coaches"}

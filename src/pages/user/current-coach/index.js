@@ -174,6 +174,7 @@ const tabItems = [
     label: `Video Tutorials`,
     children: coachVids.map((card) => (
       <VideoCard
+        user
         key={card.id}
         id={card.id}
         image={card.img}

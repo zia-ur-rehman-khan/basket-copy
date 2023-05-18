@@ -22,7 +22,7 @@ const CreateSession = () => {
   const { TextArea } = Input;
   return (
     <AdminLayout>
-      <DashboardTitle title={"Create Session"} />
+      <DashboardTitle title={"Edit Session"} />
       <Form className="dashboard__form">
         <Row gutter={20}>
           <Col span={24}>

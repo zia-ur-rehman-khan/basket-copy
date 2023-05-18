@@ -20,7 +20,7 @@ const data = [
     status: "Confirm",
     paymentStatus: "Paid",
     total: 590.0,
-    details: `/user/orders`,
+    details: `/coach/orders`,
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const data = [
     status: "Confirm",
     paymentStatus: "Paid",
     total: 590.0,
-    details: `/user/orders`,
+    details: `/coach/orders`,
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const data = [
     status: "Confirm",
     paymentStatus: "Paid",
     total: 590.0,
-    details: `/user/orders`,
+    details: `/coach/orders`,
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const data = [
     status: "Confirm",
     paymentStatus: "Paid",
     total: 590.0,
-    details: `/user/orders`,
+    details: `/coach/orders`,
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const data = [
     status: "Confirm",
     paymentStatus: "Paid",
     total: 590.0,
-    details: `/user/orders`,
+    details: `/coach/orders`,
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ const data = [
     status: "Confirm",
     paymentStatus: "Paid",
     total: 590.0,
-    details: `/user/orders`,
+    details: `/coach/orders`,
   },
 ];
 

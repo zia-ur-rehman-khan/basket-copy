@@ -88,6 +88,8 @@ const UploadedVideos = () => {
     <>
       {uploads?.map((upload) => (
         <VideoCard
+          crudButtons
+          disableClick
           key={upload?.id}
           image={upload?.img}
           title={upload?.title}
