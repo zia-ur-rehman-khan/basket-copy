@@ -25,20 +25,36 @@ const PlayerRegion = ({ type }) => {
     push({ pathname: "/what-we-do/register", query: { t: type } });
   };
 
-  const array = [
-    region1,
-    region2,
-    region3,
-    region4,
-    region1,
-    region2,
-    region3,
-    region4,
-    region1,
-    region2,
-    region3,
-    region4,
-  ];
+  const array =
+    type === "Coach"
+      ? [
+          region1,
+          region2,
+          region3,
+          region4,
+          region1,
+          region2,
+          region3,
+          region4,
+          region1,
+          region2,
+          region3,
+          region4,
+        ]
+      : [
+          { url: region1, title: "Catherine Lawson" },
+          { url: region2, title: "Larry Morris" },
+          { url: region3, title: "Kerry Henry" },
+          { url: region4, title: "Margarita Barrett" },
+          { url: region1, title: "Catherine Lawson" },
+          { url: region2, title: "Larry Morris" },
+          { url: region3, title: "Kerry Henry" },
+          { url: region4, title: "Margarita Barrett" },
+          { url: region1, title: "Catherine Lawson" },
+          { url: region2, title: "Larry Morris" },
+          { url: region3, title: "Kerry Henry" },
+          { url: region4, title: "Margarita Barrett" },
+        ];
 
   return (
     <div>

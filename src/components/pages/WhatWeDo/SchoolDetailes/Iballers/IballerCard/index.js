@@ -28,7 +28,7 @@ const IballerCard = ({ src }) => {
         <>
           <div>
             <Image
-              src={src}
+              src={src.url}
               alt="Picture of the author"
               width={432}
               height={335}
@@ -36,14 +36,14 @@ const IballerCard = ({ src }) => {
           </div>
           <Space className="p-2" size={11} align="center" direction="vertical">
             <CommonTextField
-              text={"00"}
+              text={src.number}
               className={"black"}
               fontSize={"32px"}
               fontWeight={"bold"}
             />
             <Divider style={{ borderColor: "#000000", width: "200px" }} />
             <CommonTextField
-              text={"Russ"}
+              text={src.title}
               className={"black"}
               fontSize={"32px"}
               fontWeight={"bold"}
