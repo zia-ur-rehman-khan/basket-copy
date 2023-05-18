@@ -107,6 +107,7 @@ const columns = [
   {
     title: "SNo",
     dataIndex: "key",
+    width: "5%",
     key: "key",
     render: (_, record) => (
       <>{record.id < 10 ? <>0{record.id}</> : record.id}</>
@@ -116,6 +117,7 @@ const columns = [
     title: "Name",
     dataIndex: "name, img",
     key: "key",
+    width: "22%",
     render: (_, record) => (
       <div className="item">
         <Image src={record.img} alt="img" />
@@ -123,18 +125,20 @@ const columns = [
       </div>
     ),
   },
-  { title: "Description", dataIndex: "description", key: "key" },
+  { title: "Description", dataIndex: "description", key: "key", width: "33%" },
   {
     title: "Quantity",
     dataIndex: "qty",
     key: "key",
+    width: "12%",
     render: (_, record) => <>Qty {record.qty}</>,
   },
-  { title: "Date", dataIndex: "date", key: "key" },
+  { title: "Date", dataIndex: "date", key: "key", width: "15%" },
   {
     title: "Amount",
     dataIndex: "amount",
     key: "key",
+    width: "12%",
     render: (_, record) => <>£{record.amount.toFixed(2)}</>,
   },
   // {

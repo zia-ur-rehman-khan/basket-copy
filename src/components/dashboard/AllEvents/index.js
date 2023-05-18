@@ -11,7 +11,7 @@ const AllEvents = ({ date, month, name, isCompleted }) => {
   return (
     <div className="event-wrapp">
       <div className="event-info-wrap">
-        <div className="event__date">
+        <div className={`event__date ${isCompleted ? "bg__transparent" : ""}`}>
           {isCompleted ? (
             <Image src={checkGreen} alt=" " />
           ) : (

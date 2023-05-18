@@ -13,7 +13,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
   }
 
   .event__date {
@@ -25,7 +24,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 
     h3 {
       color: #ff6600;
@@ -60,5 +58,23 @@
 
   &&:hover {
     color: #ffc700;
+  }
+}
+.event__date.bg__transparent {
+  background: transparent;
+}
+
+@media (max-width: 1150px) {
+  .event-wrapp .event__date {
+    width: 92px;
+  }
+  .event-wrapp {
+    padding: 6px 6px;
+  }
+  .event-info-wrap {
+    flex: 3;
+  }
+  .event-wrapp .paragraph-parent {
+    flex: 1;
   }
 }

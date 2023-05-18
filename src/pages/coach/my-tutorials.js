@@ -117,6 +117,7 @@ const PurchasedVideos = () => {
 
       {tutorials?.map((tutorial) => (
         <VideoCard
+          myTutorials
           key={tutorial?.id}
           image={tutorial?.img}
           title={tutorial?.title}
