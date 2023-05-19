@@ -70,7 +70,10 @@ const SchoolRegister = ({ contactUs }) => {
                   key={index}
                 >
                   <Image src={_t} alt={"icon"} width={45} height={45} />
-                  <CommonTextField text={"Chat: admin@iball.uk"} />
+                  <CommonTextField
+                    text={"Chat: admin@iball.uk"}
+                    className={"mt-2"}
+                  />
                 </div>
               ))}
             </div>

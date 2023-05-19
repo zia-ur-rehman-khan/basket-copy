@@ -34,18 +34,18 @@ const IballerCard = ({ src }) => {
               height={335}
             />
           </div>
-          <Space className="p-2" size={11} align="center" direction="vertical">
+          <Space className="p-3" size={11} align="center" direction="vertical">
             <CommonTextField
               text={src.number}
               className={"black"}
-              fontSize={"32px"}
+              fontSize={"24px"}
               fontWeight={"bold"}
             />
             <Divider style={{ borderColor: "#000000", width: "200px" }} />
             <CommonTextField
               text={src.title}
               className={"black"}
-              fontSize={"32px"}
+              fontSize={"24px"}
               fontWeight={"bold"}
             />
           </Space>
