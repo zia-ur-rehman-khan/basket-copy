@@ -8,6 +8,7 @@ import CommonInputField from "components/common/Input";
 import { Input } from "antd";
 import { Space } from "antd";
 import CommonButton from "components/common/Button";
+import Link from "next/link";
 
 const { TextArea } = Input;
 
@@ -74,13 +75,20 @@ const CommingSoon = () => {
             )}
           </Space>
         </div>
-        <div className="coming_soon_message">
+        <Space size={4} className="coming_soon_message ">
           <CommonHeading
             level={2}
             heading={"STAY TUNED"}
             color="var(--primary-color)"
+            className={"mt-2"}
           />
-        </div>
+
+          <p style={{ color: "white" }}>
+            For any enquiries email
+            <a href="mailto:admin@iball.uk"> admin@iball.uk </a>
+            or call <a href="tel:07506 408 260">07506 408 260</a>
+          </p>
+        </Space>
         <div className="double_sided_handle_left">
           <div className="hook_top"></div>
           <div className="handle"></div>
