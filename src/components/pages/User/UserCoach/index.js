@@ -23,6 +23,7 @@ import thumbThree from "public/profile/thumb3.png";
 import thumbFour from "public/profile/thumb4.png";
 import CommonHeading from "components/common/Heading";
 import CommonTextField from "components/common/TextField";
+import { useRouter } from "next/router";
 
 // Videos
 // import vid from 'public/video/video.mp4'
@@ -75,6 +76,11 @@ const uploads = [
 ];
 
 const Index = () => {
+  const { push } = useRouter();
+
+  const handelRoute = () => {
+    push("/what-we-do/coach-region/10/10");
+  };
   const [size, setSize] = useState(20);
   return (
     <UserLayout>
@@ -102,7 +108,7 @@ const Index = () => {
           ))}
         </Col>
         <Col span={4}>
-          <CommonButton child="View Profile" />
+          <CommonButton child="View Profile" onClick={handelRoute} />
         </Col>
       </Row>
       <div style={{ height: "50px" }}></div>
@@ -110,6 +116,7 @@ const Index = () => {
         <DashboardTitle title="Uploaded Videos" />
         {uploads?.map((upload) => (
           <VideoCard
+            user
             key={upload?.id}
             image={upload?.img}
             title={upload?.title}

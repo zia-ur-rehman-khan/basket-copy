@@ -4,7 +4,7 @@ import { Row, Col, Card } from "antd";
 import { AiFillPlayCircle } from "react-icons/ai";
 import CommonButton from "components/common/Button";
 
-const CoachSingle = ({ img, title, text, name, thumb }) => {
+const CoachSingle = ({ img, title, text, name, thumb, coach }) => {
   return (
     <div className="single__vid-wrapp">
       <Card className="vid__card full-w">
@@ -27,17 +27,19 @@ const CoachSingle = ({ img, title, text, name, thumb }) => {
           </ul>
         </div>
       </Card>
-      <Row gutter={20}>
-        <Col span={12}>
-          <CommonButton child={"$25 To View"} />
-        </Col>
-        <Col span={12}>
-          <CommonButton
-            type="default"
-            child={"Buy Monthly Membership For $500"}
-          />
-        </Col>
-      </Row>
+      {!coach && (
+        <Row gutter={20}>
+          <Col span={12}>
+            <CommonButton child={"$25 To View"} />
+          </Col>
+          <Col span={12}>
+            <CommonButton
+              type="default"
+              child={"Buy Monthly Membership For $500"}
+            />
+          </Col>
+        </Row>
+      )}
     </div>
   );
 };

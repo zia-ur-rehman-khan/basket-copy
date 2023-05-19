@@ -72,10 +72,10 @@ const Index = () => {
       children: <CoachSessions />,
     },
   ];
-  
+
   const locale = {
-    startWeekDay : 0
-  }
+    startWeekDay: 0,
+  };
 
   return (
     <AdminLayout>
@@ -87,7 +87,11 @@ const Index = () => {
           sm={{ span: 24 }}
           xs={{ span: 24 }}
         >
-          <Tabs defaultActiveKey="1" items={tabItems} className="full__w-tabs" />
+          <Tabs
+            defaultActiveKey="1"
+            items={tabItems}
+            className="full__w-tabs"
+          />
         </Col>
         <Col
           lg={{ span: 12 }}

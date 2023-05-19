@@ -3,10 +3,13 @@ import CommonTextField from "components/common/TextField";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import checkGreen from "public/profile/check-green.svg";
-const AllEvents = ({ date, month, name, isCompleted }) => {
+const AllEvents = ({ date, month, name, isCompleted, sessionCompleted }) => {
   const { push } = useRouter();
   const handelRoute = () => {
-    push("/");
+    push("/event/camps/1");
+  };
+  const handelEditSessionRoute = () => {
+    push("/coach/edit-session");
   };
   return (
     <div className="event-wrapp">
@@ -29,9 +32,9 @@ const AllEvents = ({ date, month, name, isCompleted }) => {
         <CommonHeading level={4} heading={name} />
       </div>
       <CommonTextField
-        text={"View Details"}
+        text={sessionCompleted ? "Edit" : "View Details"}
         color={"#FF6600"}
-        onClick={handelRoute}
+        onClick={sessionCompleted ? handelEditSessionRoute : handelRoute}
       />
     </div>
   );

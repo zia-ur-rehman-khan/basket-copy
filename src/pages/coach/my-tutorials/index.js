@@ -15,12 +15,12 @@ import thumbFour from "public/profile/thumb4.png";
 // Components
 import DashboardTitle from "components/dashboard/Title";
 import AdminLayout from "components/dashboard/AdminLayout";
-import VideoCard from "components/dashboard/VideoCard";
 import CommonButton from "components/common/Button";
 
 // Ant D
 import { Col, Row } from "antd";
 import { useRouter } from "next/router";
+import CoachVideoCard from "components/dashboard/CoachVideoCard";
 
 // Data
 const tutorials = [
@@ -90,7 +90,7 @@ const tutorials = [
   },
 ];
 
-const PurchasedVideos = () => {
+const Index = () => {
   const { push } = useRouter();
 
   const handelRoute = () => {
@@ -116,8 +116,8 @@ const PurchasedVideos = () => {
       </Row>
 
       {tutorials?.map((tutorial) => (
-        <VideoCard
-          myTutorials
+        <CoachVideoCard
+          crudButtons
           key={tutorial?.id}
           image={tutorial?.img}
           title={tutorial?.title}
@@ -130,4 +130,4 @@ const PurchasedVideos = () => {
   );
 };
 
-export default PurchasedVideos;
+export default Index;

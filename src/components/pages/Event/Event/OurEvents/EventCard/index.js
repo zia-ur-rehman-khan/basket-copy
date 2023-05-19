@@ -4,7 +4,7 @@ import CommonTextField from "components/common/TextField";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
-import Icon from "../../../../../../public/svg/ClubIcon";
+import Icon from "public/svg/ClubIcon";
 
 const EventCard = ({ data, academy }) => {
   const { push } = useRouter();
@@ -31,7 +31,7 @@ const EventCard = ({ data, academy }) => {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
         />
       </Space>
-      <CommonButton child="Learn More" />
+      <CommonButton child="View Details" />
     </Space>
   );
 };

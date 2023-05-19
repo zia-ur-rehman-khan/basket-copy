@@ -22,11 +22,11 @@ const MembershipCard = () => {
       {cardInfo?.map((card, i) => (
         <div className="membership__card" key={i}>
           <div className="card__header">
-            <CommonHeading heading={card?.name} level={2}/>
+            <CommonHeading heading={card?.name} level={2} />
             <h2 className="card__price">
               £{card?.price}
               <sup>
-                <del>£{card?.oldPrice}</del>
+                <del>£{card?.oldPrice.toFixed(2)}</del>
               </sup>
             </h2>
           </div>

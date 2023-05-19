@@ -2,13 +2,12 @@ import { Card } from "antd";
 import CommonHeading from "components/common/Heading";
 import CommonTextField from "components/common/TextField";
 import Image from "next/image";
-import Link from "next/link";
 import edit from "public/profile/icon-edit.svg";
 import deleteIco from "public/profile/icon-delete.svg";
 import { useRouter } from "next/router";
 
 import { AiFillPlayCircle } from "react-icons/ai";
-const VideoCard = ({
+const CoachVideoCard = ({
   image,
   title,
   text,
@@ -21,12 +20,11 @@ const VideoCard = ({
   coachTutorial,
 }) => {
   const router = useRouter();
-  const currentRoute = user ? "/user" : "/coach";
   const handleClick = () => {
-    router.push(`${currentRoute}/current-coach/${id}`);
+    router.push(`/coach/my-tutorials/${id}`);
   };
   const handleEdit = () => {
-    router.push(`${currentRoute}/edit-video`);
+    router.push("/coach/edit-video");
   };
   return (
     <Card className="vid__card">
@@ -45,7 +43,7 @@ const VideoCard = ({
           <>
             <Image src={image} alt=" " />
             <button className="view__btn">
-              <AiFillPlayCircle onClick={!disableClick ? handleClick : null} />
+              <AiFillPlayCircle onClick={handleClick} />
             </button>
           </>
         </div>
@@ -64,4 +62,4 @@ const VideoCard = ({
   );
 };
 
-export default VideoCard;
+export default CoachVideoCard;

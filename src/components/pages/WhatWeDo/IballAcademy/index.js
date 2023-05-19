@@ -35,7 +35,7 @@ const IballAcademy = () => {
           md={{ span: 24 }}
           sm={{ span: 24 }}
         >
-          <Commonheading level={2} heading={"Browse Our Events"} />
+          <Commonheading level={2} heading={"Iball Academy"} />
         </Col>
         <Col
           xxl={{ span: 12 }}

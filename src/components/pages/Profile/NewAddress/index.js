@@ -2,20 +2,24 @@ import React from "react";
 
 import { Input } from "antd";
 import { Row, Col } from "antd";
-const { TextArea } = Input;
 
 import Commonheading from "components/common/Heading";
-import CommonTextField from "components/common/TextField";
 import CommonInputField from "components/common/Input";
 
 import CommonButton from "components/common/Button";
 import CommonSelect from "components/common/Select";
 
 const Index = () => {
+  const { TextArea } = Input;
   return (
-    <>
+    <div className="register-main">
       <div className="form_wrapper">
-        <Commonheading heading={"Add New Address"} level={2} className={"mb-4"}/>
+        <Commonheading
+          heading={"Add New Address"}
+          level={2}
+          className={"mb-4"}
+          textAlign={"center"}
+        />
         <Row gutter={[14, 14]} className="signUp-main">
           <Col
             xxl={{ span: 24 }}
@@ -26,7 +30,7 @@ const Index = () => {
             xs={{ span: 24 }}
           >
             <CommonSelect
-              placeholder="Select State"
+              placeholder="Select Shipment Method"
               options={[
                 { value: "jack", label: "America" },
                 { value: "lucy", label: "canada" },
@@ -143,16 +147,16 @@ const Index = () => {
           </Col>
         </Row>
         <CommonButton
-          child={"Submit"}
+          child={"Save Details"}
           classname={"mt-4"}
           height={"45px"}
           width={"100%"}
           onClick={() => {
-            handelRoute("");
+            handelRoute
           }}
         />
       </div>
-    </>
+    </div>
   );
 };
 
