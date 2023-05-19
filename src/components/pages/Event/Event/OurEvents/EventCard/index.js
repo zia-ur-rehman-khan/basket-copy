@@ -27,6 +27,7 @@ const EventCard = ({ data, academy }) => {
         <div className="event-icon-background">{icon}</div>
         <CommonTextField text={title} fontSize="23px" fontWeight="600" />
         <CommonTextField
+          textAlign={"center"}
           fontSize={"14px"}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua."
         />
