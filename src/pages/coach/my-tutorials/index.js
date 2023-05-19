@@ -124,6 +124,7 @@ const Index = () => {
           text={tutorial?.text}
           name={tutorial?.name}
           thumb={tutorial?.thumb}
+          id={tutorial?.id}
         />
       ))}
     </AdminLayout>

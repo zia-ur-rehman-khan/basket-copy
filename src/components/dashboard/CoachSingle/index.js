@@ -4,7 +4,7 @@ import { Row, Col, Card } from "antd";
 import { AiFillPlayCircle } from "react-icons/ai";
 import CommonButton from "components/common/Button";
 
-const CoachSingle = ({ img, title, text, name, thumb, coach }) => {
+const CoachSingle = ({ img, title, text, name, thumb, coach, id }) => {
   return (
     <div className="single__vid-wrapp">
       <Card className="vid__card full-w">
