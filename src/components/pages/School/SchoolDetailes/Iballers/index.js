@@ -52,7 +52,7 @@ const Iballers = () => {
           <Space size={20} wrap={true}>
             <Search placeholder="Search by Name" enterButton />
             <Space>
-              <CommonTextField text={"Coach Region:"} />
+              <CommonTextField text={"Gender:"} />
               <CommonSelect
                 className="simple-select"
                 defaultValue="lucy"
@@ -67,6 +67,7 @@ const Iballers = () => {
             <Space>
               <CommonTextField text={"Age:"} />
               <CommonSelect
+                className="simple-select"
                 defaultValue="lucy"
                 width={120}
                 options={[

@@ -8,6 +8,7 @@ const RegionCard = ({ src }) => {
   const { push, asPath, pathname, query } = useRouter();
 
   const { region } = query;
+  console.log("🚀 ~ file: index.js:11 ~ RegionCard ~ region:", region);
 
   const handelRoute = (t) => {
     push(
@@ -22,17 +23,7 @@ const RegionCard = ({ src }) => {
     <CommonCard
       onClick={() => handelRoute(10)}
       child={
-        region === "Coach" ? (
-          <>
-            <Image src={src} alt="Picture of the author" />
-
-            <CommonTextField
-              text={"View Coaches"}
-              color="#4DC3D1"
-              className={"p-2 mt-5"}
-            />
-          </>
-        ) : (
+        region == "player-region" ? (
           <>
             <Image src={src.url} alt="Picture of the author" />
 
@@ -46,7 +37,17 @@ const RegionCard = ({ src }) => {
             <CommonTextField
               text={"View Coaches"}
               color="#4DC3D1"
-              className={"p-2 "}
+              className={"m-3 "}
+            />
+          </>
+        ) : (
+          <>
+            <Image src={src} alt="Picture of the author" />
+
+            <CommonTextField
+              text={"View Coaches"}
+              color="#4DC3D1"
+              className={"mb-3 mt-5"}
             />
           </>
         )
